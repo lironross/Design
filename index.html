@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atly | Know where to go</title>
+  <meta
+    name="description"
+    content="Atly turns a craving, a specific need, or a plan tonight into a shortlist of places that actually fit."
+  >
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/Inter-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/Inter-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" aria-label="Atly landing page header">
+    <a class="brand" href="#top" aria-label="Atly home">
+      <img class="brand-wordmark" src="assets/logo-wordmark.png" alt="Atly">
+    </a>
+
+    <a class="button button-outline button-header header-download" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018">
+      Download
+    </a>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="12" x2="21" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="18" x2="21" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+      <button class="mobile-menu__close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <a href="https://www.atly.com/">Company</a>
+      <a href="https://www.atly.com/news">Press</a>
+      <a href="https://www.atly.com/blog">Blog</a>
+      <a href="https://www.atly.com/careers">Careers</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://www.atly.com/contact-us">Contact</a>
+      <a href="https://www.atly.com/terms-of-use">Terms</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__canvas">
+        <div class="hero__main">
+          <h1 id="hero-title" class="sr-only">Know where to go</h1>
+          <div class="hero__heading-wrap" aria-hidden="true">
+            <img
+              class="hero__heading-image"
+              src="assets/final-frame/hero-heading.png"
+              alt=""
+            >
+          </div>
+
+          <p class="hero__copy">
+            Atly turns a craving, a specific need, or a plan tonight<br>into a shortlist of places that actually fit.
+          </p>
+
+          <div class="hero__actions" aria-label="Primary actions">
+            <a class="button button-primary" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018">
+              <span>Get the app</span>
+              <span class="store-icons" aria-hidden="true">
+                <svg viewBox="0 0 17 20" role="presentation">
+                  <path d="M14.1 10.5c0-2.1 1.8-3.1 1.9-3.2-1-1.5-2.7-1.7-3.3-1.7-1.4-.2-2.7.8-3.4.8-.7 0-1.8-.8-3-.8-1.5 0-2.9.9-3.7 2.2-1.6 2.8-.4 6.9 1.2 9.1.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.8 3-.8 1.4 0 1.8.8 3 .8 1.2 0 2-1.1 2.8-2.2.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4zM11.8 4.1c.6-.7 1.1-1.8 1-2.8-.9 0-2 .6-2.7 1.3-.6.7-1.1 1.8-1 2.8 1 .1 2-.5 2.7-1.3z" fill="currentColor"/>
+                </svg>
+                <svg viewBox="0 0 18 20" role="presentation">
+                  <path d="M9.4 9.1 1.8 1.2c-.4.3-.7.8-.7 1.5v14.6c0 .7.3 1.2.7 1.5l7.6-7.9zm1.2 1.2 2.6 2.7-9 5.1c.3.2.7.2 1.1 0l8.1-4.6-2.8-3.2zm6.4-2.2-2.4-1.4-2.7 2.9 2.8 2.9 2.3-1.3c.7-.4 1.1-.9 1.1-1.6 0-.6-.4-1.1-1.1-1.5zm-12.8-6 9 5.1-2.6 2.7-7.6-7.8c.4-.3.9-.3 1.2 0z" fill="currentColor"/>
+                </svg>
+              </span>
+            </a>
+
+            <a class="button button-outline" href="https://www.atly.com/">
+              Explore Atly
+            </a>
+          </div>
+        </div>
+
+        <div class="spotlight" aria-labelledby="spotlight-title">
+        <h2 id="spotlight-title" class="sr-only">Examples of Atly context-based scoring</h2>
+
+        <div class="spotlight__viewport">
+          <div class="spotlight__rail" data-hero-rail aria-label="Atly score examples">
+            <div class="spotlight__track" data-hero-track>
+              <article class="spotlight-card">
+                <img src="assets/figma/card-work-friendly.png" alt="Bright cafe interior with airy seating">
+                <p class="spotlight-card__score">
+                  <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                  <span>9.7 <em>for</em> Work friendly</span>
+                </p>
+              </article>
+
+              <article class="spotlight-card">
+                <img src="assets/figma/card-pets-ok.png" alt="Curly dog near a coffee counter">
+                <p class="spotlight-card__score">
+                  <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                  <span>9.2 <em>for</em> Pets ok</span>
+                </p>
+              </article>
+
+              <article class="spotlight-card">
+                <img src="assets/figma/card-gluten-free.png" alt="Pastries displayed behind glass">
+                <p class="spotlight-card__score">
+                  <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                  <span>9.8 <em>for</em> Gluten free eats</span>
+                </p>
+              </article>
+
+              <article class="spotlight-card">
+                <img src="assets/figma/card-vegan-brunch.png" alt="Cafe dining room with tall windows">
+                <p class="spotlight-card__score">
+                  <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                  <span>9.4 <em>for</em> Vegan brunch</span>
+                </p>
+              </article>
+
+              <article class="spotlight-card">
+                <img src="assets/figma/card-date-night.png" alt="Moody restaurant with a couple at dinner">
+                <p class="spotlight-card__score">
+                  <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                  <span>9.4 <em>for</em> Date night</span>
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="press-strip" aria-label="Press mentions">
+      <p>As seen on</p>
+      <img src="assets/figma/logo-strip.svg" alt="TC, Travel + Leisure, TD, and Yahoo">
+    </div>
+
+    <section class="feature feature-score" aria-labelledby="feature-score-title">
+      <div class="feature__visual">
+        <img src="assets/Imageleft.png" alt="Atly map and Monday survival fuel screens">
+      </div>
+
+      <div class="feature__copy feature__copy--score">
+        <h2 id="feature-score-title" class="fade-in-up">
+          <span>Place scores</span>
+          <span>that fit your</span>
+          <span>search</span>
+        </h2>
+        <p class="feature__support fade-in-up">Atly scored matches exactly what you are looking for</p>
+        <p class="fade-in-up">
+          Atly does not flatten every place into one general rating. A cafe can be great for cozy brunch and weaker for getting work done, because the best place depends on what you are searching for in that moment.
+        </p>
+      </div>
+    </section>
+
+    <section class="feature feature-signals" aria-labelledby="feature-signals-title">
+      <div class="feature__visual">
+        <img src="assets/Imageright.png" alt="Atly Bella Napoli place profile and signals">
+      </div>
+
+      <div class="feature__copy feature__copy--signals">
+        <h2 id="feature-signals-title" class="fade-in-up">
+          <span>Feels like the</span>
+          <span>research was</span>
+          <span>already done</span>
+          <span>for you.</span>
+        </h2>
+        <p class="feature__support fade-in-up">Millions of trusted signals</p>
+        <p class="fade-in-up">
+          Atly analyzes reviews, comments, local posts, trusted creators, and real place context to explain why each spot matches your search, so every recommendation feels detailed, current, and earned.
+        </p>
+      </div>
+    </section>
+
+    <section class="closing" aria-labelledby="closing-title">
+      <div class="closing__inner">
+        <h2 id="closing-title" class="sr-only">Your kind of places</h2>
+        <img
+          class="closing__heading-image"
+          src="assets/FooterCollage.png"
+          alt=""
+          aria-hidden="true"
+        >
+
+        <p class="closing__copy">
+          Atly turns a craving, a specific need,<br>or a plan tonight into a shortlist of<br>places that actually fit.
+        </p>
+
+        <div class="hero__actions" aria-label="Closing actions">
+          <a class="button button-primary" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018">
+            <span>Get the app</span>
+            <span class="store-icons" aria-hidden="true">
+              <svg viewBox="0 0 17 20" role="presentation">
+                <path d="M14.1 10.5c0-2.1 1.8-3.1 1.9-3.2-1-1.5-2.7-1.7-3.3-1.7-1.4-.2-2.7.8-3.4.8-.7 0-1.8-.8-3-.8-1.5 0-2.9.9-3.7 2.2-1.6 2.8-.4 6.9 1.2 9.1.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.8 3-.8 1.4 0 1.8.8 3 .8 1.2 0 2-1.1 2.8-2.2.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.7-1-2.7-4zM11.8 4.1c.6-.7 1.1-1.8 1-2.8-.9 0-2 .6-2.7 1.3-.6.7-1.1 1.8-1 2.8 1 .1 2-.5 2.7-1.3z" fill="currentColor"/>
+              </svg>
+              <svg viewBox="0 0 18 20" role="presentation">
+                <path d="M9.4 9.1 1.8 1.2c-.4.3-.7.8-.7 1.5v14.6c0 .7.3 1.2.7 1.5l7.6-7.9zm1.2 1.2 2.6 2.7-9 5.1c.3.2.7.2 1.1 0l8.1-4.6-2.8-3.2zm6.4-2.2-2.4-1.4-2.7 2.9 2.8 2.9 2.3-1.3c.7-.4 1.1-.9 1.1-1.6 0-.6-.4-1.1-1.1-1.5zm-12.8-6 9 5.1-2.6 2.7-7.6-7.8c.4-.3.9-.3 1.2 0z" fill="currentColor"/>
+              </svg>
+            </span>
+          </a>
+
+          <a class="button button-outline" href="https://www.atly.com/">
+            Explore Atly
+          </a>
+        </div>
+
+        <div class="subscriber-proof">
+          <div class="subscriber-proof__avatars" aria-hidden="true">
+            <img src="assets/figma/avatar-1.png" alt="">
+            <img src="assets/figma/avatar-2.png" alt="">
+            <img src="assets/figma/avatar-3.png" alt="">
+            <img src="assets/figma/avatar-4.png" alt="">
+            <img src="assets/figma/avatar-5.png" alt="">
+          </div>
+          <p>117 new subscribers today</p>
+        </div>
+
+        <footer class="site-footer">
+          <nav class="footer-links" aria-label="Footer">
+            <a href="https://www.atly.com/">Company</a>
+            <a href="https://www.atly.com/news">Press</a>
+            <a href="https://www.atly.com/blog">Blog</a>
+            <a href="https://www.atly.com/careers">Careers</a>
+            <a href="#faq">FAQ</a>
+            <a href="https://www.atly.com/contact-us">Contact</a>
+            <a href="https://www.atly.com/terms-of-use">Terms</a>
+          </nav>
+
+          <div class="footer-social" aria-label="Social links">
+            <a href="https://www.instagram.com/atly/" aria-label="Atly on Instagram">
+              <svg viewBox="0 0 24 24" role="presentation">
+                <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 1.8A3.7 3.7 0 0 0 3.8 7.5v9a3.7 3.7 0 0 0 3.7 3.7h9a3.7 3.7 0 0 0 3.7-3.7v-9a3.7 3.7 0 0 0-3.7-3.7Zm9.8 1.5a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.5A5.5 5.5 0 1 1 6.5 12 5.5 5.5 0 0 1 12 6.5Zm0 1.8A3.7 3.7 0 1 0 15.7 12 3.7 3.7 0 0 0 12 8.3Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@atlyofficial" aria-label="Atly on TikTok">
+              <svg viewBox="0 0 24 24" role="presentation">
+                <path d="M14.8 2c.4 2.2 1.7 3.8 3.9 4.5v2.8a7.5 7.5 0 0 1-3.8-1.1v6.9A5.9 5.9 0 1 1 9 9.2v2.9a3.2 3.2 0 1 0 3.2 3.2V2h2.6Z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/atlyofficial" aria-label="Atly on Facebook">
+              <svg viewBox="0 0 24 24" role="presentation">
+                <path d="M13.7 22v-8.3H17l.5-3.6h-3.8V7.8c0-1 .3-1.8 1.8-1.8H17V2.7c-.3 0-1.4-.1-2.7-.1-2.6 0-4.4 1.6-4.4 4.6v2.9H7v3.6h2.9V22h3.8Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
