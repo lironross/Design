@@ -646,7 +646,7 @@ main {
   justify-content: space-between;
   gap: 24px 32px;
   margin: 0;
-  padding: 40px 48px calc(48px + env(safe-area-inset-bottom, 0px));
+  padding: 96px 48px calc(48px + env(safe-area-inset-bottom, 0px));
   box-sizing: border-box;
 }
 
