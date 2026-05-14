@@ -560,6 +560,7 @@ main {
 }
 
 .closing {
+  position: relative;
   margin-top: 0;
   min-height: auto;
   width: 100%;
@@ -574,36 +575,58 @@ main {
 }
 
 .site-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 16px 32px;
+  gap: 16px 24px;
   margin: 0;
-  padding: 24px 48px calc(24px + env(safe-area-inset-bottom, 0px));
+  padding: 20px 32px calc(20px + env(safe-area-inset-bottom, 0px));
   box-sizing: border-box;
 }
 
 .footer__cta {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex: 0 0 auto;
 }
 
+.footer__cta .button {
+  min-height: 36px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.footer__cta .button-outline {
+  border-width: 2px;
+}
+
 .footer-links {
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   min-width: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px 20px;
+  gap: 8px 16px;
   margin: 0;
-  padding: 0;
-  font-size: 12px;
+  padding: 10px 20px;
+  font-size: 11px;
   font-weight: 600;
   line-height: 1.44;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: rgba(60, 20, 90, 0.7);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .footer-social {
@@ -611,7 +634,7 @@ main {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
-  gap: 12px 16px;
+  gap: 10px;
   margin: 0;
   padding: 0;
 }
@@ -622,8 +645,8 @@ main {
 }
 
 .footer-social svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
 @media (min-width: 1024px) {
@@ -905,11 +928,12 @@ main {
   }
 
   .site-footer {
+    position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 20px 20px calc(32px + env(safe-area-inset-bottom, 0px));
+    gap: 16px;
+    padding: 16px 16px calc(24px + env(safe-area-inset-bottom, 0px));
   }
 
   .footer__cta {
@@ -922,8 +946,9 @@ main {
   }
 
   .footer-links {
-    font-size: 16px;
-    line-height: 1.44;
+    font-size: 10px;
+    padding: 8px 14px;
+    gap: 6px 10px;
   }
 
   .footer-social svg {
