@@ -225,11 +225,14 @@
 
     <section class="closing" aria-labelledby="closing-title">
       <h2 id="closing-title" class="sr-only">Your kind of places</h2>
-      <img
-        class="closing__collage"
-        src="assets/Bottom-image.png"
-        alt="Collage of city scenes, street food, and people exploring places"
-      >
+      <picture>
+        <source media="(max-width: 720px)" srcset="assets/Mobileimagebottom.png">
+        <img
+          class="closing__collage"
+          src="assets/Bottom-image.png"
+          alt="Collage of city scenes, street food, and people exploring places"
+        >
+      </picture>
 
       <footer class="site-footer">
         <div class="footer__cta" aria-label="Closing actions">
