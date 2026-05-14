@@ -455,7 +455,7 @@ main {
   margin: 48px auto 0;
   display: grid;
   grid-template-columns: 549px 1fr;
-  align-items: start;
+  align-items: center;
   justify-content: space-between;
   gap: var(--feature-gap);
   min-height: 684px;
@@ -664,9 +664,10 @@ main {
   gap: 12px 20px;
   margin: 0;
   padding: 0;
-  font-size: var(--footer-link-size);
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.44;
+  text-transform: uppercase;
 }
 
 .footer-social {
