@@ -8,7 +8,6 @@
   --shell-width: 1014px;
   --content-width: 1014px;
   --header-width: 1280px;
-  --hero-frame-height: 834px;
   --card-width: 284px;
   --card-gap: 16px;
   --spotlight-card-height: 316px;
@@ -107,11 +106,7 @@ button {
   border: 0;
 }
 
-.feature {
-  width: calc(100% - 40px);
-  max-width: var(--content-width);
-  margin: 0 auto;
-}
+/* Base .feature resets handled below in the main .feature block */
 
 .site-header {
   display: flex;
@@ -494,14 +489,16 @@ main {
   line-height: 0;
 }
 
-.feature-score .feature__visual {
+.feature-score .feature__visual,
+.feature-highlights .feature__visual {
   width: 549px;
   max-width: 549px;
 }
 
-.feature-signals .feature__visual {
-  width: 562px;
-  max-width: 562px;
+.feature-signals .feature__visual,
+.feature-collections .feature__visual {
+  width: 549px;
+  max-width: 549px;
   justify-self: end;
   background: transparent;
 }
@@ -525,13 +522,7 @@ main {
   min-width: 0;
 }
 
-.feature-score .feature__copy {
-  padding-top: 74px;
-}
-
-.feature-signals .feature__copy {
-  padding-top: 76px;
-}
+/* padding-top removed — grid align-items: center handles vertical centering */
 
 .feature__copy h2 {
   display: grid;
