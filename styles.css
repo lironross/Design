@@ -598,15 +598,24 @@ main {
 
 .footer__cta .button {
   min-height: 36px;
-  padding: 0 14px;
-  border-radius: 10px;
+  padding: 0 16px;
+  border-radius: 999px;
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  background: rgba(60, 20, 90, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: none;
+}
+
+.footer__cta .button-primary {
+  background: rgba(60, 20, 90, 0.7);
 }
 
 .footer__cta .button-outline {
-  border-width: 2px;
+  background: rgba(60, 20, 90, 0.7);
+  border: none;
 }
 
 .footer-links {
@@ -631,12 +640,15 @@ main {
 
 .footer-social {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
   margin: 0;
-  padding: 0;
+  padding: 8px 14px;
+  background: rgba(60, 20, 90, 0.7);
+  border-radius: 999px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .footer-social a {
