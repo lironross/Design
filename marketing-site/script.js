@@ -20,6 +20,7 @@ if (rail && track) {
     const halfWidth = track.scrollWidth / 2;
     const speed = 35;
     const duration = halfWidth / speed;
+    const offset = Number.parseFloat(getComputedStyle(track).getPropertyValue("--marquee-offset")) || 0;
 
     track.style.animation = `marquee ${duration}s linear infinite`;
 
@@ -31,8 +32,8 @@ if (rail && track) {
     }
     sheet.textContent = `
       @keyframes marquee {
-        from { transform: translateX(0); }
-        to   { transform: translateX(-${halfWidth}px); }
+        from { transform: translateX(${offset}px); }
+        to   { transform: translateX(${offset - halfWidth}px); }
       }
     `;
   }

@@ -360,7 +360,8 @@
       width: max-content;
       gap: 16px;
       align-items: flex-start;
-      transform: translateX(-89px);
+      --marquee-offset: -89px;
+      transform: translateX(var(--marquee-offset));
     }
 
     .place-card {
@@ -833,7 +834,11 @@
       .landing-codex-2026 .site-header {
         top: 62px;
         padding: 0 24px;
-        align-items: center;
+        align-items: flex-start;
+      }
+
+      .landing-codex-2026 .brand {
+        align-items: flex-start;
       }
 
       .landing-codex-2026 .brand-wordmark {
@@ -846,6 +851,7 @@
 
       .landing-codex-2026 .hamburger {
         display: flex;
+        align-items: flex-start;
       }
 
       .lp-hero {
@@ -854,22 +860,28 @@
       }
 
       .lp-hero__art {
-        width: min(382px, calc(100vw - 28px));
-        max-width: calc(100vw - 28px);
+        width: min(360px, calc(100vw - 33px));
+        height: 224px;
+        max-width: calc(100vw - 33px);
         left: auto;
         margin: 0 auto;
       }
 
+      .lp-hero__art img {
+        height: 100%;
+        object-fit: fill;
+      }
+
       .lp-hero__copy {
-        width: 267px;
-        margin-top: 8px;
+        width: min(331px, calc(100% - 62px));
+        margin-top: 25px;
         font-size: 15px;
         font-weight: 400;
         line-height: 1.5;
       }
 
       .lp-primary-actions {
-        margin-top: 22px;
+        margin-top: 25px;
       }
 
       .lp-button {
@@ -904,7 +916,8 @@
 
       .score-marquee__track {
         gap: 12px;
-        transform: translateX(0);
+        --marquee-offset: 16px;
+        animation: none !important;
       }
 
       .place-card {
@@ -946,30 +959,45 @@
 
       .research__map {
         width: 100%;
-        margin-top: 28px;
+        height: 415px;
+        margin-top: 37px;
         border-radius: 0;
         box-shadow: none;
       }
 
+      .research__map img {
+        height: 100%;
+        object-fit: cover;
+      }
+
       .score-explain {
-        padding-top: 72px;
+        padding-top: 39px;
       }
 
       .score-explain .lp-section-heading,
       .score-explain .lp-section-copy {
-        width: min(328px, calc(100% - 32px));
+        width: min(304px, calc(100% - 48px));
+        text-align: left;
+      }
+
+      .score-explain .lp-section-heading {
+        line-height: 0.86;
+      }
+
+      .score-explain .lp-section-copy {
+        margin-top: 12px;
       }
 
       .plan-cards-wrap {
-        height: 166px;
-        margin-top: 32px;
+        height: 186px;
+        margin-top: 46px;
         overflow: hidden;
       }
 
       .plan-cards {
         width: 952px;
         height: 489px;
-        transform: scale(0.34);
+        transform: scale(0.378);
         transform-origin: top center;
       }
 
@@ -977,12 +1005,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 24px;
-        padding: 34px 0 0 50px;
+        gap: 29px;
+        padding: 53px 0 23px 45px;
       }
 
       .collections__copy {
-        width: 220px;
+        width: min(304px, calc(100vw - 62px));
       }
 
       .collections .lp-section-heading,
@@ -993,7 +1021,7 @@
 
       .collections .lp-section-heading {
         font-size: 42px;
-        line-height: 1.05;
+        line-height: 0.86;
       }
 
       .collections .lp-section-copy {
@@ -1003,11 +1031,11 @@
       }
 
       .collection-cards {
-        width: 520px;
+        width: 360px;
         gap: 1px;
         justify-self: auto;
         margin-right: 0;
-        transform: translateX(74px);
+        transform: translateX(-28px);
       }
 
       .collection-card {
@@ -1053,6 +1081,7 @@
       .store-badges {
         align-self: center;
         gap: 12px;
+        transform: translateX(10px);
       }
 
       .app-store-badge {
@@ -1086,7 +1115,8 @@
 
     @media (max-width: 374px) {
       .lp-hero__art {
-        width: min(360px, calc(100vw - 28px));
+        width: min(336px, calc(100vw - 28px));
+        height: 209px;
         margin: 0 auto;
       }
 
@@ -1095,11 +1125,11 @@
       }
 
       .collections {
-        padding-left: 32px;
+        padding-left: 36px;
       }
 
       .collection-cards {
-        transform: translateX(48px);
+        transform: translateX(-19px);
       }
     }
 
@@ -1387,11 +1417,11 @@
           <a href="https://www.instagram.com/atly/" aria-label="Atly on Instagram">
             <img src="Images/IG.png" alt="" aria-hidden="true">
           </a>
-          <a href="https://www.facebook.com/atlyofficial/" aria-label="Atly on Facebook">
-            <img src="Images/Facebook.png" alt="" aria-hidden="true">
-          </a>
           <a href="https://www.tiktok.com/@atlyofficial" aria-label="Atly on TikTok">
             <img src="Images/TIKTOK.png" alt="" aria-hidden="true">
+          </a>
+          <a href="https://www.facebook.com/atlyofficial/" aria-label="Atly on Facebook">
+            <img src="Images/Facebook.png" alt="" aria-hidden="true">
           </a>
         </nav>
       </footer>
