@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atly | Know where to go</title>
+  <meta
+    name="description"
+    content="Atly turns a craving, a specific need, or a plan tonight into a shortlist of places that actually fit."
+  >
+  <meta name="theme-color" content="#271b58">
+  <meta property="og:title" content="Atly | Know where to go">
+  <meta property="og:description" content="Atly turns a craving, a specific need, or a plan tonight into a shortlist of places that actually fit.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="preload" href="assets/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/Inter-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/Inter-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/LeagueGothic-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @font-face {
+      font-family: "League Gothic Local";
+      src: url("assets/LeagueGothic-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    body.landing-codex-2026 {
+      min-width: 320px;
+      color: #ffffff;
+      background:
+        linear-gradient(
+          180deg,
+          #271b58 0%,
+          #500f56 53.25%,
+          #361757 102.79%,
+          #1a1f58 156%
+        );
+    }
+
+    body.landing-codex-2026::before {
+      display: none;
+    }
+
+    .landing-codex-2026 main {
+      display: block;
+      padding: 0;
+    }
+
+    .landing-codex-2026 .site-header {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0 63px;
+      pointer-events: none;
+    }
+
+    .landing-codex-2026 .brand,
+    .landing-codex-2026 .header-download,
+    .landing-codex-2026 .hamburger {
+      pointer-events: auto;
+    }
+
+    .landing-codex-2026 .brand {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+
+    .landing-codex-2026 .brand-wordmark {
+      width: 100px;
+      height: auto;
+    }
+
+    .landing-codex-2026 .header-download {
+      min-width: 127px;
+      min-height: 40px;
+      padding: 0 18px;
+      border: 2px solid #ffffff;
+      border-radius: 12px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: none;
+    }
+
+    .landing-codex-2026 .hamburger {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .landing-codex-2026 .hamburger img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .landing-codex-2026 .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+      padding: 40px;
+      background: #271b58;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity 220ms cubic-bezier(0.23, 1, 0.32, 1),
+        visibility 220ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .landing-codex-2026 .mobile-menu.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .landing-codex-2026 .mobile-menu__close {
+      position: absolute;
+      top: 24px;
+      right: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .landing-codex-2026 .mobile-menu__close::before,
+    .landing-codex-2026 .mobile-menu__close::after {
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      content: "";
+    }
+
+    .landing-codex-2026 .mobile-menu__close::before {
+      transform: rotate(45deg);
+    }
+
+    .landing-codex-2026 .mobile-menu__close::after {
+      transform: rotate(-45deg);
+    }
+
+    .landing-codex-2026 .mobile-menu a {
+      min-height: 44px;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 2.2;
+    }
+
+    .lp-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 63px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 16px;
+      color: #ffffff;
+      background: linear-gradient(48deg, #ff3c87 6%, #ef6f5e 83%);
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.1),
+        0 3px 5px rgba(0, 0, 0, 0.13);
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1;
+      white-space: nowrap;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .lp-button:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    .lp-button:active {
+      transform: scale(0.97);
+    }
+
+    .lp-button:focus-visible,
+    .landing-codex-2026 a:focus-visible,
+    .landing-codex-2026 button:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 4px;
+    }
+
+    .lp-button__icons {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lp-button__icons img:first-child {
+      width: 19px;
+      height: 24px;
+    }
+
+    .lp-button__icons img:last-child {
+      width: 18px;
+      height: 20px;
+      transform: scaleX(1.2) scaleY(-1.2);
+    }
+
+    .lp-hero {
+      position: relative;
+      height: 774px;
+      padding-top: 43px;
+      overflow: hidden;
+    }
+
+    .lp-hero__art {
+      position: relative;
+      z-index: 1;
+      width: min(860px, calc(100vw - 192px));
+      max-width: none;
+      margin: 0 auto;
+    }
+
+    .lp-hero__art img {
+      width: 100%;
+      max-width: none;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .lp-hero__copy {
+      position: relative;
+      z-index: 2;
+      width: min(510px, calc(100% - 48px));
+      margin: 8px auto 0;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.51;
+      text-align: center;
+    }
+
+    .lp-primary-actions {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 34px;
+    }
+
+    .lp-qr {
+      position: relative;
+      display: inline-flex;
+      width: 64px;
+      height: 63px;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #ffffff;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .lp-qr:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    .lp-qr:active {
+      transform: scale(0.97);
+    }
+
+    .lp-qr img {
+      position: absolute;
+      display: block;
+      max-width: none;
+    }
+
+    .lp-qr__base {
+      inset: 1px;
+      width: 62px;
+      height: 61px;
+    }
+
+    .lp-qr__code {
+      inset: 7px 7px 6px 8px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .lp-qr__outline {
+      inset: -1px 0 -1px 0;
+      width: 64px;
+      height: 65px;
+    }
+
+    .lp-press {
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      height: 186px;
+      gap: 30px;
+      padding: 40px 72px;
+    }
+
+    .lp-press p {
+      margin: 0;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.32;
+      text-transform: uppercase;
+    }
+
+    .lp-press img {
+      width: 589px;
+      max-width: min(589px, calc(100vw - 160px));
+      height: auto;
+    }
+
+    .score-marquee {
+      height: 324px;
+      overflow: hidden;
+    }
+
+    .score-marquee__rail {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .score-marquee__track {
+      display: flex;
+      width: max-content;
+      gap: 16px;
+      align-items: flex-start;
+      --marquee-offset: -89px;
+      transform: translateX(var(--marquee-offset));
+    }
+
+    .place-card {
+      position: relative;
+      flex: 0 0 279px;
+      width: 279px;
+      height: 310px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #2c1f5d;
+      box-shadow:
+        0 3px 9px rgba(0, 0, 0, 0.1),
+        0 9px 28px rgba(0, 0, 0, 0.13);
+    }
+
+    .place-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .place-card::after {
+      position: absolute;
+      inset: 18% 0 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      content: "";
+    }
+
+    .place-card__score {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 20px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.45;
+      white-space: nowrap;
+    }
+
+    .place-card__score img {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .place-card__score em {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .lp-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lp-section-heading {
+      width: min(772px, calc(100% - 48px));
+      margin: 0 auto;
+      color: #ffffff;
+      font-family: "League Gothic Local", "League Gothic", sans-serif;
+      font-size: 96px;
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .lp-section-copy {
+      width: min(772px, calc(100% - 48px));
+      margin: 20px auto 0;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.42;
+      text-align: center;
+    }
+
+    .research {
+      padding-top: 78px;
+    }
+
+    .research__map {
+      display: block;
+      width: min(1204px, calc(100% - 80px));
+      margin: 48px auto 0;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 24px 72px rgba(16, 6, 42, 0.2);
+    }
+
+    .research__map img {
+      width: 100%;
+      height: auto;
+    }
+
+    .score-explain {
+      padding-top: 126px;
+    }
+
+    .score-explain .lp-section-heading {
+      width: min(696px, calc(100% - 48px));
+    }
+
+    .score-explain .lp-section-copy {
+      width: min(696px, calc(100% - 48px));
+    }
+
+    .plan-cards-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 72px;
+      overflow: visible;
+    }
+
+    .plan-cards {
+      display: flex;
+      align-items: center;
+      width: 952px;
+      height: 489px;
+    }
+
+    .plan-card {
+      position: relative;
+      flex: 0 0 360px;
+      width: 360px;
+      overflow: hidden;
+      border: 1px solid #001c3d;
+      border-radius: 16px;
+      background: #ebe9f7;
+      box-shadow: 0 16px 87px 9px rgba(238, 31, 188, 0.25);
+    }
+
+    .plan-card:not(:last-child) {
+      margin-right: -64px;
+    }
+
+    .plan-card__photo {
+      position: relative;
+      height: 312px;
+      margin-bottom: -49px;
+      overflow: hidden;
+    }
+
+    .plan-card__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .plan-card__body {
+      position: relative;
+      min-height: 226px;
+      padding: 12px 20px 24px;
+      background: #f6f7f9;
+      color: #001c3d;
+    }
+
+    .plan-card__score {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin: 0 0 10px;
+      color: #001c3d;
+      font-size: 12px;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+
+    .plan-card__score img {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+      transform: rotate(180deg) scaleY(-1);
+    }
+
+    .plan-card__score strong {
+      font-size: 28px;
+      line-height: 1.35;
+    }
+
+    .plan-card__score b {
+      font-weight: 600;
+    }
+
+    .plan-card__text {
+      margin: 0;
+      color: #001c3d;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .plan-card__text strong {
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: minmax(0, 404px) minmax(0, 1fr);
+      align-items: center;
+      justify-content: stretch;
+      gap: 86px;
+      padding-left: clamp(48px, 17.45vw, 264px);
+      padding-right: 0;
+      padding-top: 96px;
+      padding-bottom: 72px;
+    }
+
+    .collections__copy {
+      width: 404px;
+    }
+
+    .collections .lp-section-heading,
+    .collections .lp-section-copy {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+    }
+
+    .collections .lp-section-heading {
+      font-size: 64px;
+      line-height: 1.05;
+    }
+
+    .collections .lp-section-copy {
+      font-size: 18px;
+      line-height: 1.44;
+    }
+
+    .collection-cards {
+      display: flex;
+      gap: 1px;
+      align-items: center;
+      justify-self: end;
+      margin-right: 0;
+      min-width: 0;
+    }
+
+    .collection-card {
+      position: relative;
+      flex: 0 0 270px;
+      width: 270px;
+      height: 415px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 20px;
+      padding: 24px 18px;
+      box-shadow: 0 16px 87px 9px rgba(238, 31, 188, 0.25);
+    }
+
+    .collection-card > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .collection-card::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, #000000 19%, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 0.54) 100%);
+      content: "";
+    }
+
+    .collection-card__title {
+      position: relative;
+      z-index: 1;
+      width: 234px;
+      margin: 0;
+      color: #ffffff;
+      font-family: "League Gothic Local", "League Gothic", sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 0.99;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .collection-card__proof {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin-top: 9px;
+      color: #ffffff;
+      font-size: 9px;
+      font-weight: 500;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+
+    .avatar-stack {
+      display: flex;
+      align-items: center;
+    }
+
+    .avatar-stack img {
+      width: 13px;
+      height: 13px;
+      border-radius: 999px;
+    }
+
+    .avatar-stack img:not(:first-child) {
+      margin-left: -5px;
+    }
+
+    .bottom-collage {
+      position: relative;
+      overflow: hidden;
+      padding-top: 0;
+    }
+
+    .bottom-collage picture,
+    .bottom-collage__image {
+      display: block;
+      width: 100%;
+    }
+
+    .bottom-collage__image {
+      height: auto;
+    }
+
+    .site-footer-2026 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 48px;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      pointer-events: none;
+    }
+
+    .store-badges,
+    .social-links {
+      pointer-events: auto;
+    }
+
+    .store-badges {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .app-store-badge,
+    .google-play-badge {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 216px;
+      height: 72px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #ffffff;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .app-store-badge:hover,
+      .google-play-badge:hover,
+      .social-links a:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    .app-store-badge:active,
+    .google-play-badge:active,
+    .social-links a:active {
+      transform: scale(0.97);
+    }
+
+    .google-play-badge {
+      width: 244px;
+    }
+
+    .app-store-badge img,
+    .google-play-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 80px;
+      padding: 18px 22px;
+      border-radius: 999px;
+      background: #ffffff;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .social-links img {
+      width: auto;
+      height: auto;
+      max-width: 35px;
+      max-height: 35px;
+    }
+
+    @media (max-width: 1280px) {
+      .collections {
+        grid-template-columns: minmax(280px, 404px) minmax(620px, 812px);
+        justify-content: center;
+        gap: 56px;
+        padding-left: 40px;
+        padding-right: 0;
+      }
+
+      .collection-cards {
+        justify-self: auto;
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .lp-section-heading {
+        font-size: 72px;
+      }
+
+      .collections {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 36px;
+        padding: 72px 0 56px;
+      }
+
+      .collections__copy {
+        width: min(404px, calc(100% - 48px));
+      }
+
+      .collections .lp-section-heading,
+      .collections .lp-section-copy {
+        text-align: center;
+      }
+
+      .collection-cards {
+        max-width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .landing-codex-2026 .site-header {
+        top: 62px;
+        padding: 0 24px;
+        align-items: flex-start;
+      }
+
+      .landing-codex-2026 .brand {
+        align-items: flex-start;
+      }
+
+      .landing-codex-2026 .brand-wordmark {
+        width: 105px;
+      }
+
+      .landing-codex-2026 .header-download {
+        display: none;
+      }
+
+      .landing-codex-2026 .hamburger {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .lp-hero {
+        height: 548px;
+        padding-top: 116px;
+      }
+
+      .lp-hero__art {
+        width: min(360px, calc(100vw - 33px));
+        height: 224px;
+        max-width: calc(100vw - 33px);
+        left: auto;
+        margin: 0 auto;
+      }
+
+      .lp-hero__art img {
+        height: 100%;
+        object-fit: fill;
+      }
+
+      .lp-hero__copy {
+        width: min(331px, calc(100% - 62px));
+        margin-top: 25px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      .lp-primary-actions {
+        margin-top: 25px;
+      }
+
+      .lp-button {
+        min-width: 248px;
+        min-height: 63px;
+        padding: 0 22px;
+        font-size: 21px;
+      }
+
+      .lp-qr {
+        display: none;
+      }
+
+      .lp-press {
+        height: 119px;
+        gap: 12px;
+        padding: 8px 16px 24px;
+      }
+
+      .lp-press p {
+        font-size: 16px;
+      }
+
+      .lp-press img {
+        width: 360px;
+        max-width: calc(100vw - 32px);
+      }
+
+      .score-marquee {
+        height: 248px;
+      }
+
+      .score-marquee__track {
+        gap: 12px;
+        --marquee-offset: 16px;
+        animation: none !important;
+      }
+
+      .place-card {
+        flex-basis: 213px;
+        width: 213px;
+        height: 237px;
+        border-radius: 9px;
+      }
+
+      .place-card__score {
+        left: 9px;
+        right: 9px;
+        bottom: 15px;
+        gap: 4px;
+        font-size: 14px;
+      }
+
+      .place-card__score img {
+        width: 14px;
+        height: 14px;
+      }
+
+      .research {
+        padding-top: 42px;
+      }
+
+      .lp-section-heading {
+        width: min(332px, calc(100% - 32px));
+        font-size: 42px;
+        line-height: 0.93;
+      }
+
+      .lp-section-copy {
+        width: min(332px, calc(100% - 32px));
+        margin-top: 14px;
+        font-size: 12px;
+        line-height: 1.42;
+      }
+
+      .research__map {
+        width: 100%;
+        height: 415px;
+        margin-top: 37px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .research__map img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .score-explain {
+        padding-top: 39px;
+      }
+
+      .score-explain .lp-section-heading,
+      .score-explain .lp-section-copy {
+        width: min(304px, calc(100% - 48px));
+        text-align: left;
+      }
+
+      .score-explain .lp-section-heading {
+        line-height: 0.86;
+      }
+
+      .score-explain .lp-section-copy {
+        margin-top: 12px;
+      }
+
+      .plan-cards-wrap {
+        height: 186px;
+        margin-top: 46px;
+        overflow: hidden;
+      }
+
+      .plan-cards {
+        width: 952px;
+        height: 489px;
+        transform: scale(0.378);
+        transform-origin: top center;
+      }
+
+      .collections {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 29px;
+        padding: 53px 0 23px 45px;
+      }
+
+      .collections__copy {
+        width: min(304px, calc(100vw - 62px));
+      }
+
+      .collections .lp-section-heading,
+      .collections .lp-section-copy {
+        width: 100%;
+        text-align: left;
+      }
+
+      .collections .lp-section-heading {
+        font-size: 42px;
+        line-height: 0.86;
+      }
+
+      .collections .lp-section-copy {
+        margin-top: 14px;
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .collection-cards {
+        width: 360px;
+        gap: 1px;
+        justify-self: auto;
+        margin-right: 0;
+        transform: translateX(-28px);
+      }
+
+      .collection-card {
+        flex-basis: 120px;
+        width: 120px;
+        height: 184px;
+        border-radius: 9px;
+        padding: 11px 8px;
+      }
+
+      .collection-card__title {
+        width: 104px;
+        font-size: 19px;
+      }
+
+      .collection-card__proof {
+        gap: 1px;
+        margin-top: 4px;
+        font-size: 4px;
+      }
+
+      .avatar-stack img {
+        width: 6px;
+        height: 6px;
+      }
+
+      .avatar-stack img:not(:first-child) {
+        margin-left: -2px;
+      }
+
+      .bottom-collage {
+        padding-top: 0;
+      }
+
+      .site-footer-2026 {
+        bottom: 36px;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 21px;
+        padding: 0 24px;
+      }
+
+      .store-badges {
+        align-self: center;
+        gap: 12px;
+        transform: translateX(10px);
+      }
+
+      .app-store-badge {
+        width: 144px;
+        height: 48px;
+        border-radius: 5px;
+      }
+
+      .google-play-badge {
+        width: 163px;
+        height: 48px;
+        border-radius: 5px;
+      }
+
+      .social-links {
+        flex-direction: column;
+        min-height: 0;
+        gap: 12px;
+        padding: 0;
+        background: transparent;
+      }
+
+      .social-links a {
+        width: 44px;
+        height: 44px;
+        padding: 13px;
+        border-radius: 999px;
+        background: #ffffff;
+      }
+    }
+
+    @media (max-width: 374px) {
+      .lp-hero__art {
+        width: min(336px, calc(100vw - 28px));
+        height: 209px;
+        margin: 0 auto;
+      }
+
+      .plan-cards {
+        transform: scale(0.31);
+      }
+
+      .collections {
+        padding-left: 36px;
+      }
+
+      .collection-cards {
+        transform: translateX(-19px);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .landing-codex-2026 *,
+      .landing-codex-2026 *::before,
+      .landing-codex-2026 *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body class="landing-codex landing-codex-2026">
+  <header class="site-header" aria-label="Atly landing page header">
+    <a class="brand" href="#top" aria-label="Atly home">
+      <img class="brand-wordmark" src="assets/logo-wordmark.png" alt="Atly">
+    </a>
+
+    <a class="lp-button header-download" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018">
+      Get the app
+    </a>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <img src="assets/figma/icon-menu.svg" alt="" aria-hidden="true">
+    </button>
+
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+      <button class="mobile-menu__close" aria-label="Close menu"></button>
+      <a href="https://www.atly.com/">Company</a>
+      <a href="https://www.atly.com/news">Press</a>
+      <a href="https://www.atly.com/blog">Blog</a>
+      <a href="https://www.atly.com/careers">Careers</a>
+      <a href="https://www.atly.com/contact-us">Contact</a>
+      <a href="https://www.atly.com/terms-of-use">Terms</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="lp-hero" aria-labelledby="hero-title">
+      <h1 id="hero-title" class="sr-only">Know where to go</h1>
+      <div class="lp-hero__art" aria-hidden="true">
+        <img src="Images/Heroimage.png" alt="">
+      </div>
+
+      <p class="lp-hero__copy">
+        Turn craving, a specific need, or a plan tonight into a shortlist of places that actually fit. In seconds
+      </p>
+
+      <div class="lp-primary-actions" aria-label="Primary actions">
+        <a class="lp-button" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018">
+          <span>Get the app</span>
+          <span class="lp-button__icons" aria-hidden="true">
+            <img src="assets/figma/icon-apple.svg" alt="">
+            <img src="assets/figma/icon-play.svg" alt="">
+          </span>
+        </a>
+
+        <a class="lp-qr" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018" aria-label="Get Atly from the App Store">
+          <img class="lp-qr__base" src="assets/figma/qr-vector.svg" alt="">
+          <img class="lp-qr__code" src="assets/figma/qr-code.svg" alt="">
+          <img class="lp-qr__outline" src="assets/figma/qr-outline.svg" alt="">
+        </a>
+      </div>
+    </section>
+
+    <section class="lp-press" aria-label="Press mentions">
+      <p>As seen on</p>
+      <img src="assets/figma/logo-strip.svg" alt="TC, Travel + Leisure, TD, and Yahoo">
+    </section>
+
+    <section class="score-marquee" aria-labelledby="score-marquee-title">
+      <h2 id="score-marquee-title" class="sr-only">Atly score examples</h2>
+      <div class="score-marquee__rail" data-hero-rail>
+        <div class="score-marquee__track" data-hero-track>
+          <article class="place-card">
+            <img src="Images/2.png" alt="Bright cafe interior with a pastry counter">
+            <p class="place-card__score">
+              <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+              <span>9.7 <em>for</em> Work friendly</span>
+            </p>
+          </article>
+
+          <article class="place-card">
+            <img src="Images/3.png" alt="Dog at a cafe counter">
+            <p class="place-card__score">
+              <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+              <span>9.2 <em>for</em> Pets ok</span>
+            </p>
+          </article>
+
+          <article class="place-card">
+            <img src="Images/5.png" alt="Bakery display case with pastries">
+            <p class="place-card__score">
+              <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+              <span>9.8 <em>for</em> Gluten free eats</span>
+            </p>
+          </article>
+
+          <article class="place-card">
+            <img src="Images/6.png" alt="Cafe tables with tall windows">
+            <p class="place-card__score">
+              <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+              <span>9.4 <em>for</em> Vegan brunch</span>
+            </p>
+          </article>
+
+          <article class="place-card">
+            <img src="Images/7.png" alt="Candlelit restaurant dining room">
+            <p class="place-card__score">
+              <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+              <span>9.4 <em>for</em> Date night</span>
+            </p>
+          </article>
+
+          <article class="place-card">
+            <img src="Images/2.png" alt="Bright cafe interior with airy seating">
+            <p class="place-card__score">
+              <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+              <span>9.7 <em>for</em> Work friendly</span>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section research" aria-labelledby="research-title">
+      <h2 id="research-title" class="lp-section-heading">
+        Feels like the research was already done for you
+      </h2>
+      <p class="lp-section-copy">
+        Places don't deserve a single rating. A cafe may be perfect for a cozy brunch but not suitable for work, as the best spot depends on your current needs.
+      </p>
+
+      <picture class="research__map">
+        <source media="(max-width: 720px)" srcset="Images/MapMobile.png">
+        <img src="Images/MapDesktop.png" alt="Atly map with place scores and match details for a romantic pizzeria">
+      </picture>
+    </section>
+
+    <section class="lp-section score-explain" aria-labelledby="score-explain-title">
+      <h2 id="score-explain-title" class="lp-section-heading">
+        Place scores that fit your search
+      </h2>
+      <p class="lp-section-copy">
+        Atly does not flatten every place into one general rating. A cafe can be great for cozy brunch and weaker for getting work done, because the best place depends on what you are searching for in that moment.
+      </p>
+
+      <div class="plan-cards-wrap" aria-label="Contextual score explanations">
+        <div class="plan-cards">
+          <article class="plan-card">
+            <div class="plan-card__photo">
+              <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
+            </div>
+            <div class="plan-card__body">
+              <p class="plan-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                <strong>9.2</strong>
+                <span>/ 10 match for <b>A cafe to focus and work</b></span>
+              </p>
+              <p class="plan-card__text">
+                <strong>An ideal cafe for remote work</strong>, this spot offers a brew that keeps you energized, <strong>cozy ambiance and dependable Wi-Fi</strong>, it's perfect for productivity. You'll find <strong>plenty of power outlets</strong> and the soundtrack plays gentle tunes.
+              </p>
+            </div>
+          </article>
+
+          <article class="plan-card">
+            <div class="plan-card__photo">
+              <img src="Images/Cafe.png" alt="Cafe interior with bright windows and a seating area">
+            </div>
+            <div class="plan-card__body">
+              <p class="plan-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                <strong>8.7</strong>
+                <span>/ 10 match for <b>Dog friendly cafe near me</b></span>
+              </p>
+              <p class="plan-card__text">
+                Dogs are welcome in this laid-back space. <strong>Your furry friend will receive a bowl of water and a friendly smile</strong> from the staff. It's <strong>particularly suited for quieter dogs</strong>, as many visitors prefer to work remotely here and appreciate the quiet.
+              </p>
+            </div>
+          </article>
+
+          <article class="plan-card">
+            <div class="plan-card__photo">
+              <img src="Images/Cafe.png" alt="Cafe interior with a calm work-friendly atmosphere">
+            </div>
+            <div class="plan-card__body">
+              <p class="plan-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                <strong>6.4</strong>
+                <span>/ 10 match for <b>Cafe for first date</b></span>
+              </p>
+              <p class="plan-card__text">
+                While this location has its merits, it <strong>may not be the most suitable</strong> choice for impressing a date. <strong>The ambiance leans heavily towards a work-oriented vibe</strong>, which can detract from the intimacy and warmth typically desired for a romantic outing.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section collections" aria-labelledby="collections-title">
+      <div class="collections__copy">
+        <h2 id="collections-title" class="lp-section-heading">
+          Curated collections, made personal
+        </h2>
+        <p class="lp-section-copy">
+          Find curated lists from locals, personalized to your taste and interests so every recommendation feels made for you.
+        </p>
+      </div>
+
+      <div class="collection-cards" aria-label="Curated collections">
+        <article class="collection-card">
+          <img src="Images/Atly%20-FS1.png" alt="Burger being eaten outside">
+          <h3 class="collection-card__title">The Burger Breakdown</h3>
+          <div class="collection-card__proof">
+            <span class="avatar-stack" aria-hidden="true">
+              <img src="assets/figma/avatar-1.png" alt="">
+              <img src="assets/figma/avatar-2.png" alt="">
+              <img src="assets/figma/avatar-3.png" alt="">
+              <img src="assets/figma/avatar-4.png" alt="">
+              <img src="assets/figma/avatar-5.png" alt="">
+            </span>
+            <span>Curated from 16k+ local reviews</span>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img src="Images/Atly%20-FS2.png" alt="Friends celebrating at a bar">
+          <h3 class="collection-card__title">Happy Hour Heroes</h3>
+          <div class="collection-card__proof">
+            <span class="avatar-stack" aria-hidden="true">
+              <img src="assets/figma/avatar-1.png" alt="">
+              <img src="assets/figma/avatar-2.png" alt="">
+              <img src="assets/figma/avatar-3.png" alt="">
+              <img src="assets/figma/avatar-4.png" alt="">
+              <img src="assets/figma/avatar-5.png" alt="">
+            </span>
+            <span>Curated from 22k+ local reviews</span>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img src="Images/Atly%20-FS3.png" alt="Fresh green salad on a table">
+          <h3 class="collection-card__title">Green Flags Only</h3>
+          <div class="collection-card__proof">
+            <span class="avatar-stack" aria-hidden="true">
+              <img src="assets/figma/avatar-1.png" alt="">
+              <img src="assets/figma/avatar-2.png" alt="">
+              <img src="assets/figma/avatar-3.png" alt="">
+              <img src="assets/figma/avatar-4.png" alt="">
+              <img src="assets/figma/avatar-5.png" alt="">
+            </span>
+            <span>Curated from 15k+ local reviews</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="bottom-collage" aria-labelledby="closing-title">
+      <h2 id="closing-title" class="sr-only">Your kind of places</h2>
+      <picture>
+        <source media="(max-width: 720px)" srcset="Images/Bottom%20Mobile.png">
+        <img
+          class="bottom-collage__image"
+          src="Images/BottomDesktop.png"
+          alt="Collage of New York places, city scenes, and people enjoying food"
+        >
+      </picture>
+
+      <footer class="site-footer-2026">
+        <div class="store-badges" aria-label="Download Atly">
+          <a class="app-store-badge" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018" aria-label="Download Atly on the App Store">
+            <img src="Images/Appstore.jpg" alt="" aria-hidden="true">
+          </a>
+
+          <a class="google-play-badge" href="https://play.google.com/store/apps/details?id=com.steps.app.steps&amp;hl=en" aria-label="Get Atly on Google Play">
+            <img src="Images/Googleplay.jpg" alt="" aria-hidden="true">
+          </a>
+        </div>
+
+        <nav class="social-links" aria-label="Social links">
+          <a href="https://www.instagram.com/atly/" aria-label="Atly on Instagram">
+            <img src="Images/IG.png" alt="" aria-hidden="true">
+          </a>
+          <a href="https://www.tiktok.com/@atlyofficial" aria-label="Atly on TikTok">
+            <img src="Images/TIKTOK.png" alt="" aria-hidden="true">
+          </a>
+          <a href="https://www.facebook.com/atlyofficial/" aria-label="Atly on Facebook">
+            <img src="Images/Facebook.png" alt="" aria-hidden="true">
+          </a>
+        </nav>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
