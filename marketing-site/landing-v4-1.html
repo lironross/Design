@@ -3115,7 +3115,7 @@
       .landing-2026-redesign .mobile-intent-carousel {
         width: min(346px, 100%);
         height: auto;
-        min-height: 543px;
+        min-height: 536px;
         display: block;
         margin: 0 auto;
       }
@@ -3169,11 +3169,13 @@
         width: 100%;
         min-width: 100%;
         flex: 0 0 100%;
-        height: auto;
-        min-height: 503px;
-        grid-template-rows: 216px auto;
+        height: 496px;
+        min-height: 496px;
+        grid-template-rows: 216px 280px;
         margin: 0;
         border-radius: 12px;
+        background: #f8f7fa;
+        box-shadow: none;
         backface-visibility: hidden;
         contain: paint;
         scroll-snap-align: center;
@@ -3186,46 +3188,61 @@
       }
 
       .landing-2026-redesign .context-card__body {
-        height: auto;
-        min-height: 287px;
+        height: 280px;
+        min-height: 280px;
         gap: 11px;
         justify-content: flex-start;
         padding: 16px 16px 18px;
         overflow: hidden;
       }
 
+      .landing-2026-redesign .mobile-intent-carousel__slide .context-card__heading {
+        width: 280px;
+        height: 54px;
+        display: flex;
+        flex: 0 0 54px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
       .landing-2026-redesign .context-card__score {
-        width: 100%;
+        width: 280px;
         min-height: 24px;
         height: 24px;
         gap: 6px;
         padding: 0;
+        color: #181124;
       }
 
       .landing-2026-redesign .context-card__score img {
-        width: 20px;
-        height: 20px;
-        flex-basis: 20px;
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
+        margin-bottom: 4px;
       }
 
-      .landing-2026-redesign .context-card__score strong,
-      .landing-2026-redesign .context-card__score span {
-        font-size: 15px;
-        font-weight: 700;
+      .landing-2026-redesign .context-card__score .context-card__score-copy {
+        width: 230px;
+        font-size: 20px;
+        font-weight: 500;
         line-height: 20px;
+        white-space: nowrap;
       }
 
       .landing-2026-redesign .context-card__body h3 {
-        width: 100%;
+        width: 280px;
         height: 26px;
         margin: 0;
+        color: #181124;
         font-size: 20px;
+        font-weight: 600;
         line-height: 26px;
       }
 
       .landing-2026-redesign .context-card__summary {
         width: 100%;
-        height: auto;
+        height: 107px;
         min-height: 107px;
         margin: 0;
         padding-bottom: 12px;
@@ -3235,12 +3252,18 @@
         line-height: 19px;
       }
 
+      .landing-2026-redesign .context-card__summary strong {
+        font-weight: 600;
+        line-height: 1.36;
+      }
+
       .landing-2026-redesign .context-card__reasons {
-        width: 100%;
+        width: 280px;
         height: 63px;
+        flex: 0 0 63px;
         align-content: flex-start;
         gap: 11px 6px;
-        margin: auto 0 0;
+        margin: 0;
         overflow: hidden;
       }
 
@@ -3252,7 +3275,21 @@
         color: #181124;
         box-shadow: none;
         font-size: 11px;
+        font-weight: 500;
         line-height: 16px;
+        text-align: center;
+      }
+
+      .landing-2026-redesign .context-card__reasons li:nth-child(1) {
+        width: 138px;
+      }
+
+      .landing-2026-redesign .context-card__reasons li:nth-child(2) {
+        width: 125px;
+      }
+
+      .landing-2026-redesign .context-card__reasons li:nth-child(3) {
+        width: 190px;
       }
 
       .landing-2026-redesign .mobile-intent-carousel__pagination {
@@ -3723,6 +3760,28 @@
       }
     }
 
+    @media (max-width: 376px) {
+      .landing-2026-redesign .mobile-intent-carousel {
+        min-height: 555px;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__slide {
+        height: 515px;
+        min-height: 515px;
+        grid-template-rows: 216px 299px;
+      }
+
+      .landing-2026-redesign .context-card__body {
+        height: 299px;
+        min-height: 299px;
+      }
+
+      .landing-2026-redesign .context-card__summary {
+        height: 126px;
+        min-height: 126px;
+      }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .landing-codex-2026 *,
       .landing-codex-2026 *::before,
@@ -4033,12 +4092,13 @@
                   <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
                 </div>
                 <div class="context-card__body">
-                  <p class="context-card__score">
-                    <img src="Images/Sparkle.png" alt="" aria-hidden="true">
-                    <strong>9.2</strong>
-                    <span>/ 10 match for</span>
-                  </p>
-                  <h3>A café to focus and work</h3>
+                  <div class="context-card__heading">
+                    <p class="context-card__score">
+                      <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+                      <span class="context-card__score-copy">9.2&nbsp; / 10 match for</span>
+                    </p>
+                    <h3>A café to focus and work</h3>
+                  </div>
                   <p class="context-card__summary">
                     An <strong>ideal café for remote work</strong>, this spot offers a cozy ambiance, <strong>dependable Wi-Fi, plenty of power outlets, and gentle background music.</strong> It’s the perfect place to settle in with your laptop and enjoy a productive day.
                   </p>
@@ -4055,19 +4115,20 @@
                   <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
                 </div>
                 <div class="context-card__body">
-                  <p class="context-card__score">
-                    <img src="Images/Sparkle.png" alt="" aria-hidden="true">
-                    <strong>6.5</strong>
-                    <span>/ 10 match for</span>
-                  </p>
-                  <h3>Dog-friendly café</h3>
+                  <div class="context-card__heading">
+                    <p class="context-card__score">
+                      <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+                      <span class="context-card__score-copy">6.5&nbsp; / 10 match for</span>
+                    </p>
+                    <h3>Dog-friendly café</h3>
+                  </div>
                   <p class="context-card__summary">
                     This cozy café isn't dog-friendly as <strong>barking can annoy the staff and disrupt the calm vibe.</strong> While the menu is great for humans, the <strong>indoor seating is ideal for those wanting peace.</strong> It's best to <strong>leave your pup at home for a more relaxing visit.</strong>
                   </p>
                   <ul class="context-card__reasons">
-                    <li>🐕 Not ideal for pets</li>
-                    <li>🤫 Calm indoor seating</li>
-                    <li>👨‍💻 Work friendly environment</li>
+                    <li>🛜 Dependable Wi‑Fi</li>
+                    <li>🔌 Power outlets</li>
+                    <li>🤫 Quiet weekday atmosphere</li>
                   </ul>
                 </div>
               </article>
@@ -4077,20 +4138,20 @@
                   <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
                 </div>
                 <div class="context-card__body">
-                  <p class="context-card__score">
-                    <img src="Images/Sparkle.png" alt="" aria-hidden="true">
-                    <strong>8.9</strong>
-                    <span>/ 10 match for</span>
-                  </p>
-                  <h3>A café for a first date</h3>
+                  <div class="context-card__heading">
+                    <p class="context-card__score">
+                      <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+                      <span class="context-card__score-copy">8.2&nbsp; / 10 match for</span>
+                    </p>
+                    <h3>A café for a first date</h3>
+                  </div>
                   <p class="context-card__summary">
                     The café's cozy <strong>downstairs vibe is perfect for a romantic date</strong>, featuring soft lighting and comfy seating for couples to relax with <strong>mellow tunes, creating an intimate atmosphere.</strong> The upstairs is a quiet space for laptop work and productivity.
                   </p>
                   <ul class="context-card__reasons">
-                    <li>💕 Romantic downstairs</li>
-                    <li>💡 Soft lighting</li>
-                    <li>🎶 Mellow tunes</li>
-                    <li>💬 Good for conversations</li>
+                    <li>🛜 Dependable Wi‑Fi</li>
+                    <li>🔌 Power outlets</li>
+                    <li>🤫 Quiet weekday atmosphere</li>
                   </ul>
                 </div>
               </article>
