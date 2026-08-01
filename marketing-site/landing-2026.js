@@ -70,8 +70,8 @@ const contextExamples = {
   work: {
     score: "9.2",
     title: "A café to focus and work",
-    reasons: ["🛜 Dependable Wi-Fi", "🔌 Power outlets", "🤫 Quiet weekday atmosphere"],
-    summary: "<strong>An ideal café for remote work</strong>, this spot offers cozy ambiance, dependable Wi‑Fi, plenty of power outlets, and gentle background music."
+    reasons: ["🛜 Dependable Wi-Fi", "🔌 Outlets near most tables", "🤫 Quiet weekday atmosphere"],
+    summary: "<strong>An ideal café for remote work</strong>, this spot offers a brew that keeps you energized, cozy ambiance and dependable Wi-Fi, it’s perfect for productivity. You'll find plenty of power outlets and the soundtrack plays gentle tunes."
   },
   dog: {
     score: "8.7",

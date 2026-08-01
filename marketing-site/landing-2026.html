@@ -16,7 +16,7 @@
   <meta property="og:image" content="https://atly-know-where-to-go.lironcodex.chatgpt.site/marketing-site/assets/og-intelligence.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Atly — Know where to go">
+  <meta property="og:image:alt" content="Atly | Know where to go">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://atly-know-where-to-go.lironcodex.chatgpt.site/marketing-site/assets/og-intelligence.jpg">
   <link rel="canonical" href="https://lironross.github.io/Design/marketing-site/landing-2026.html">
@@ -3447,20 +3447,27 @@
       .landing-2026-redesign .loop-steps li {
         min-height: 72px;
         height: auto;
-        grid-template-columns: 36px minmax(0, 1fr);
+        grid-template-columns: 24px minmax(0, 1fr);
         gap: 14px;
         align-items: start;
         padding: 16px;
+        border: 0;
         border-radius: 14px;
+        box-shadow: inset 0 0 0 1px rgb(255 255 255 / 12%);
+      }
+
+      .landing-2026-redesign .loop-steps li:nth-child(3) {
+        min-height: 104px;
       }
 
       .landing-2026-redesign .loop-steps > li > span {
-        width: 36px;
-        height: 36px;
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
         font-family: Inter, sans-serif;
-        font-size: 14px;
+        font-size: 9.333px;
         font-weight: 700;
-        line-height: 18px;
+        line-height: 12px;
       }
 
       .landing-2026-redesign .loop-steps h3 {
@@ -3850,7 +3857,8 @@
         One place. Three different answers.
       </h2>
       <p class="lp-section-copy">
-        The same café can be perfect for getting work done, unsuitable for your dog, and good enough for a first date. Switch the intent to see the score and the evidence change.
+        <span class="copy--desktop">The same café can be perfect for getting work done, unsuitable for your dog, and good enough for a first date. Switch the intent to see the score and the evidence change.</span>
+        <span class="copy--mobile">The same café can be perfect for getting work done, unsuitable for your dog, and good enough for a first date. Switch the intent to see the score and evidence change.</span>
       </p>
 
       <div class="context-switcher" data-context-switcher>
@@ -3881,11 +3889,11 @@
             </p>
             <h3 data-context-title>A café to focus and work</h3>
             <p class="context-card__summary" data-context-summary>
-              <strong>An ideal café for remote work</strong>, this spot offers cozy ambiance, dependable Wi‑Fi, plenty of power outlets, and gentle background music.
+              <strong>An ideal café for remote work</strong>, this spot offers a brew that keeps you energized, cozy ambiance and dependable Wi-Fi, it’s perfect for productivity. You'll find plenty of power outlets and the soundtrack plays gentle tunes.
             </p>
             <ul class="context-card__reasons" data-context-reasons>
               <li>🛜 Dependable Wi-Fi</li>
-              <li>🔌 Power outlets</li>
+              <li>🔌 Outlets near most tables</li>
               <li>🤫 Quiet weekday atmosphere</li>
             </ul>
           </div>
@@ -3915,7 +3923,7 @@
                     <strong>An ideal café for remote work</strong>, this spot offers cozy ambiance, dependable Wi‑Fi, plenty of power outlets, and gentle background music.
                   </p>
                   <ul class="context-card__reasons">
-                    <li>🛜 Dependable Wi-Fi</li>
+                    <li>🛜 Dependable Wi‑Fi</li>
                     <li>🔌 Power outlets</li>
                     <li>🤫 Quiet weekday atmosphere</li>
                   </ul>
@@ -3992,7 +4000,7 @@
       <div class="collection-cards" aria-label="Curated collections">
         <article class="collection-card">
           <img src="Images/Atly%20-FS1.png" alt="Burger being eaten outside">
-          <h3 class="collection-card__title">The Burger Breakdown</h3>
+          <h3 class="collection-card__title">THE Burger breakdown</h3>
           <div class="collection-card__proof">
             <span class="avatar-stack" aria-hidden="true">
               <img src="assets/figma/avatar-1.png" alt="">
@@ -4045,7 +4053,7 @@
     <section id="intelligence" class="lp-section intelligence-bridge" aria-labelledby="intelligence-title">
       <p class="section-eyebrow">Beyond the app</p>
       <h2 id="intelligence-title" class="lp-section-heading">
-        Intelligence layer that bridges personal taste with real-world places.
+        intelligence layer that bridges personal taste with real-world places.
       </h2>
       <p class="lp-section-copy">
         <span class="copy--desktop">Every place means something different depending on who is asking and why. Atly turns fragmented local signals into structured, explainable place intelligence, powering personal discovery today and new partner experiences tomorrow.</span>
@@ -4105,7 +4113,8 @@
           <span class="copy--mobile">Give every product<br>A better sense<br>of place.</span>
         </h2>
         <p class="lp-section-copy">
-          Atly turns natural-language intent into ranked, explainable place matches—built for travel products, AI assistants, hospitality platforms, marketplaces, and any experience that needs to understand not just where a place is, but what it is good for.
+          <span class="copy--desktop">Atly turns natural-language intent into ranked, explainable place matches. Built for travel products, AI assistants, hospitality platforms, marketplaces, and any experience that needs to understand not just where a place is, but what it is good for.</span>
+          <span class="copy--mobile">Atly turns natural-language intent into ranked, explainable place matches, built for travel products, AI assistants, hospitality platforms, marketplaces, and any experience that needs to understand not just where a place is, but what it is good for.</span>
         </p>
         <a class="lp-button" href="https://www.atly.com/contact-us">Request API access</a>
       </div>
@@ -4151,7 +4160,7 @@
         <li class="figma-glass"><span>1</span><div><h3>People express intent</h3><p>“Quiet café for a two-hour work session.”</p></div></li>
         <li class="figma-glass"><span>2</span><div><h3>Atly ranks and explains</h3><p>Results are scored against the attributes that matter.</p></div></li>
         <li class="figma-glass"><span>3</span><div><h3>People choose, save, or contribute</h3><p>Behavior and explicit feedback validate relevance.</p></div></li>
-        <li class="figma-glass"><span>4</span><div><h3>Place intelligence improves</h3><p>Attributes, confidence, and rankings become more precise.</p></div></li>
+        <li class="figma-glass"><span>4</span><div><h3><span class="copy--desktop">Place intelligence improves</span><span class="copy--mobile">People to Place match algo improves</span></h3><p>Attributes, confidence, and rankings become more precise.</p></div></li>
         <li class="figma-glass"><span>5</span><div><h3>Better results attract more use</h3><p>More use creates more opportunities to enrich the graph.</p></div></li>
       </ol>
     </section>
