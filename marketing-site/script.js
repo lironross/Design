@@ -10,10 +10,16 @@ if (rail && track) {
     track.appendChild(clone);
   });
 
+  let marqueeAnimation;
+
   function applyMarquee() {
+    if (marqueeAnimation) {
+      marqueeAnimation.cancel();
+      marqueeAnimation = undefined;
+    }
+
     if (reducedMotion.matches) {
-      track.style.animation = "none";
-      track.style.transform = "none";
+      track.style.transform = "translateX(var(--marquee-offset))";
       return;
     }
 
@@ -22,34 +28,34 @@ if (rail && track) {
     const duration = halfWidth / speed;
     const offset = Number.parseFloat(getComputedStyle(track).getPropertyValue("--marquee-offset")) || 0;
 
-    track.style.animation = `marquee ${duration}s linear infinite`;
-
-    let sheet = document.getElementById("marquee-keyframes");
-    if (!sheet) {
-      sheet = document.createElement("style");
-      sheet.id = "marquee-keyframes";
-      document.head.appendChild(sheet);
-    }
-    sheet.textContent = `
-      @keyframes marquee {
-        from { transform: translateX(${offset}px); }
-        to   { transform: translateX(${offset - halfWidth}px); }
+    marqueeAnimation = track.animate(
+      [
+        { transform: `translateX(${offset}px)` },
+        { transform: `translateX(${offset - halfWidth}px)` }
+      ],
+      {
+        duration: duration * 1000,
+        easing: "linear",
+        iterations: Infinity
       }
-    `;
+    );
   }
 
-  applyMarquee();
+  requestAnimationFrame(() => requestAnimationFrame(applyMarquee));
+  window.addEventListener("load", applyMarquee, { once: true });
 
   document.addEventListener("visibilitychange", () => {
-    track.style.animationPlayState = document.hidden ? "paused" : "running";
+    if (!marqueeAnimation) return;
+    if (document.hidden) marqueeAnimation.pause();
+    else marqueeAnimation.play();
   });
 
   rail.addEventListener("focusin", () => {
-    track.style.animationPlayState = "paused";
+    marqueeAnimation?.pause();
   });
 
   rail.addEventListener("focusout", () => {
-    track.style.animationPlayState = "running";
+    marqueeAnimation?.play();
   });
 
   window.addEventListener("resize", applyMarquee);

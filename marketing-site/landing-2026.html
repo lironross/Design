@@ -13,12 +13,12 @@
   <meta property="og:description" content="Personalized place recommendations for exactly what you need right now.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://lironross.github.io/Design/marketing-site/landing-2026.html">
-  <meta property="og:image" content="https://lironross.github.io/Design/marketing-site/assets/og-intelligence.jpg">
+  <meta property="og:image" content="https://atly-know-where-to-go.lironcodex.chatgpt.site/marketing-site/assets/og-intelligence.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Atly — Know where to go">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://lironross.github.io/Design/marketing-site/assets/og-intelligence.jpg">
+  <meta name="twitter:image" content="https://atly-know-where-to-go.lironcodex.chatgpt.site/marketing-site/assets/og-intelligence.jpg">
   <link rel="canonical" href="https://lironross.github.io/Design/marketing-site/landing-2026.html">
   <link rel="icon" href="assets/app-icon.png">
   <link rel="preload" href="assets/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin>
@@ -1634,6 +1634,10 @@
       box-shadow: 0 24px 70px rgba(16, 6, 42, 0.24);
     }
 
+    .mobile-intent-carousel {
+      display: none;
+    }
+
     .context-card__photo {
       position: relative;
       min-height: 270px;
@@ -2851,6 +2855,10 @@
     }
 
     @media (max-width: 720px) {
+      .landing-2026-redesign .site-header {
+        top: 28px;
+      }
+
       .landing-2026-redesign .desktop-header-actions {
         display: none;
       }
@@ -2989,7 +2997,7 @@
       }
 
       .landing-2026-redesign .lp-hero {
-        padding: 118px 16px 39.36px;
+        padding: 84px 16px 39.36px;
       }
 
       .landing-2026-redesign .lp-hero__art {
@@ -3041,7 +3049,7 @@
       }
 
       .landing-2026-redesign .score-explain {
-        height: 728px;
+        height: 704px;
         margin-top: 36px;
         padding: 0 24px;
       }
@@ -3065,50 +3073,50 @@
       }
 
       .landing-2026-redesign .context-switcher__tabs {
-        width: min(312px, 100%);
-        height: 44px;
-        display: flex;
-        gap: 4px;
-        margin: 0 auto 20px;
-        padding-bottom: 4px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scrollbar-width: none;
-        scroll-snap-type: x proximity;
-      }
-
-      .landing-2026-redesign .context-switcher__tabs::-webkit-scrollbar {
         display: none;
       }
 
-      .landing-2026-redesign .context-tab {
-        min-width: 153px;
-        min-height: 40px;
-        flex: 0 0 153px;
-        justify-content: center;
-        gap: 2px;
-        padding: 0;
-        border-bottom-color: #806997;
-        color: #baaacd;
-        font-size: 12px;
-        line-height: 18px;
-        text-align: center;
-        scroll-snap-align: start;
+      .landing-2026-redesign .context-card--desktop {
+        display: none;
       }
 
-      .landing-2026-redesign .context-tab img {
-        width: 12px;
-        height: 12px;
-        flex-basis: 12px;
-      }
-
-      .landing-2026-redesign .context-card {
+      .landing-2026-redesign .mobile-intent-carousel {
         width: min(346px, 100%);
+        height: 512px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__viewport {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        touch-action: pan-y pinch-zoom;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__viewport::-webkit-scrollbar {
+        display: none;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__track {
+        display: flex;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__slide {
+        width: 100%;
+        min-width: 100%;
+        flex: 0 0 100%;
         height: 472px;
         min-height: 0;
         grid-template-rows: 216px 256px;
-        margin: 0 auto;
+        margin: 0;
         border-radius: 12px;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
       }
 
       .landing-2026-redesign .context-card__photo {
@@ -3181,6 +3189,37 @@
         box-shadow: none;
         font-size: 11px;
         line-height: 16px;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__pagination {
+        height: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 28px;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__pagination button {
+        width: 12px;
+        height: 12px;
+        flex: 0 0 12px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: rgb(255 255 255 / 24%);
+        cursor: pointer;
+        transition: background-color 180ms ease;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__pagination button.is-active {
+        background: #ffffff;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__pagination button:focus-visible,
+      .landing-2026-redesign .mobile-intent-carousel__viewport:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 3px;
       }
 
       .landing-2026-redesign .research {
@@ -3406,8 +3445,8 @@
       }
 
       .landing-2026-redesign .loop-steps li {
-        min-height: 104px;
-        height: 104px;
+        min-height: 72px;
+        height: auto;
         grid-template-columns: 36px minmax(0, 1fr);
         gap: 14px;
         align-items: start;
@@ -3748,7 +3787,7 @@
             <img src="Images/3.png" alt="Dog at a cafe counter">
             <p class="place-card__score">
               <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
-              <span>9.2 <em>for</em> Pets ok</span>
+              <span>9.2 <em>for</em> Dog friendly cafe</span>
             </p>
           </article>
 
@@ -3830,7 +3869,7 @@
           </button>
         </div>
 
-        <article class="context-card" role="tabpanel" aria-live="polite">
+        <article class="context-card context-card--desktop" role="tabpanel" aria-live="polite">
           <div class="context-card__photo">
             <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
           </div>
@@ -3851,6 +3890,90 @@
             </ul>
           </div>
         </article>
+
+        <div
+          class="mobile-intent-carousel"
+          data-mobile-intent-carousel
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Place recommendations by intent"
+        >
+          <div class="mobile-intent-carousel__viewport" data-mobile-intent-viewport tabindex="0">
+            <div class="mobile-intent-carousel__track">
+              <article class="context-card mobile-intent-carousel__slide" aria-label="1 of 3: A café to focus and work">
+                <div class="context-card__photo">
+                  <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
+                </div>
+                <div class="context-card__body">
+                  <p class="context-card__score">
+                    <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+                    <strong>9.2</strong>
+                    <span>/ 10 match for</span>
+                  </p>
+                  <h3>A café to focus and work</h3>
+                  <p class="context-card__summary">
+                    <strong>An ideal café for remote work</strong>, this spot offers cozy ambiance, dependable Wi‑Fi, plenty of power outlets, and gentle background music.
+                  </p>
+                  <ul class="context-card__reasons">
+                    <li>🛜 Dependable Wi-Fi</li>
+                    <li>🔌 Power outlets</li>
+                    <li>🤫 Quiet weekday atmosphere</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="context-card mobile-intent-carousel__slide" aria-label="2 of 3: A dog-friendly café">
+                <div class="context-card__photo">
+                  <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
+                </div>
+                <div class="context-card__body">
+                  <p class="context-card__score">
+                    <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+                    <strong>8.7</strong>
+                    <span>/ 10 match for</span>
+                  </p>
+                  <h3>A dog-friendly café</h3>
+                  <p class="context-card__summary">
+                    <strong>Dogs are welcome in this laid-back space.</strong> Your furry friend will receive a bowl of water and a friendly smile from the staff. It's particularly suited for quieter dogs, as many visitors prefer to work remotely here and appreciate the quiet.
+                  </p>
+                  <ul class="context-card__reasons">
+                    <li>🐕 Dogs welcome indoors</li>
+                    <li>💧 Water bowls available</li>
+                    <li>😌 Best for calm weekday visits</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="context-card mobile-intent-carousel__slide" aria-label="3 of 3: A café for a first date">
+                <div class="context-card__photo">
+                  <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
+                </div>
+                <div class="context-card__body">
+                  <p class="context-card__score">
+                    <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+                    <strong>6.4</strong>
+                    <span>/ 10 match for</span>
+                  </p>
+                  <h3>A café for a first date</h3>
+                  <p class="context-card__summary">
+                    <strong>While this location has its merits,</strong> it may not be the most suitable choice for impressing a date. The ambiance leans heavily towards a work-oriented vibe, which can detract from the intimacy and warmth typically desired for a romantic outing.
+                  </p>
+                  <ul class="context-card__reasons">
+                    <li>💡 Bright communal seating</li>
+                    <li>💻 Work-focused atmosphere</li>
+                    <li>🪑 Limited intimate tables</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="mobile-intent-carousel__pagination" aria-label="Choose recommendation card">
+            <button type="button" class="is-active" data-mobile-intent-dot="0" aria-label="Show work-friendly café" aria-current="true"></button>
+            <button type="button" data-mobile-intent-dot="1" aria-label="Show dog-friendly café" aria-current="false"></button>
+            <button type="button" data-mobile-intent-dot="2" aria-label="Show first-date café" aria-current="false"></button>
+          </div>
+        </div>
       </div>
     </section>
 

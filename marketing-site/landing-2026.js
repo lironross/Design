@@ -136,3 +136,96 @@ contextTabs.forEach((tab, index) => {
     renderContext(contextTabs[nextIndex].dataset.contextKey);
   });
 });
+
+const mobileIntentCarousel = document.querySelector("[data-mobile-intent-carousel]");
+
+if (mobileIntentCarousel) {
+  const viewport = mobileIntentCarousel.querySelector("[data-mobile-intent-viewport]");
+  const slides = Array.from(mobileIntentCarousel.querySelectorAll(".mobile-intent-carousel__slide"));
+  const dots = Array.from(mobileIntentCarousel.querySelectorAll("[data-mobile-intent-dot]"));
+  const mobileReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const mobileLayout = window.matchMedia("(max-width: 720px)");
+  const autoplayDelay = 5000;
+  let activeIndex = 0;
+  let autoplayTimer;
+  let scrollFrame;
+  let interactionActive = false;
+
+  function updatePagination(index) {
+    activeIndex = Math.max(0, Math.min(index, slides.length - 1));
+    dots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === activeIndex;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-current", String(isActive));
+    });
+  }
+
+  function goToSlide(index, behavior = "smooth") {
+    if (!viewport || slides.length === 0) return;
+    const nextIndex = (index + slides.length) % slides.length;
+    updatePagination(nextIndex);
+    viewport.scrollTo({
+      left: slides[nextIndex].offsetLeft,
+      behavior: mobileReducedMotion.matches ? "auto" : behavior
+    });
+  }
+
+  function stopAutoplay() {
+    window.clearInterval(autoplayTimer);
+    autoplayTimer = undefined;
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    if (!mobileLayout.matches || mobileReducedMotion.matches || interactionActive || document.hidden) return;
+    autoplayTimer = window.setInterval(() => goToSlide(activeIndex + 1), autoplayDelay);
+  }
+
+  function endInteraction() {
+    interactionActive = false;
+    startAutoplay();
+  }
+
+  if (viewport && slides.length > 0) {
+    viewport.addEventListener("scroll", () => {
+      window.cancelAnimationFrame(scrollFrame);
+      scrollFrame = window.requestAnimationFrame(() => {
+        const width = viewport.clientWidth || 1;
+        updatePagination(Math.round(viewport.scrollLeft / width));
+      });
+    }, { passive: true });
+
+    viewport.addEventListener("pointerdown", () => {
+      interactionActive = true;
+      stopAutoplay();
+    });
+    viewport.addEventListener("pointerup", endInteraction);
+    viewport.addEventListener("pointercancel", endInteraction);
+    viewport.addEventListener("focusin", () => {
+      interactionActive = true;
+      stopAutoplay();
+    });
+    viewport.addEventListener("focusout", endInteraction);
+    viewport.addEventListener("keydown", (event) => {
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      goToSlide(activeIndex + (event.key === "ArrowRight" ? 1 : -1));
+      startAutoplay();
+    });
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      goToSlide(Number(dot.dataset.mobileIntentDot));
+      startAutoplay();
+    });
+  });
+
+  window.addEventListener("resize", () => goToSlide(activeIndex, "auto"));
+  document.addEventListener("visibilitychange", startAutoplay);
+  mobileReducedMotion.addEventListener("change", startAutoplay);
+  mobileLayout.addEventListener("change", startAutoplay);
+
+  updatePagination(0);
+  startAutoplay();
+}
