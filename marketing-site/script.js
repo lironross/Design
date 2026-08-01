@@ -10,48 +10,65 @@ if (rail && track) {
     track.appendChild(clone);
   });
 
-  let marqueeAnimation;
   let resizeTimer;
+  let reducedStepTimer;
+  let reducedStepIndex = 0;
+
+  function stopReducedStepper() {
+    window.clearInterval(reducedStepTimer);
+    reducedStepTimer = undefined;
+  }
+
+  function getMarqueeMeasurements() {
+    const firstOriginal = originals[0];
+    const firstClone = track.children[originals.length];
+    const secondOriginal = originals[1];
+    if (!firstOriginal || !firstClone) return null;
+
+    const travel = firstClone.offsetLeft - firstOriginal.offsetLeft;
+    const step = secondOriginal ? secondOriginal.offsetLeft - firstOriginal.offsetLeft : travel;
+    if (!Number.isFinite(travel) || travel <= 0 || !Number.isFinite(step) || step <= 0) return null;
+
+    return { travel, step };
+  }
+
+  function setReducedPosition(offset, step) {
+    track.style.transform = `translate3d(${offset - reducedStepIndex * step}px, 0, 0)`;
+  }
+
+  function startReducedStepper(offset, step) {
+    stopReducedStepper();
+    reducedStepIndex = 0;
+    setReducedPosition(offset, step);
+    reducedStepTimer = window.setInterval(() => {
+      reducedStepIndex = (reducedStepIndex + 1) % originals.length;
+      setReducedPosition(offset, step);
+    }, 5000);
+  }
 
   function applyMarquee() {
-    if (marqueeAnimation) {
-      marqueeAnimation.cancel();
-      marqueeAnimation = undefined;
-    }
-
+    stopReducedStepper();
     track.classList.remove("is-css-animated");
+    track.classList.remove("is-marquee-paused");
+    track.style.removeProperty("transform");
 
-    if (reducedMotion.matches) {
-      track.style.transform = "translateX(var(--marquee-offset))";
-      return;
-    }
+    const measurements = getMarqueeMeasurements();
+    if (!measurements) return;
 
-    const halfWidth = track.scrollWidth / 2;
     const speed = 35;
-    const duration = halfWidth / speed;
+    const duration = measurements.travel / speed;
     const offset = Number.parseFloat(getComputedStyle(track).getPropertyValue("--marquee-offset")) || 0;
 
-    if (!Number.isFinite(halfWidth) || halfWidth <= 0) return;
-
-    if (typeof track.animate !== "function") {
-      track.style.setProperty("--marquee-start", `${offset}px`);
-      track.style.setProperty("--marquee-end", `${offset - halfWidth}px`);
-      track.style.setProperty("--marquee-duration", `${duration}s`);
-      track.classList.add("is-css-animated");
+    if (reducedMotion.matches) {
+      startReducedStepper(offset, measurements.step);
       return;
     }
 
-    marqueeAnimation = track.animate(
-      [
-        { transform: `translateX(${offset}px)` },
-        { transform: `translateX(${offset - halfWidth}px)` }
-      ],
-      {
-        duration: duration * 1000,
-        easing: "linear",
-        iterations: Infinity
-      }
-    );
+    track.style.setProperty("--marquee-start", `${offset}px`);
+    track.style.setProperty("--marquee-end", `${offset - measurements.travel}px`);
+    track.style.setProperty("--marquee-duration", `${duration}s`);
+    void track.offsetWidth;
+    track.classList.add("is-css-animated");
   }
 
   requestAnimationFrame(() => requestAnimationFrame(applyMarquee));
@@ -59,7 +76,8 @@ if (rail && track) {
 
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
-      marqueeAnimation?.pause();
+      stopReducedStepper();
+      track.classList.add("is-marquee-paused");
       return;
     }
 
@@ -74,7 +92,11 @@ if (rail && track) {
     window.clearTimeout(resizeTimer);
     resizeTimer = window.setTimeout(applyMarquee, 120);
   });
-  reducedMotion.addEventListener("change", applyMarquee);
+  if (typeof reducedMotion.addEventListener === "function") {
+    reducedMotion.addEventListener("change", applyMarquee);
+  } else {
+    reducedMotion.addListener(applyMarquee);
+  }
 }
 
 const hamburger = document.querySelector(".hamburger");

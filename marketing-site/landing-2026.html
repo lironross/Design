@@ -2203,12 +2203,17 @@
     }
 
     @keyframes score-marquee-fallback {
-      from { transform: translateX(var(--marquee-start)); }
-      to { transform: translateX(var(--marquee-end)); }
+      from { transform: translate3d(var(--marquee-start), 0, 0); }
+      to { transform: translate3d(var(--marquee-end), 0, 0); }
     }
 
     .score-marquee__track.is-css-animated {
       animation: score-marquee-fallback var(--marquee-duration) linear infinite;
+      will-change: transform;
+    }
+
+    .score-marquee__track.is-marquee-paused {
+      animation-play-state: paused;
     }
 
     .dual-cta {
@@ -3119,6 +3124,26 @@
         gap: 12px;
       }
 
+      .landing-2026-redesign .mobile-intent-carousel.is-transform-carousel .mobile-intent-carousel__viewport {
+        overflow-x: hidden;
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+        touch-action: pan-y pinch-zoom;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel.is-transform-carousel .mobile-intent-carousel__track {
+        transform: translate3d(0, 0, 0);
+        will-change: transform;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel.is-transform-carousel .mobile-intent-carousel__track.is-animating {
+        transition: transform 360ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel.is-transform-carousel .mobile-intent-carousel__track.is-dragging {
+        transition: none;
+      }
+
       .landing-2026-redesign .mobile-intent-carousel__slide {
         width: 100%;
         min-width: 100%;
@@ -3128,6 +3153,8 @@
         grid-template-rows: 216px auto;
         margin: 0;
         border-radius: 12px;
+        backface-visibility: hidden;
+        contain: paint;
         scroll-snap-align: center;
         scroll-snap-stop: always;
       }
@@ -4239,7 +4266,7 @@
     </section>
   </main>
 
-  <script src="script.js"></script>
-  <script src="landing-2026.js"></script>
+  <script src="script.js?v=20260801-carousel-fix"></script>
+  <script src="landing-2026.js?v=20260801-carousel-fix"></script>
 </body>
 </html>

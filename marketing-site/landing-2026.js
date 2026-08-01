@@ -141,6 +141,7 @@ const mobileIntentCarousel = document.querySelector("[data-mobile-intent-carouse
 
 if (mobileIntentCarousel) {
   const viewport = mobileIntentCarousel.querySelector("[data-mobile-intent-viewport]");
+  const track = mobileIntentCarousel.querySelector(".mobile-intent-carousel__track");
   const slides = Array.from(mobileIntentCarousel.querySelectorAll(".mobile-intent-carousel__slide"));
   const dots = Array.from(mobileIntentCarousel.querySelectorAll("[data-mobile-intent-dot]"));
   const mobileReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -148,9 +149,12 @@ if (mobileIntentCarousel) {
   const autoplayDelay = 5000;
   let activeIndex = 0;
   let autoplayTimer;
-  let scrollFrame;
-  let scrollSettledTimer;
   let interactionActive = false;
+  let activePointerId;
+  let dragStartX = 0;
+  let dragStartY = 0;
+  let dragDeltaX = 0;
+  let horizontalDrag = false;
 
   function updatePagination(index) {
     activeIndex = Math.max(0, Math.min(index, slides.length - 1));
@@ -161,14 +165,23 @@ if (mobileIntentCarousel) {
     });
   }
 
+  function slideOffset(index) {
+    return slides[index]?.offsetLeft || 0;
+  }
+
+  function positionTrack(index, delta = 0, animate = false) {
+    if (!track) return;
+    track.classList.toggle("is-animating", animate && !mobileReducedMotion.matches);
+    track.classList.toggle("is-dragging", delta !== 0);
+    track.style.transform = `translate3d(${-slideOffset(index) + delta}px, 0, 0)`;
+  }
+
   function goToSlide(index, behavior = "smooth") {
-    if (!viewport || slides.length === 0) return;
+    if (!viewport || !track || slides.length === 0) return;
     const nextIndex = (index + slides.length) % slides.length;
+    const wrapsToStart = activeIndex === slides.length - 1 && nextIndex === 0;
     updatePagination(nextIndex);
-    viewport.scrollTo({
-      left: slides[nextIndex].offsetLeft,
-      behavior: mobileReducedMotion.matches ? "auto" : behavior
-    });
+    positionTrack(nextIndex, 0, behavior !== "auto" && !wrapsToStart);
   }
 
   function stopAutoplay() {
@@ -178,56 +191,81 @@ if (mobileIntentCarousel) {
 
   function startAutoplay() {
     stopAutoplay();
-    if (!mobileLayout.matches || mobileReducedMotion.matches || interactionActive || document.hidden) return;
+    if (!mobileLayout.matches || interactionActive || document.hidden) return;
     autoplayTimer = window.setTimeout(() => {
       goToSlide(activeIndex + 1);
       startAutoplay();
     }, autoplayDelay);
   }
 
-  function endInteraction() {
+  function resetDragState() {
+    activePointerId = undefined;
+    dragDeltaX = 0;
+    horizontalDrag = false;
     interactionActive = false;
+    track?.classList.remove("is-dragging");
+  }
+
+  function finishDrag(event, cancelled = false) {
+    if (activePointerId === undefined || (event && event.pointerId !== activePointerId)) return;
+
+    if (viewport?.hasPointerCapture?.(activePointerId)) {
+      viewport.releasePointerCapture(activePointerId);
+    }
+
+    const threshold = Math.min(64, (viewport?.clientWidth || 1) * 0.16);
+    let nextIndex = activeIndex;
+    if (!cancelled && horizontalDrag && Math.abs(dragDeltaX) >= threshold) {
+      nextIndex = Math.max(0, Math.min(activeIndex + (dragDeltaX < 0 ? 1 : -1), slides.length - 1));
+    }
+
+    resetDragState();
+    goToSlide(nextIndex);
     startAutoplay();
   }
 
-  if (viewport && slides.length > 0) {
-    viewport.addEventListener("scroll", () => {
-      window.cancelAnimationFrame(scrollFrame);
-      scrollFrame = window.requestAnimationFrame(() => {
-        const closestIndex = slides.reduce((bestIndex, slide, index) => {
-          const bestDistance = Math.abs(slides[bestIndex].offsetLeft - viewport.scrollLeft);
-          const distance = Math.abs(slide.offsetLeft - viewport.scrollLeft);
-          return distance < bestDistance ? index : bestIndex;
-        }, 0);
-        updatePagination(closestIndex);
-      });
+  if (viewport && track && slides.length > 0) {
+    mobileIntentCarousel.classList.add("is-transform-carousel");
+    viewport.scrollLeft = 0;
 
-      window.clearTimeout(scrollSettledTimer);
-      scrollSettledTimer = window.setTimeout(() => {
-        if (!interactionActive) startAutoplay();
-      }, 180);
-    }, { passive: true });
-
-    viewport.addEventListener("pointerdown", () => {
+    viewport.addEventListener("pointerdown", (event) => {
+      if (!mobileLayout.matches || event.button > 0 || event.isPrimary === false) return;
       interactionActive = true;
       stopAutoplay();
+      activePointerId = event.pointerId;
+      dragStartX = event.clientX;
+      dragStartY = event.clientY;
+      dragDeltaX = 0;
+      horizontalDrag = false;
+      track.classList.remove("is-animating");
+      viewport.setPointerCapture?.(event.pointerId);
     });
-    viewport.addEventListener("touchstart", () => {
-      interactionActive = true;
-      stopAutoplay();
-    }, { passive: true });
+
+    viewport.addEventListener("pointermove", (event) => {
+      if (event.pointerId !== activePointerId) return;
+      const deltaX = event.clientX - dragStartX;
+      const deltaY = event.clientY - dragStartY;
+
+      if (!horizontalDrag && Math.abs(deltaX) < 6) return;
+      if (!horizontalDrag && Math.abs(deltaY) > Math.abs(deltaX)) {
+        finishDrag(event, true);
+        return;
+      }
+
+      horizontalDrag = true;
+      dragDeltaX = deltaX;
+      positionTrack(activeIndex, dragDeltaX, false);
+    });
+
+    viewport.addEventListener("pointerup", (event) => finishDrag(event));
+    viewport.addEventListener("pointercancel", (event) => finishDrag(event, true));
+
     viewport.addEventListener("keydown", (event) => {
       if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
       event.preventDefault();
       goToSlide(activeIndex + (event.key === "ArrowRight" ? 1 : -1));
       startAutoplay();
     });
-
-    window.addEventListener("pointerup", endInteraction);
-    window.addEventListener("pointercancel", endInteraction);
-    window.addEventListener("touchend", endInteraction, { passive: true });
-    window.addEventListener("touchcancel", endInteraction, { passive: true });
-    window.addEventListener("blur", endInteraction);
   }
 
   dots.forEach((dot) => {
@@ -238,17 +276,35 @@ if (mobileIntentCarousel) {
   });
 
   window.addEventListener("resize", () => {
+    window.requestAnimationFrame(() => {
+      viewport.scrollLeft = 0;
+      goToSlide(activeIndex, "auto");
+      startAutoplay();
+    });
+  });
+  window.addEventListener("pageshow", () => {
+    viewport.scrollLeft = 0;
     goToSlide(activeIndex, "auto");
     startAutoplay();
   });
-  window.addEventListener("pageshow", startAutoplay);
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) stopAutoplay();
     else startAutoplay();
   });
-  mobileReducedMotion.addEventListener("change", startAutoplay);
-  mobileLayout.addEventListener("change", startAutoplay);
+
+  const handleMotionChange = () => {
+    goToSlide(activeIndex, "auto");
+    startAutoplay();
+  };
+  if (typeof mobileReducedMotion.addEventListener === "function") {
+    mobileReducedMotion.addEventListener("change", handleMotionChange);
+    mobileLayout.addEventListener("change", handleMotionChange);
+  } else {
+    mobileReducedMotion.addListener(handleMotionChange);
+    mobileLayout.addListener(handleMotionChange);
+  }
 
   updatePagination(0);
+  positionTrack(0);
   startAutoplay();
 }
