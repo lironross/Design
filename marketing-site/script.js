@@ -11,12 +11,15 @@ if (rail && track) {
   });
 
   let marqueeAnimation;
+  let resizeTimer;
 
   function applyMarquee() {
     if (marqueeAnimation) {
       marqueeAnimation.cancel();
       marqueeAnimation = undefined;
     }
+
+    track.classList.remove("is-css-animated");
 
     if (reducedMotion.matches) {
       track.style.transform = "translateX(var(--marquee-offset))";
@@ -27,6 +30,16 @@ if (rail && track) {
     const speed = 35;
     const duration = halfWidth / speed;
     const offset = Number.parseFloat(getComputedStyle(track).getPropertyValue("--marquee-offset")) || 0;
+
+    if (!Number.isFinite(halfWidth) || halfWidth <= 0) return;
+
+    if (typeof track.animate !== "function") {
+      track.style.setProperty("--marquee-start", `${offset}px`);
+      track.style.setProperty("--marquee-end", `${offset - halfWidth}px`);
+      track.style.setProperty("--marquee-duration", `${duration}s`);
+      track.classList.add("is-css-animated");
+      return;
+    }
 
     marqueeAnimation = track.animate(
       [
@@ -45,20 +58,22 @@ if (rail && track) {
   window.addEventListener("load", applyMarquee, { once: true });
 
   document.addEventListener("visibilitychange", () => {
-    if (!marqueeAnimation) return;
-    if (document.hidden) marqueeAnimation.pause();
-    else marqueeAnimation.play();
+    if (document.hidden) {
+      marqueeAnimation?.pause();
+      return;
+    }
+
+    applyMarquee();
   });
 
-  rail.addEventListener("focusin", () => {
-    marqueeAnimation?.pause();
+  window.addEventListener("pageshow", () => {
+    applyMarquee();
   });
 
-  rail.addEventListener("focusout", () => {
-    marqueeAnimation?.play();
+  window.addEventListener("resize", () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(applyMarquee, 120);
   });
-
-  window.addEventListener("resize", applyMarquee);
   reducedMotion.addEventListener("change", applyMarquee);
 }
 

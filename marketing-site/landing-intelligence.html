@@ -2202,6 +2202,15 @@
       line-height: 1.45;
     }
 
+    @keyframes score-marquee-fallback {
+      from { transform: translateX(var(--marquee-start)); }
+      to { transform: translateX(var(--marquee-end)); }
+    }
+
+    .score-marquee__track.is-css-animated {
+      animation: score-marquee-fallback var(--marquee-duration) linear infinite;
+    }
+
     .dual-cta {
       width: min(1180px, calc(100% - 32px));
       margin: 0 auto 96px;
@@ -2423,7 +2432,9 @@
       .loop-steps li {
         min-height: 260px;
         grid-template-columns: 1fr;
-        align-content: space-between;
+        align-content: start;
+        gap: 24px;
+        padding: 19px;
       }
 
       .dual-cta {
@@ -3049,7 +3060,7 @@
       }
 
       .landing-2026-redesign .score-explain {
-        height: 704px;
+        height: auto;
         margin-top: 36px;
         padding: 0 24px;
       }
@@ -3082,7 +3093,8 @@
 
       .landing-2026-redesign .mobile-intent-carousel {
         width: min(346px, 100%);
-        height: 512px;
+        height: auto;
+        min-height: 543px;
         display: block;
         margin: 0 auto;
       }
@@ -3095,7 +3107,7 @@
         scrollbar-width: none;
         scroll-behavior: smooth;
         scroll-snap-type: x mandatory;
-        touch-action: pan-y pinch-zoom;
+        touch-action: pan-x pan-y pinch-zoom;
       }
 
       .landing-2026-redesign .mobile-intent-carousel__viewport::-webkit-scrollbar {
@@ -3110,9 +3122,9 @@
         width: 100%;
         min-width: 100%;
         flex: 0 0 100%;
-        height: 472px;
-        min-height: 0;
-        grid-template-rows: 216px 256px;
+        height: auto;
+        min-height: 503px;
+        grid-template-rows: 216px auto;
         margin: 0;
         border-radius: 12px;
         scroll-snap-align: center;
@@ -3125,7 +3137,8 @@
       }
 
       .landing-2026-redesign .context-card__body {
-        height: 256px;
+        height: auto;
+        min-height: 287px;
         gap: 11px;
         justify-content: flex-start;
         padding: 16px 16px 18px;
@@ -3163,9 +3176,11 @@
 
       .landing-2026-redesign .context-card__summary {
         width: 100%;
-        height: 76px;
+        height: auto;
+        min-height: 107px;
         margin: 0;
-        overflow: hidden;
+        padding-bottom: 12px;
+        overflow: visible;
         color: #41374c;
         font-size: 13px;
         line-height: 19px;
@@ -3920,7 +3935,7 @@
                   </p>
                   <h3>A café to focus and work</h3>
                   <p class="context-card__summary">
-                    <strong>An ideal café for remote work</strong>, this spot offers cozy ambiance, dependable Wi‑Fi, plenty of power outlets, and gentle background music.
+                    An <strong>ideal café for remote work</strong>, this spot offers a cozy ambiance, <strong>dependable Wi-Fi, plenty of power outlets, and gentle background music.</strong> It’s the perfect place to settle in with your laptop and enjoy a productive day.
                   </p>
                   <ul class="context-card__reasons">
                     <li>🛜 Dependable Wi‑Fi</li>
@@ -3930,24 +3945,24 @@
                 </div>
               </article>
 
-              <article class="context-card mobile-intent-carousel__slide" aria-label="2 of 3: A dog-friendly café">
+              <article class="context-card mobile-intent-carousel__slide" aria-label="2 of 3: Dog-friendly café">
                 <div class="context-card__photo">
                   <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
                 </div>
                 <div class="context-card__body">
                   <p class="context-card__score">
                     <img src="Images/Sparkle.png" alt="" aria-hidden="true">
-                    <strong>8.7</strong>
+                    <strong>6.5</strong>
                     <span>/ 10 match for</span>
                   </p>
-                  <h3>A dog-friendly café</h3>
+                  <h3>Dog-friendly café</h3>
                   <p class="context-card__summary">
-                    <strong>Dogs are welcome in this laid-back space.</strong> Your furry friend will receive a bowl of water and a friendly smile from the staff. It's particularly suited for quieter dogs, as many visitors prefer to work remotely here and appreciate the quiet.
+                    This cozy café isn't dog-friendly as <strong>barking can annoy the staff and disrupt the calm vibe.</strong> While the menu is great for humans, the <strong>indoor seating is ideal for those wanting peace.</strong> It's best to <strong>leave your pup at home for a more relaxing visit.</strong>
                   </p>
                   <ul class="context-card__reasons">
-                    <li>🐕 Dogs welcome indoors</li>
-                    <li>💧 Water bowls available</li>
-                    <li>😌 Best for calm weekday visits</li>
+                    <li>🛜 Dependable Wi-Fi</li>
+                    <li>🔌 Power outlets</li>
+                    <li>🤫 Quiet weekday atmosphere</li>
                   </ul>
                 </div>
               </article>
@@ -3959,17 +3974,17 @@
                 <div class="context-card__body">
                   <p class="context-card__score">
                     <img src="Images/Sparkle.png" alt="" aria-hidden="true">
-                    <strong>6.4</strong>
+                    <strong>8.9</strong>
                     <span>/ 10 match for</span>
                   </p>
                   <h3>A café for a first date</h3>
                   <p class="context-card__summary">
-                    <strong>While this location has its merits,</strong> it may not be the most suitable choice for impressing a date. The ambiance leans heavily towards a work-oriented vibe, which can detract from the intimacy and warmth typically desired for a romantic outing.
+                    The café's cozy <strong>downstairs vibe is perfect for a romantic date</strong>, featuring soft lighting and comfy seating for couples to relax with <strong>mellow tunes, creating an intimate atmosphere.</strong> The upstairs is a quiet space for laptop work and productivity.
                   </p>
                   <ul class="context-card__reasons">
-                    <li>💡 Bright communal seating</li>
-                    <li>💻 Work-focused atmosphere</li>
-                    <li>🪑 Limited intimate tables</li>
+                    <li>🛜 Dependable Wi-Fi</li>
+                    <li>🔌 Power outlets</li>
+                    <li>🤫 Quiet weekday atmosphere</li>
                   </ul>
                 </div>
               </article>

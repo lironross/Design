@@ -71,19 +71,19 @@ const contextExamples = {
     score: "9.2",
     title: "A café to focus and work",
     reasons: ["🛜 Dependable Wi-Fi", "🔌 Outlets near most tables", "🤫 Quiet weekday atmosphere"],
-    summary: "<strong>An ideal café for remote work</strong>, this spot offers a brew that keeps you energized, cozy ambiance and dependable Wi-Fi, it’s perfect for productivity. You'll find plenty of power outlets and the soundtrack plays gentle tunes."
+    summary: "<strong>An ideal café for remote work</strong>, this spot offers a brew that keeps you energized, <strong>cozy ambiance and dependable Wi-Fi</strong>, it’s perfect for productivity. You'll find <strong>plenty of power outlets</strong> and the soundtrack plays gentle tunes."
   },
   dog: {
-    score: "8.7",
-    title: "A dog-friendly café",
-    reasons: ["🐕 Dogs welcome indoors", "💧 Water bowls available", "😌 Best for calm weekday visits"],
-    summary: "<strong>Dogs are welcome in this laid-back space.</strong> Your furry friend will receive a bowl of water and a friendly smile from the staff. It's particularly suited for quieter dogs, as many visitors prefer to work remotely here and appreciate the quiet."
+    score: "6.5",
+    title: "Dog-friendly café",
+    reasons: ["🛜 Dependable Wi-Fi", "🔌 Outlets near most tables", "🤫 Quiet weekday atmosphere"],
+    summary: "This cozy café <strong>isn't dog-friendly as barking can annoy the staff and disrupt the calm vibe.</strong> While the menu is great for humans, the indoor seating is ideal for those wanting peace. It's <strong>best to leave your pup at home for a more relaxing visit.</strong>"
   },
   date: {
-    score: "6.4",
+    score: "8.9",
     title: "A café for a first date",
-    reasons: ["💡 Bright communal seating", "💻 Work-focused atmosphere", "🪑 Limited intimate tables"],
-    summary: "<strong>While this location has its merits,</strong> it may not be the most suitable choice for impressing a date. The ambiance leans heavily towards a work-oriented vibe, which can detract from the intimacy and warmth typically desired for a romantic outing."
+    reasons: ["🛜 Dependable Wi-Fi", "🔌 Outlets near most tables", "🤫 Quiet weekday atmosphere"],
+    summary: "The café's <strong>cozy downstairs vibe is perfect for a romantic date</strong>, featuring <strong>soft lighting and comfy seating for couples</strong> to relax with mellow tunes. The <strong>upstairs area is dedicated for working on laptops.</strong>"
   }
 };
 
@@ -149,6 +149,7 @@ if (mobileIntentCarousel) {
   let activeIndex = 0;
   let autoplayTimer;
   let scrollFrame;
+  let scrollSettledTimer;
   let interactionActive = false;
 
   function updatePagination(index) {
@@ -171,14 +172,17 @@ if (mobileIntentCarousel) {
   }
 
   function stopAutoplay() {
-    window.clearInterval(autoplayTimer);
+    window.clearTimeout(autoplayTimer);
     autoplayTimer = undefined;
   }
 
   function startAutoplay() {
     stopAutoplay();
     if (!mobileLayout.matches || mobileReducedMotion.matches || interactionActive || document.hidden) return;
-    autoplayTimer = window.setInterval(() => goToSlide(activeIndex + 1), autoplayDelay);
+    autoplayTimer = window.setTimeout(() => {
+      goToSlide(activeIndex + 1);
+      startAutoplay();
+    }, autoplayDelay);
   }
 
   function endInteraction() {
@@ -190,28 +194,40 @@ if (mobileIntentCarousel) {
     viewport.addEventListener("scroll", () => {
       window.cancelAnimationFrame(scrollFrame);
       scrollFrame = window.requestAnimationFrame(() => {
-        const width = viewport.clientWidth || 1;
-        updatePagination(Math.round(viewport.scrollLeft / width));
+        const closestIndex = slides.reduce((bestIndex, slide, index) => {
+          const bestDistance = Math.abs(slides[bestIndex].offsetLeft - viewport.scrollLeft);
+          const distance = Math.abs(slide.offsetLeft - viewport.scrollLeft);
+          return distance < bestDistance ? index : bestIndex;
+        }, 0);
+        updatePagination(closestIndex);
       });
+
+      window.clearTimeout(scrollSettledTimer);
+      scrollSettledTimer = window.setTimeout(() => {
+        if (!interactionActive) startAutoplay();
+      }, 180);
     }, { passive: true });
 
     viewport.addEventListener("pointerdown", () => {
       interactionActive = true;
       stopAutoplay();
     });
-    viewport.addEventListener("pointerup", endInteraction);
-    viewport.addEventListener("pointercancel", endInteraction);
-    viewport.addEventListener("focusin", () => {
+    viewport.addEventListener("touchstart", () => {
       interactionActive = true;
       stopAutoplay();
-    });
-    viewport.addEventListener("focusout", endInteraction);
+    }, { passive: true });
     viewport.addEventListener("keydown", (event) => {
       if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
       event.preventDefault();
       goToSlide(activeIndex + (event.key === "ArrowRight" ? 1 : -1));
       startAutoplay();
     });
+
+    window.addEventListener("pointerup", endInteraction);
+    window.addEventListener("pointercancel", endInteraction);
+    window.addEventListener("touchend", endInteraction, { passive: true });
+    window.addEventListener("touchcancel", endInteraction, { passive: true });
+    window.addEventListener("blur", endInteraction);
   }
 
   dots.forEach((dot) => {
@@ -221,8 +237,15 @@ if (mobileIntentCarousel) {
     });
   });
 
-  window.addEventListener("resize", () => goToSlide(activeIndex, "auto"));
-  document.addEventListener("visibilitychange", startAutoplay);
+  window.addEventListener("resize", () => {
+    goToSlide(activeIndex, "auto");
+    startAutoplay();
+  });
+  window.addEventListener("pageshow", startAutoplay);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stopAutoplay();
+    else startAutoplay();
+  });
   mobileReducedMotion.addEventListener("change", startAutoplay);
   mobileLayout.addEventListener("change", startAutoplay);
 
