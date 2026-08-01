@@ -76,13 +76,13 @@ const contextExamples = {
   dog: {
     score: "6.5",
     title: "Dog-friendly café",
-    reasons: ["🐕 Not dog-friendly", "🤫 Calm indoor seating", "🏡 Leave pups at home"],
+    reasons: ["🐕 Not ideal for pets", "🤫 Calm indoor seating", "👨‍💻 Work friendly environment"],
     summary: "This cozy café <strong>isn't dog-friendly as barking can annoy the staff and disrupt the calm vibe.</strong> While the menu is great for humans, the indoor seating is ideal for those wanting peace. It's <strong>best to leave your pup at home for a more relaxing visit.</strong>"
   },
   date: {
     score: "8.9",
     title: "A café for a first date",
-    reasons: ["💕 Romantic downstairs", "💡 Soft lighting", "🎶 Mellow tunes"],
+    reasons: ["💕 Romantic downstairs", "💡 Soft lighting", "🎶 Mellow tunes", "💬 Good for conversations"],
     summary: "The café's <strong>cozy downstairs vibe is perfect for a romantic date</strong>, featuring <strong>soft lighting and comfy seating for couples</strong> to relax with mellow tunes. The <strong>upstairs area is dedicated for working on laptops.</strong>"
   }
 };
