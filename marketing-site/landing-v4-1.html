@@ -1,0 +1,4349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atly | Know where to go</title>
+  <meta
+    name="description"
+    content="Atly learns what you like and surfaces the places around you that feel right for your taste and your plans."
+  >
+  <meta name="theme-color" content="#271b58">
+  <meta property="og:title" content="Atly | Know where to go">
+  <meta property="og:description" content="Personalized place recommendations for exactly what you need right now.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://atly-know-where-to-go.lironcodex.chatgpt.site/marketing-site/landing-2026">
+  <meta property="og:image" content="https://atly-know-where-to-go.lironcodex.chatgpt.site/marketing-site/assets/og-intelligence.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Atly | Know where to go">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://atly-know-where-to-go.lironcodex.chatgpt.site/marketing-site/assets/og-intelligence.jpg">
+  <link rel="canonical" href="https://atly-know-where-to-go.lironcodex.chatgpt.site/marketing-site/landing-2026">
+  <link rel="icon" href="assets/app-icon.png">
+  <link rel="preload" href="assets/Inter-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/Inter-SemiBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/Inter-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/LeagueGothic-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @font-face {
+      font-family: "League Gothic Local";
+      src: url("assets/LeagueGothic-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    body.landing-codex-2026 {
+      min-width: 320px;
+      color: #ffffff;
+      background:
+        linear-gradient(
+          180deg,
+          #271b58 0%,
+          #500f56 53.25%,
+          #361757 102.79%,
+          #1a1f58 156%
+        );
+    }
+
+    body.landing-codex-2026::before {
+      display: none;
+    }
+
+    .landing-codex-2026 main {
+      display: block;
+      padding: 0;
+    }
+
+    .landing-codex-2026 .site-header {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      z-index: 20;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
+      max-width: none;
+      margin: 0;
+      padding: 0 63px;
+      pointer-events: none;
+    }
+
+    .landing-codex-2026 .brand,
+    .landing-codex-2026 .header-download,
+    .landing-codex-2026 .hamburger {
+      pointer-events: auto;
+    }
+
+    .landing-codex-2026 .brand {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+    }
+
+    .landing-codex-2026 .brand-wordmark {
+      width: 100px;
+      height: auto;
+    }
+
+    .landing-codex-2026 .header-download {
+      min-width: 127px;
+      min-height: 40px;
+      padding: 0 18px;
+      border: 2px solid #ffffff;
+      border-radius: 12px;
+      background: transparent;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: none;
+    }
+
+    .landing-codex-2026 .hamburger {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .landing-codex-2026 .hamburger img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .landing-codex-2026 .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+      padding: 40px;
+      background: #271b58;
+      opacity: 0;
+      pointer-events: auto;
+      visibility: hidden;
+      transition:
+        opacity 220ms cubic-bezier(0.23, 1, 0.32, 1),
+        visibility 220ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .landing-codex-2026 .mobile-menu.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .landing-codex-2026 .mobile-menu__close {
+      position: absolute;
+      top: 24px;
+      right: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      background: transparent;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .landing-codex-2026 .mobile-menu__close::before,
+    .landing-codex-2026 .mobile-menu__close::after {
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      content: "";
+    }
+
+    .landing-codex-2026 .mobile-menu__close::before {
+      transform: rotate(45deg);
+    }
+
+    .landing-codex-2026 .mobile-menu__close::after {
+      transform: rotate(-45deg);
+    }
+
+    .landing-codex-2026 .mobile-menu a {
+      min-height: 44px;
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 2.2;
+    }
+
+    .lp-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 63px;
+      padding: 0 18px;
+      border: 0;
+      border-radius: 16px;
+      color: #ffffff;
+      background: linear-gradient(47.377deg, #ff3c87 6.381%, #ef6f5e 83.25%);
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.1),
+        0 3px 5px rgba(0, 0, 0, 0.13);
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1;
+      white-space: nowrap;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .lp-button:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    .lp-button:active {
+      transform: scale(0.97);
+    }
+
+    .lp-button:focus-visible,
+    .landing-codex-2026 a:focus-visible,
+    .landing-codex-2026 button:focus-visible {
+      outline: 2px solid #ffffff;
+      outline-offset: 4px;
+    }
+
+    .lp-button__icons {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lp-button__icons img:first-child {
+      width: 19px;
+      height: 24px;
+    }
+
+    .lp-button__icons img:last-child {
+      width: 18px;
+      height: 20px;
+      transform: scaleX(1.2) scaleY(-1.2);
+    }
+
+    .lp-hero {
+      position: relative;
+      height: 774px;
+      padding-top: 43px;
+      overflow: hidden;
+    }
+
+    .lp-hero__art {
+      position: relative;
+      z-index: 1;
+      width: min(860px, calc(100vw - 192px));
+      max-width: none;
+      margin: 0 auto;
+    }
+
+    .lp-hero__art img {
+      width: 100%;
+      max-width: none;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .lp-hero__copy {
+      position: relative;
+      z-index: 2;
+      width: min(510px, calc(100% - 48px));
+      margin: 8px auto 0;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.51;
+      text-align: center;
+    }
+
+    .lp-primary-actions {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      margin-top: 34px;
+    }
+
+    .lp-qr {
+      position: relative;
+      display: inline-flex;
+      width: 64px;
+      height: 63px;
+      overflow: hidden;
+      border-radius: 4px;
+      background: #ffffff;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .lp-qr:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    .lp-qr:active {
+      transform: scale(0.97);
+    }
+
+    .lp-qr img {
+      position: absolute;
+      display: block;
+      max-width: none;
+    }
+
+    .lp-qr__base {
+      inset: 1px;
+      width: 62px;
+      height: 61px;
+    }
+
+    .lp-qr__code {
+      inset: 7px 7px 6px 8px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .lp-qr__outline {
+      inset: -1px 0 -1px 0;
+      width: 64px;
+      height: 65px;
+    }
+
+    .lp-press {
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      height: 186px;
+      gap: 30px;
+      padding: 40px 72px;
+    }
+
+    .lp-press p {
+      margin: 0;
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.32;
+      text-transform: uppercase;
+    }
+
+    .lp-press img {
+      width: 589px;
+      max-width: min(589px, calc(100vw - 160px));
+      height: auto;
+    }
+
+    .score-marquee {
+      height: 324px;
+      overflow: hidden;
+    }
+
+    .score-marquee__rail {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .score-marquee__track {
+      display: flex;
+      width: max-content;
+      align-items: flex-start;
+      --marquee-offset: -89px;
+      --marquee-duration: 50.6s;
+      animation: score-marquee var(--marquee-duration) linear infinite;
+      backface-visibility: hidden;
+      transform: translate3d(var(--marquee-offset), 0, 0);
+      will-change: transform;
+    }
+
+    .score-marquee__group {
+      display: flex;
+      flex: 0 0 auto;
+      align-items: flex-start;
+      gap: 16px;
+      padding-inline-end: 16px;
+    }
+
+    .place-card {
+      position: relative;
+      flex: 0 0 279px;
+      width: 279px;
+      height: 310px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #2c1f5d;
+      box-shadow:
+        0 3px 9px rgba(0, 0, 0, 0.1),
+        0 9px 28px rgba(0, 0, 0, 0.13);
+    }
+
+    .place-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .place-card::after {
+      position: absolute;
+      inset: 18% 0 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      content: "";
+    }
+
+    .place-card__score {
+      position: absolute;
+      left: 12px;
+      right: 12px;
+      bottom: 20px;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 0;
+      color: #ffffff;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1.45;
+      white-space: nowrap;
+    }
+
+    .place-card__score img {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 auto;
+    }
+
+    .place-card__score em {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .lp-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lp-section-heading {
+      width: min(772px, calc(100% - 48px));
+      margin: 0 auto;
+      color: #ffffff;
+      font-family: "League Gothic Local", "League Gothic", sans-serif;
+      font-size: 96px;
+      font-weight: 400;
+      line-height: 0.9;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .lp-section-copy {
+      width: min(772px, calc(100% - 48px));
+      margin: 20px auto 0;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.42;
+      text-align: center;
+    }
+
+    .research {
+      padding-top: 78px;
+    }
+
+    .research__map {
+      display: block;
+      width: min(1204px, calc(100% - 80px));
+      margin: 48px auto 0;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 24px 72px rgba(16, 6, 42, 0.2);
+    }
+
+    .research__map img {
+      width: 100%;
+      height: auto;
+    }
+
+    .score-explain {
+      padding-top: 126px;
+    }
+
+    .score-explain .lp-section-heading {
+      width: min(696px, calc(100% - 48px));
+    }
+
+    .score-explain .lp-section-copy {
+      width: min(696px, calc(100% - 48px));
+    }
+
+    .plan-cards-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 72px;
+      overflow: visible;
+    }
+
+    .plan-cards {
+      display: flex;
+      align-items: center;
+      width: 952px;
+      height: 489px;
+    }
+
+    .plan-card {
+      position: relative;
+      flex: 0 0 360px;
+      width: 360px;
+      overflow: hidden;
+      border: 1px solid #001c3d;
+      border-radius: 16px;
+      background: #ebe9f7;
+      box-shadow: 0 16px 87px 9px rgba(238, 31, 188, 0.25);
+    }
+
+    .plan-card:not(:last-child) {
+      margin-right: -64px;
+    }
+
+    .plan-card__photo {
+      position: relative;
+      height: 312px;
+      margin-bottom: -49px;
+      overflow: hidden;
+    }
+
+    .plan-card__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .plan-card__body {
+      position: relative;
+      min-height: 226px;
+      padding: 12px 20px 24px;
+      background: #f6f7f9;
+      color: #001c3d;
+    }
+
+    .plan-card__score {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin: 0 0 10px;
+      color: #001c3d;
+      font-size: 12px;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+
+    .plan-card__score img {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+      transform: rotate(180deg) scaleY(-1);
+    }
+
+    .plan-card__score strong {
+      font-size: 28px;
+      line-height: 1.35;
+    }
+
+    .plan-card__score b {
+      font-weight: 600;
+    }
+
+    .plan-card__text {
+      margin: 0;
+      color: #001c3d;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .plan-card__text strong {
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: minmax(0, 404px) minmax(0, 1fr);
+      align-items: center;
+      justify-content: stretch;
+      gap: 86px;
+      padding-left: clamp(48px, 17.45vw, 264px);
+      padding-right: 0;
+      padding-top: 96px;
+      padding-bottom: 72px;
+    }
+
+    .collections__copy {
+      width: 404px;
+    }
+
+    .collections .lp-section-heading,
+    .collections .lp-section-copy {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+    }
+
+    .collections .lp-section-heading {
+      font-size: 64px;
+      line-height: 1.05;
+    }
+
+    .collections .lp-section-copy {
+      font-size: 18px;
+      line-height: 1.44;
+    }
+
+    .collection-cards {
+      display: flex;
+      gap: 1px;
+      align-items: center;
+      justify-self: end;
+      margin-right: 0;
+      min-width: 0;
+    }
+
+    .collection-card {
+      position: relative;
+      flex: 0 0 270px;
+      width: 270px;
+      height: 415px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 20px;
+      padding: 24px 18px;
+      box-shadow: 0 16px 87px 9px rgba(238, 31, 188, 0.25);
+    }
+
+    .collection-card > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .collection-card::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, #000000 19%, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 0.54) 100%);
+      content: "";
+    }
+
+    .collection-card__title {
+      position: relative;
+      z-index: 1;
+      width: 234px;
+      margin: 0;
+      color: #ffffff;
+      font-family: "League Gothic Local", "League Gothic", sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 0.99;
+      letter-spacing: 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .collection-card__proof {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin-top: 9px;
+      color: #ffffff;
+      font-size: 9px;
+      font-weight: 500;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+
+    .avatar-stack {
+      display: flex;
+      align-items: center;
+    }
+
+    .avatar-stack img {
+      width: 13px;
+      height: 13px;
+      border-radius: 999px;
+    }
+
+    .avatar-stack img:not(:first-child) {
+      margin-left: -5px;
+    }
+
+    .bottom-collage {
+      position: relative;
+      overflow: hidden;
+      padding-top: 0;
+    }
+
+    .bottom-collage picture,
+    .bottom-collage__image {
+      display: block;
+      width: 100%;
+    }
+
+    .bottom-collage__image {
+      height: auto;
+    }
+
+    .site-footer-2026 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 5;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: center;
+      height: 123.654px;
+      padding: 0 48px;
+      pointer-events: none;
+    }
+
+    .store-badges,
+    .social-links {
+      pointer-events: auto;
+    }
+
+    .store-badges {
+      display: flex;
+      align-items: center;
+      justify-self: start;
+      gap: 24px;
+    }
+
+    .app-store-badge,
+    .google-play-badge {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 156px;
+      height: 52px;
+      overflow: hidden;
+      border-radius: 300px;
+      background: #ffffff;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .app-store-badge:hover,
+      .google-play-badge:hover,
+      .social-links a:hover {
+        transform: translateY(-2px);
+      }
+    }
+
+    .app-store-badge:active,
+    .google-play-badge:active,
+    .social-links a:active {
+      transform: scale(0.97);
+    }
+
+    .google-play-badge {
+      width: 175.964px;
+      height: 51.381px;
+    }
+
+    .app-store-badge img,
+    .google-play-badge img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .footer-wordmark {
+      display: block;
+      width: 105.254px;
+      height: 32px;
+      pointer-events: none;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      justify-self: end;
+      gap: 9.775px;
+      width: 97.791px;
+      height: 52px;
+      min-height: 0;
+      padding: 15.639px 14.662px;
+      border-radius: 999px;
+      background: #ffffff;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+      min-height: 0;
+      position: relative;
+      transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .social-links img {
+      display: block;
+      max-width: none;
+      max-height: none;
+    }
+
+    .social-links a:first-child {
+      width: 18.995px;
+      height: 18.994px;
+    }
+
+    .social-links a:first-child img {
+      position: absolute;
+      width: 22.449px;
+      height: 22.449px;
+      inset: -1.727px;
+    }
+
+    .social-links a:nth-child(2) {
+      width: 18.847px;
+      height: 20.721px;
+    }
+
+    .social-links a:nth-child(2) img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .social-links a:last-child {
+      width: 11.075px;
+      height: 20.721px;
+    }
+
+    .social-links a:last-child img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @media (min-width: 721px) and (max-width: 900px) {
+      .site-footer-2026 {
+        padding-right: 32px;
+        padding-left: 32px;
+      }
+
+      .store-badges {
+        gap: 10px;
+      }
+
+      .app-store-badge {
+        width: 125px;
+        height: 41.667px;
+      }
+
+      .google-play-badge {
+        width: 141px;
+        height: 41.175px;
+      }
+
+      .footer-wordmark {
+        width: 92px;
+        height: 27.972px;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      .collections {
+        grid-template-columns: minmax(280px, 404px) minmax(620px, 812px);
+        justify-content: center;
+        gap: 56px;
+        padding-left: 40px;
+        padding-right: 0;
+      }
+
+      .collection-cards {
+        justify-self: auto;
+        margin-right: 0;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .lp-section-heading {
+        font-size: 72px;
+      }
+
+      .collections {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 36px;
+        padding: 72px 0 56px;
+      }
+
+      .collections__copy {
+        width: min(404px, calc(100% - 48px));
+      }
+
+      .collections .lp-section-heading,
+      .collections .lp-section-copy {
+        text-align: center;
+      }
+
+      .collection-cards {
+        max-width: 100%;
+        overflow: hidden;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .landing-codex-2026 .site-header {
+        top: 62px;
+        padding: 0 24px;
+        align-items: flex-start;
+      }
+
+      .landing-codex-2026 .brand {
+        align-items: flex-start;
+      }
+
+      .landing-codex-2026 .brand-wordmark {
+        width: 105px;
+      }
+
+      .landing-codex-2026 .header-download {
+        display: none;
+      }
+
+      .landing-codex-2026 .hamburger {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .lp-hero {
+        height: 548px;
+        padding-top: 116px;
+      }
+
+      .lp-hero__art {
+        width: min(360px, calc(100vw - 33px));
+        height: 224px;
+        max-width: calc(100vw - 33px);
+        left: auto;
+        margin: 0 auto;
+      }
+
+      .lp-hero__art img {
+        height: 100%;
+        object-fit: fill;
+      }
+
+      .lp-hero__copy {
+        width: min(331px, calc(100% - 62px));
+        margin-top: 25px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      .lp-primary-actions {
+        margin-top: 25px;
+      }
+
+      .lp-button {
+        min-width: 248px;
+        min-height: 63px;
+        padding: 0 22px;
+        font-size: 21px;
+      }
+
+      .lp-qr {
+        display: none;
+      }
+
+      .lp-press {
+        height: 119px;
+        gap: 12px;
+        padding: 8px 16px 24px;
+      }
+
+      .lp-press p {
+        font-size: 16px;
+      }
+
+      .lp-press img {
+        width: 360px;
+        max-width: calc(100vw - 32px);
+      }
+
+      .score-marquee {
+        height: 248px;
+      }
+
+      .landing-codex-2026:not(.landing-2026-redesign) .score-marquee__track {
+        gap: 12px;
+        --marquee-offset: 16px;
+        animation: none !important;
+      }
+
+      .landing-2026-redesign .score-marquee__track {
+        --marquee-offset: 16px;
+        --marquee-duration: 38.6s;
+      }
+
+      .landing-2026-redesign .score-marquee__group {
+        gap: 12px;
+        padding-inline-end: 12px;
+      }
+
+      .place-card {
+        flex-basis: 213px;
+        width: 213px;
+        height: 237px;
+        border-radius: 9px;
+      }
+
+      .place-card__score {
+        left: 9px;
+        right: 9px;
+        bottom: 15px;
+        gap: 4px;
+        font-size: 14px;
+      }
+
+      .place-card__score img {
+        width: 14px;
+        height: 14px;
+      }
+
+      .research {
+        padding-top: 42px;
+      }
+
+      .lp-section-heading {
+        width: min(332px, calc(100% - 32px));
+        font-size: 42px;
+        line-height: 0.93;
+      }
+
+      .lp-section-copy {
+        width: min(332px, calc(100% - 32px));
+        margin-top: 14px;
+        font-size: 12px;
+        line-height: 1.42;
+      }
+
+      .research__map {
+        width: 100%;
+        height: 415px;
+        margin-top: 37px;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .research__map img {
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .score-explain {
+        padding-top: 39px;
+      }
+
+      .score-explain .lp-section-heading,
+      .score-explain .lp-section-copy {
+        width: min(304px, calc(100% - 48px));
+        text-align: left;
+      }
+
+      .score-explain .lp-section-heading {
+        line-height: 0.86;
+      }
+
+      .score-explain .lp-section-copy {
+        margin-top: 12px;
+      }
+
+      .plan-cards-wrap {
+        height: 186px;
+        margin-top: 46px;
+        overflow: hidden;
+      }
+
+      .plan-cards {
+        width: 952px;
+        height: 489px;
+        transform: scale(0.378);
+        transform-origin: top center;
+      }
+
+      .collections {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 29px;
+        padding: 53px 0 23px 45px;
+      }
+
+      .collections__copy {
+        width: min(304px, calc(100vw - 62px));
+      }
+
+      .collections .lp-section-heading,
+      .collections .lp-section-copy {
+        width: 100%;
+        text-align: left;
+      }
+
+      .collections .lp-section-heading {
+        font-size: 42px;
+        line-height: 0.86;
+      }
+
+      .collections .lp-section-copy {
+        margin-top: 14px;
+        font-size: 12px;
+        line-height: 1.45;
+      }
+
+      .collection-cards {
+        width: 360px;
+        gap: 1px;
+        justify-self: auto;
+        margin-right: 0;
+        transform: translateX(-28px);
+      }
+
+      .collection-card {
+        flex-basis: 120px;
+        width: 120px;
+        height: 184px;
+        border-radius: 9px;
+        padding: 11px 8px;
+      }
+
+      .collection-card__title {
+        width: 104px;
+        font-size: 19px;
+      }
+
+      .collection-card__proof {
+        gap: 1px;
+        margin-top: 4px;
+        font-size: 4px;
+      }
+
+      .avatar-stack img {
+        width: 6px;
+        height: 6px;
+      }
+
+      .avatar-stack img:not(:first-child) {
+        margin-left: -2px;
+      }
+
+      .bottom-collage {
+        padding-top: 0;
+      }
+
+      .site-footer-2026 {
+        bottom: 36px;
+        display: flex;
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap: 21px;
+        padding: 0 24px;
+      }
+
+      .store-badges {
+        align-self: center;
+        gap: 12px;
+        transform: translateX(10px);
+      }
+
+      .app-store-badge {
+        width: 144px;
+        height: 48px;
+      }
+
+      .google-play-badge {
+        width: 163px;
+        height: 48px;
+      }
+
+      .footer-wordmark {
+        position: absolute;
+        top: 0;
+        left: 24px;
+        width: 92px;
+        height: 27.972px;
+      }
+
+      .social-links {
+        flex-direction: column;
+        width: 44px;
+        height: auto;
+        min-height: 0;
+        gap: 12px;
+        padding: 0;
+        background: transparent;
+      }
+
+      .social-links a {
+        width: 44px;
+        height: 44px;
+        padding: 13px;
+        border-radius: 999px;
+        background: #ffffff;
+      }
+
+      .social-links a:first-child,
+      .social-links a:nth-child(2),
+      .social-links a:last-child {
+        width: 44px;
+        height: 44px;
+      }
+
+      .social-links a:first-child img {
+        position: static;
+        width: 20px;
+        height: 20px;
+      }
+
+      .social-links a:nth-child(2) img {
+        width: 18px;
+        height: 20px;
+      }
+
+      .social-links a:last-child img {
+        width: 11px;
+        height: 20px;
+      }
+    }
+
+    @media (max-width: 374px) {
+      .lp-hero__art {
+        width: min(336px, calc(100vw - 28px));
+        height: 209px;
+        margin: 0 auto;
+      }
+
+      .plan-cards {
+        transform: scale(0.31);
+      }
+
+      .collections {
+        padding-left: 36px;
+      }
+
+      .collection-cards {
+        transform: translateX(-19px);
+      }
+    }
+
+    /* Landing Intelligence additions: preserve the established Atly look while
+       making the new evidence and platform story responsive and interactive. */
+    .landing-intelligence-2026 {
+      --atly-ink: #001c3d;
+      --atly-purple: #271b58;
+      --atly-purple-deep: #1a113f;
+      --atly-card: #f6f7f9;
+      --atly-lilac: #ebe9f7;
+      --atly-pink: #ff3c87;
+      --atly-coral: #ef6f5e;
+      --atly-mint: #bdf6d0;
+    }
+
+    .landing-intelligence-2026 .desktop-header-actions {
+      display: none;
+      align-items: center;
+      gap: 24px;
+      pointer-events: auto;
+    }
+
+    .landing-intelligence-2026 .partner-link {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .landing-intelligence-2026 .lp-hero {
+      height: auto;
+      min-height: 0;
+      padding: 116px 16px 56px;
+      overflow: visible;
+    }
+
+    .landing-intelligence-2026 .lp-hero__art {
+      width: min(336px, calc(100vw - 28px));
+      height: auto;
+      max-width: 100%;
+    }
+
+    .landing-intelligence-2026 .lp-hero__art img {
+      height: auto;
+      object-fit: contain;
+    }
+
+    .landing-intelligence-2026 .lp-hero__copy {
+      width: min(530px, calc(100% - 24px));
+      margin-top: 24px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .landing-intelligence-2026 .lp-hero__copy strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .landing-intelligence-2026 .lp-primary-actions {
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .lp-secondary-button {
+      min-height: 56px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 22px;
+      border: 2px solid rgba(255, 255, 255, 0.88);
+      border-radius: 16px;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1;
+      text-decoration: none;
+      transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    .lp-secondary-button:hover {
+      background: #ffffff;
+      color: var(--atly-purple);
+      transform: translateY(-2px);
+    }
+
+    .hero-query-demo {
+      position: relative;
+      z-index: 4;
+      width: min(900px, 100%);
+      margin: 44px auto 0;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.09);
+      box-shadow: 0 24px 60px rgba(15, 6, 42, 0.22);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-query-demo__eyebrow,
+    .section-eyebrow,
+    .context-card__eyebrow,
+    .api-demo__label {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-query-demo__queries {
+      display: flex;
+      gap: 10px;
+      margin-top: 12px;
+      overflow-x: auto;
+      padding: 2px 2px 10px;
+      scroll-snap-type: x proximity;
+      scrollbar-width: none;
+    }
+
+    .hero-query-demo__queries::-webkit-scrollbar {
+      display: none;
+    }
+
+    .query-chip {
+      min-height: 48px;
+      flex: 0 0 auto;
+      max-width: 270px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.36);
+      border-radius: 999px;
+      background: transparent;
+      color: #ffffff;
+      font: inherit;
+      font-size: 14px;
+      line-height: 1.3;
+      text-align: left;
+      cursor: pointer;
+      scroll-snap-align: start;
+    }
+
+    .query-chip.is-active {
+      border-color: #ffffff;
+      background: #ffffff;
+      color: var(--atly-purple);
+      box-shadow: 0 8px 24px rgba(19, 7, 52, 0.2);
+    }
+
+    .hero-query-result {
+      display: grid;
+      grid-template-columns: 84px minmax(0, 1fr);
+      gap: 14px;
+      margin-top: 8px;
+      padding: 14px;
+      border-radius: 18px;
+      background: var(--atly-card);
+      color: var(--atly-ink);
+      text-align: left;
+    }
+
+    .hero-query-result > img {
+      width: 84px;
+      height: 112px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .hero-query-result__topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .hero-query-result__place {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .hero-query-result__topline strong {
+      color: var(--atly-pink);
+      font-size: 26px;
+      line-height: 1;
+    }
+
+    .hero-query-result__intent {
+      margin: 4px 0 8px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .signal-list,
+    .context-card__reasons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .signal-list li,
+    .context-card__reasons li {
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: #e8e5f6;
+      color: var(--atly-ink);
+      font-size: 12px;
+      line-height: 1.25;
+    }
+
+    .evidence-line {
+      margin: 10px 0 0;
+      color: #506076;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .illustrative-note {
+      margin: 10px 2px 0;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 11px;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    .illustrative-note--dark {
+      color: #687286;
+    }
+
+    .landing-intelligence-2026 .lp-press {
+      height: auto;
+      min-height: 180px;
+      gap: 18px;
+      padding: 40px 20px 32px;
+    }
+
+    .landing-intelligence-2026 .lp-press a {
+      display: inline-flex;
+      justify-content: center;
+      max-width: 100%;
+    }
+
+    .landing-intelligence-2026 .lp-press blockquote {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.86);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      font-style: italic;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .landing-intelligence-2026 .lp-press cite {
+      font-family: Inter, sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .traction-band {
+      width: min(1180px, calc(100% - 32px));
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      margin: 0 auto 48px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .traction-band > div {
+      min-height: 110px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 10px;
+      background: rgba(42, 26, 91, 0.9);
+      text-align: center;
+    }
+
+    .traction-band strong {
+      color: #ffffff;
+      font-family: "League Gothic Local", "League Gothic", sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      line-height: 0.95;
+    }
+
+    .traction-band span {
+      margin-top: 6px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    .traction-band > p {
+      grid-column: 1 / -1;
+      margin: 0;
+      padding: 10px 16px;
+      background: rgba(24, 14, 66, 0.94);
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 11px;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .landing-intelligence-2026 .score-explain {
+      padding: 72px 16px 48px;
+    }
+
+    .landing-intelligence-2026 .lp-section-copy {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .landing-intelligence-2026 .score-explain .lp-section-heading,
+    .landing-intelligence-2026 .score-explain .lp-section-copy {
+      width: min(760px, 100%);
+      text-align: center;
+    }
+
+    .context-switcher {
+      width: min(980px, 100%);
+      margin: 40px auto 0;
+    }
+
+    .context-switcher__tabs {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .context-tab {
+      min-height: 58px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      font: inherit;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .context-tab strong {
+      font-size: 22px;
+    }
+
+    .context-tab.is-active {
+      border-color: #ffffff;
+      background: #ffffff;
+      color: var(--atly-purple);
+    }
+
+    .context-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: 16px;
+      overflow: hidden;
+      border-radius: 24px;
+      background: var(--atly-card);
+      color: var(--atly-ink);
+      box-shadow: 0 24px 70px rgba(16, 6, 42, 0.24);
+    }
+
+    .mobile-intent-carousel {
+      display: none;
+    }
+
+    .context-card__photo {
+      position: relative;
+      min-height: 270px;
+    }
+
+    .context-card__photo > img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .context-card__photo::after {
+      position: absolute;
+      inset: 35% 0 0;
+      background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.76));
+      content: "";
+    }
+
+    .context-card__photo p {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      z-index: 1;
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    .context-card__photo p img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .context-card__photo p strong {
+      font-size: 38px;
+      line-height: 1;
+    }
+
+    .context-card__photo p span {
+      font-size: 14px;
+    }
+
+    .context-card__body {
+      padding: 24px 20px;
+    }
+
+    .context-card__eyebrow {
+      color: #6c6482;
+    }
+
+    .context-card__body h3 {
+      margin: 8px 0 16px;
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    .context-card__reasons li {
+      font-size: 13px;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin: 22px 0 0;
+    }
+
+    .evidence-grid div {
+      padding: 12px;
+      border: 1px solid #ded9ef;
+      border-radius: 12px;
+      background: #ffffff;
+    }
+
+    .evidence-grid dt {
+      color: #746b89;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .evidence-grid dd {
+      margin: 4px 0 0;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+
+    .source-summary {
+      display: grid;
+      gap: 5px;
+      margin: 16px 0 0;
+      padding: 14px;
+      border-left: 3px solid var(--atly-pink);
+      background: #eeeaf9;
+      color: #3e4860;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .source-summary strong {
+      color: var(--atly-ink);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .landing-intelligence-2026 .collections {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 32px;
+      padding: 72px 0;
+    }
+
+    .landing-intelligence-2026 .collections__copy {
+      width: auto;
+      padding: 0 24px;
+    }
+
+    .landing-intelligence-2026 .collections .lp-section-heading,
+    .landing-intelligence-2026 .collections .lp-section-copy {
+      width: min(760px, 100%);
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .landing-intelligence-2026 .collections .lp-section-copy {
+      font-size: 16px;
+    }
+
+    .landing-intelligence-2026 .collection-cards {
+      width: 100%;
+      display: flex;
+      gap: 16px;
+      justify-content: flex-start;
+      overflow-x: auto;
+      padding: 0 24px 12px;
+      transform: none;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .carousel-hint {
+      margin: -16px 24px -12px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.4;
+      text-align: right;
+    }
+
+    .landing-intelligence-2026 .collection-cards::-webkit-scrollbar {
+      display: none;
+    }
+
+    .landing-intelligence-2026 .collection-card {
+      flex: 0 0 278px;
+      width: 278px;
+      height: 408px;
+      padding: 24px 18px;
+      border-radius: 20px;
+      scroll-snap-align: center;
+    }
+
+    .landing-intelligence-2026 .collection-card__title {
+      width: 238px;
+      font-size: 42px;
+    }
+
+    .landing-intelligence-2026 .collection-card__proof {
+      gap: 4px;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+
+    .landing-intelligence-2026 .avatar-stack img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .landing-intelligence-2026 .avatar-stack img:not(:first-child) {
+      margin-left: -6px;
+    }
+
+    .methodology-note {
+      width: min(760px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 14px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .methodology-note summary {
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .methodology-note p {
+      margin: 8px 0 0;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    .intelligence-bridge {
+      width: min(1180px, calc(100% - 32px));
+      margin: 48px auto 0;
+      padding: 72px 24px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 85% 10%, rgba(255, 60, 135, 0.36), transparent 38%),
+        linear-gradient(135deg, #1c164d, #5a1258);
+      box-shadow: 0 24px 80px rgba(17, 6, 44, 0.26);
+    }
+
+    .section-eyebrow {
+      color: #ffb0ce;
+      text-align: center;
+    }
+
+    .intelligence-bridge .lp-section-heading {
+      width: min(900px, 100%);
+      margin-top: 16px;
+      font-size: clamp(3.25rem, 12vw, 6rem);
+      line-height: 0.9;
+    }
+
+    .intelligence-bridge .lp-section-copy {
+      width: min(760px, 100%);
+      font-size: 16px;
+    }
+
+    .place-graph,
+    .api-section,
+    .learning-loop {
+      padding: 96px 16px;
+    }
+
+    .platform-heading .lp-section-heading,
+    .platform-heading .lp-section-copy {
+      width: min(880px, 100%);
+    }
+
+    .platform-heading .lp-section-heading {
+      margin-top: 14px;
+    }
+
+    .place-graph__visual {
+      width: min(1050px, 100%);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 48px auto 0;
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .graph-place-card {
+      overflow: hidden;
+      border-radius: 20px;
+      background: #ffffff;
+      color: var(--atly-ink);
+    }
+
+    .graph-place-card > img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+    }
+
+    .graph-place-card > div {
+      display: grid;
+      gap: 4px;
+      padding: 18px;
+    }
+
+    .graph-place-card p,
+    .graph-place-card strong,
+    .graph-place-card span {
+      margin: 0;
+    }
+
+    .graph-place-card p {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .graph-place-card strong {
+      font-size: 14px;
+    }
+
+    .graph-place-card span {
+      color: #6d7585;
+      font-size: 12px;
+    }
+
+    .graph-attributes {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .graph-attributes li {
+      min-height: 58px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--atly-ink);
+    }
+
+    .graph-attributes span {
+      font-size: 14px;
+    }
+
+    .graph-attributes strong {
+      color: #ee3f86;
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .graph-sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .graph-sources span {
+      padding: 8px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.86);
+      font-size: 12px;
+    }
+
+    .principle-grid,
+    .use-case-grid {
+      width: min(1050px, 100%);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin: 20px auto 0;
+    }
+
+    .principle-grid article,
+    .use-case-grid article {
+      padding: 22px;
+    }
+
+    .principle-grid article:not(.figma-glass),
+    .use-case-grid article:not(.figma-glass) {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .principle-grid span {
+      color: #ff9fc4;
+      font-family: "League Gothic Local", "League Gothic", sans-serif;
+      font-size: 30px;
+    }
+
+    .principle-grid h3,
+    .use-case-grid h3 {
+      margin: 10px 0 8px;
+      color: #ffffff;
+      font-size: 19px;
+      line-height: 1.2;
+    }
+
+    .principle-grid p,
+    .use-case-grid p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .api-section {
+      width: min(1180px, calc(100% - 32px));
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      margin: 0 auto;
+      padding-inline: 20px;
+      border-radius: 28px;
+      background: #f1eff8;
+      color: var(--atly-ink);
+    }
+
+    .api-section .section-eyebrow {
+      color: #b4226b;
+      text-align: left;
+    }
+
+    .api-section .lp-section-heading,
+    .api-section .lp-section-copy {
+      width: 100%;
+      margin-inline: 0;
+      color: var(--atly-ink);
+      text-align: left;
+    }
+
+    .api-section .lp-section-heading {
+      margin-top: 14px;
+      font-size: clamp(3.5rem, 14vw, 6rem);
+    }
+
+    .api-section .lp-section-copy {
+      font-size: 16px;
+    }
+
+    .api-section__copy .lp-button {
+      margin-top: 28px;
+      text-decoration: none;
+    }
+
+    .api-demo {
+      min-width: 0;
+      padding: 18px;
+      overflow: hidden;
+      border-radius: 20px;
+      background: #161232;
+      color: #ffffff;
+      box-shadow: 0 22px 60px rgba(26, 18, 63, 0.24);
+    }
+
+    .api-demo__label {
+      color: #d4cdea;
+    }
+
+    .api-demo__request {
+      display: grid;
+      gap: 6px;
+      margin-top: 14px;
+      padding: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.06);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .api-demo__request span {
+      color: #ff9fc4;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .api-demo pre {
+      max-width: 100%;
+      margin: 18px 0 0;
+      overflow-x: auto;
+      color: #f3efff;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 11px;
+      line-height: 1.65;
+      white-space: pre;
+    }
+
+    .code-key { color: #ff9fc4; }
+    .code-string { color: #bdf6d0; }
+    .code-number { color: #ffd59e; }
+
+    .api-section .use-case-grid {
+      grid-column: 1 / -1;
+      margin-top: 0;
+    }
+
+    .api-section .use-case-grid article:not(.figma-glass) {
+      border-color: #dad4ec;
+      background: #ffffff;
+    }
+
+    .api-section .use-case-grid h3 {
+      color: var(--atly-ink);
+    }
+
+    .api-section .use-case-grid p {
+      color: #536177;
+    }
+
+    .loop-steps {
+      width: min(980px, 100%);
+      display: grid;
+      gap: 12px;
+      margin: 48px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .loop-steps li {
+      min-height: 118px;
+      display: grid;
+      grid-template-columns: 52px minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+      padding: 18px;
+    }
+
+    .loop-steps li:not(.figma-glass) {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .loop-steps > li > span {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: transparent;
+      background-color: #f1dcf2;
+      background-image:
+        linear-gradient(
+          180deg,
+          #271b58 0%,
+          #500f56 53.25%,
+          #361757 102.79%,
+          #1a1f58 156%
+        ),
+        linear-gradient(#f1dcf2, #f1dcf2);
+      background-repeat: no-repeat;
+      background-clip: text, padding-box;
+      -webkit-background-clip: text, padding-box;
+      font-family: "League Gothic Local", "League Gothic", sans-serif;
+      font-size: 28px;
+    }
+
+    .loop-steps h3 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .loop-steps p {
+      margin: 7px 0 0;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    @keyframes score-marquee {
+      from { transform: translate3d(var(--marquee-offset), 0, 0); }
+      to { transform: translate3d(calc(-50% + var(--marquee-offset)), 0, 0); }
+    }
+
+    .score-marquee__track.is-raf-fallback {
+      animation: none;
+    }
+
+    @keyframes score-marquee-reduced {
+      from { transform: translate3d(var(--marquee-offset), 0, 0); }
+      to { transform: translate3d(calc(-50% + var(--marquee-offset)), 0, 0); }
+    }
+
+    .dual-cta {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto 96px;
+      padding: 48px 20px 20px;
+      border-radius: 28px;
+      background: #ffffff;
+      color: var(--atly-ink);
+    }
+
+    .dual-cta > h2 {
+      width: min(760px, 100%);
+      margin: 0 auto 32px;
+      font-family: "League Gothic Local", "League Gothic", sans-serif;
+      font-size: clamp(3.25rem, 13vw, 6rem);
+      font-weight: 400;
+      line-height: 0.9;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .dual-cta > div {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .dual-cta article {
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 24px;
+    }
+
+    .dual-cta article:not(.figma-glass) {
+      border-radius: 20px;
+      background: #eeeaf9;
+    }
+
+    .dual-cta article:last-child:not(.figma-glass) {
+      background:
+        radial-gradient(circle at 80% 0%, rgba(255, 60, 135, 0.55), transparent 40%),
+        #251b55;
+      color: #ffffff;
+    }
+
+    .dual-cta article > p {
+      margin: 0;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .dual-cta article h3 {
+      margin: 10px 0 24px;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+
+    .dual-cta .lp-button,
+    .dual-cta .lp-secondary-button {
+      min-height: 56px;
+      text-decoration: none;
+    }
+
+    @media (min-width: 721px) {
+      .landing-intelligence-2026 .desktop-header-actions {
+        display: flex;
+      }
+
+      .landing-intelligence-2026 .lp-hero {
+        padding: 43px 32px 80px;
+      }
+
+      .landing-intelligence-2026 .lp-hero__art {
+        width: min(860px, calc(100vw - 192px));
+      }
+
+      .landing-intelligence-2026 .lp-hero__copy {
+        margin-top: 8px;
+        font-size: 18px;
+      }
+
+      .landing-intelligence-2026 .lp-hero__copy strong {
+        font-size: 20px;
+      }
+
+      .landing-intelligence-2026 .lp-section-copy {
+        font-size: 18px;
+      }
+
+      .landing-intelligence-2026 .lp-primary-actions {
+        margin-top: 28px;
+      }
+
+      .hero-query-demo {
+        margin-top: 48px;
+        padding: 24px;
+      }
+
+      .hero-query-result {
+        grid-template-columns: 150px minmax(0, 1fr);
+        gap: 20px;
+        padding: 18px;
+      }
+
+      .hero-query-result > img {
+        width: 150px;
+        height: 150px;
+      }
+
+      .traction-band {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .traction-band strong {
+        font-size: 52px;
+      }
+
+      .context-switcher__tabs {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .context-card {
+        grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.08fr);
+      }
+
+      .context-card__photo {
+        min-height: 520px;
+      }
+
+      .context-card__body {
+        padding: 42px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .landing-intelligence-2026 .collections {
+        display: grid;
+        grid-template-columns: minmax(280px, 404px) minmax(0, 1fr);
+        align-items: center;
+        gap: 54px;
+        padding: 96px 0 72px clamp(40px, 10vw, 160px);
+      }
+
+      .landing-intelligence-2026 .collections__copy {
+        padding: 0;
+      }
+
+      .landing-intelligence-2026 .collections .lp-section-heading,
+      .landing-intelligence-2026 .collections .lp-section-copy {
+        text-align: left;
+      }
+
+      .landing-intelligence-2026 .collection-cards {
+        padding: 0 28px 12px 0;
+      }
+
+      .carousel-hint {
+        display: none;
+      }
+
+      .methodology-note {
+        grid-column: 1 / -1;
+        justify-self: center;
+      }
+
+      .place-graph,
+      .api-section,
+      .learning-loop {
+        padding: 120px 40px;
+      }
+
+      .place-graph__visual {
+        grid-template-columns: minmax(280px, 0.8fr) minmax(340px, 1.2fr);
+        padding: 22px;
+      }
+
+      .graph-place-card {
+        grid-row: span 2;
+      }
+
+      .graph-place-card > img {
+        height: 360px;
+      }
+
+      .graph-attributes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .principle-grid,
+      .use-case-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .api-section {
+        grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+        align-items: center;
+        gap: 56px;
+      }
+
+      .api-demo {
+        padding: 26px;
+      }
+
+      .api-demo pre {
+        font-size: 13px;
+      }
+
+      .loop-steps {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .loop-steps li {
+        min-height: 260px;
+        grid-template-columns: 1fr;
+        align-content: start;
+        gap: 24px;
+        padding: 19px;
+      }
+
+      .dual-cta {
+        padding: 72px 32px 32px;
+      }
+
+      .dual-cta > div {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .dual-cta article {
+        min-height: 330px;
+        padding: 36px;
+      }
+    }
+
+    @media (min-width: 1100px) {
+      .landing-intelligence-2026 .collections {
+        padding-left: clamp(80px, 12vw, 176px);
+      }
+
+      .landing-intelligence-2026 .collection-cards {
+        overflow: visible;
+      }
+    }
+
+    /* Atly Landing Page 2026: merged redesign */
+    .landing-2026-redesign main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .landing-2026-redesign .lp-hero { order: 1; }
+    .landing-2026-redesign .score-marquee { order: 2; }
+    .landing-2026-redesign .lp-press { order: 3; }
+    .landing-2026-redesign .score-explain { order: 4; }
+    .landing-2026-redesign .research { order: 5; }
+    .landing-2026-redesign .collections { order: 6; }
+    .landing-2026-redesign .intelligence-bridge { order: 7; }
+    .landing-2026-redesign .dual-cta { order: 8; }
+    .landing-2026-redesign .learning-loop { order: 9; }
+    .landing-2026-redesign .api-section { order: 10; }
+    .landing-2026-redesign .bottom-collage { order: 11; }
+
+    .copy--mobile {
+      display: none;
+    }
+
+    .landing-2026-redesign .traction-band,
+    .landing-2026-redesign .place-graph,
+    .landing-2026-redesign .partner-link,
+    .landing-2026-redesign .hero-query-demo,
+    .landing-2026-redesign .lp-primary-actions > .lp-secondary-button,
+    .landing-2026-redesign .carousel-hint,
+    .landing-2026-redesign .methodology-note,
+    .landing-2026-redesign .dual-cta > h2,
+    .landing-2026-redesign .api-section__copy > .lp-button {
+      display: none;
+    }
+
+    .landing-2026-redesign .desktop-header-actions {
+      display: flex;
+    }
+
+    .landing-2026-redesign .lp-hero {
+      height: 849.636px;
+      min-height: 0;
+      padding: 43px 0 0;
+      overflow: hidden;
+    }
+
+    .landing-2026-redesign .lp-hero__art {
+      width: min(860px, calc(100vw - 192px));
+      max-width: none;
+    }
+
+    .landing-2026-redesign .lp-hero__copy {
+      width: min(510px, calc(100% - 48px));
+      margin-top: 42px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.35;
+    }
+
+    .landing-2026-redesign .lp-hero__copy strong {
+      margin: 0;
+      font-size: inherit;
+      font-weight: 400;
+      line-height: inherit;
+    }
+
+    .landing-2026-redesign .lp-primary-actions {
+      gap: 4px;
+      margin-top: 42px;
+    }
+
+    .landing-2026-redesign .lp-press {
+      height: 291.746px;
+      min-height: 0;
+      gap: 22px;
+      padding: 48px 20px;
+    }
+
+    .landing-2026-redesign .lp-press blockquote {
+      font-size: 18px;
+    }
+
+    .landing-2026-redesign .score-explain {
+      height: 793px;
+      margin-top: 22.572px;
+      padding: 0 16px 48px;
+    }
+
+    .landing-2026-redesign .score-explain .lp-section-heading,
+    .landing-2026-redesign .score-explain .lp-section-copy {
+      width: min(760px, 100%);
+    }
+
+    .landing-2026-redesign .context-switcher {
+      margin-top: 40px;
+    }
+
+    .landing-2026-redesign .context-switcher__tabs {
+      gap: 16px;
+    }
+
+    .landing-2026-redesign .context-tab {
+      min-height: 58px;
+      justify-content: flex-start;
+      gap: 12px;
+      padding: 0 8px;
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.44);
+      border-radius: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.58);
+      font-size: 15px;
+      text-align: left;
+    }
+
+    .landing-2026-redesign .context-tab img {
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+    }
+
+    .landing-2026-redesign .context-tab.is-active {
+      border-bottom-color: #ffffff;
+      background: transparent;
+      color: #ffffff;
+    }
+
+    .landing-2026-redesign .context-card {
+      min-height: 368px;
+      grid-template-columns: minmax(0, 450.8fr) minmax(0, 529.2fr);
+      margin-top: 32px;
+    }
+
+    .landing-2026-redesign .context-card__photo {
+      min-height: 368px;
+    }
+
+    .landing-2026-redesign .context-card__photo::after {
+      display: none;
+    }
+
+    .landing-2026-redesign .context-card__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 44px 32px 32px;
+    }
+
+    .landing-2026-redesign .context-card__score {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+      color: #001c3d;
+      line-height: 1;
+      padding-inline: 12px;
+    }
+
+    .landing-2026-redesign .context-card__score img {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+      object-fit: contain;
+    }
+
+    .landing-2026-redesign .context-card__score strong {
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .landing-2026-redesign .context-card__score span {
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    .landing-2026-redesign .context-card__body h3 {
+      margin: 10px 12px 20px;
+      font-size: 24px;
+    }
+
+    .landing-2026-redesign .context-card__summary {
+      margin: 0 12px;
+      color: #001c3d;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .landing-2026-redesign .context-card__reasons {
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .landing-2026-redesign .context-card__reasons li {
+      min-height: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 12px;
+      border-radius: 300px;
+      background: #ffffff;
+      color: #002551;
+      box-shadow:
+        0 0.4px 0.6px rgba(0, 0, 0, 0.1),
+        0 1.2px 1.8px rgba(0, 0, 0, 0.12);
+      font-size: 12.262px;
+      font-weight: 500;
+      line-height: 1.5;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 1024px) {
+      .landing-2026-redesign .context-card {
+        height: 368px;
+      }
+    }
+
+    .landing-2026-redesign .research {
+      height: 1013px;
+      margin-top: 137.218px;
+      padding: 0;
+    }
+
+    .research-map-2026 {
+      display: block;
+      width: min(1204px, calc(100% - 80px));
+      aspect-ratio: 1204 / 757;
+      margin: 38px auto 0;
+    }
+
+    .research-map-2026__image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .landing-2026-redesign .collections {
+      height: 518px;
+      margin-top: 96px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    .landing-2026-redesign .learning-loop {
+      height: 612px;
+      margin-top: 96px;
+      padding: 0 40px;
+    }
+
+    .landing-2026-redesign .intelligence-bridge {
+      width: 100%;
+      height: 393px;
+      margin-top: 96px;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .landing-2026-redesign .dual-cta {
+      width: min(1116px, calc(100% - 64px));
+      height: 362px;
+      margin: 0 auto;
+      padding: 32px 0 0;
+      border-radius: 0;
+      background: transparent;
+      color: #ffffff;
+    }
+
+    .landing-2026-redesign .api-section {
+      width: 100%;
+      height: 777px;
+      grid-template-columns: minmax(0, 548px) minmax(0, 530px);
+      grid-template-rows: 352px 425px;
+      justify-content: center;
+      align-items: start;
+      gap: 0 12px;
+      margin-top: 96px;
+      margin-bottom: 0;
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      color: #ffffff;
+    }
+
+    .landing-2026-redesign .api-section__copy {
+      width: min(946px, calc(100vw - 80px));
+      grid-column: 1 / -1;
+      justify-self: center;
+      text-align: center;
+    }
+
+    .landing-2026-redesign .api-section .section-eyebrow {
+      color: #ff9fc4;
+      text-align: center;
+    }
+
+    .landing-2026-redesign .api-section .lp-section-heading,
+    .landing-2026-redesign .api-section .lp-section-copy {
+      margin-inline: auto;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .landing-2026-redesign .api-section .lp-section-heading {
+      width: 100%;
+      margin-top: 14px;
+      font-size: 96px;
+      line-height: 0.9;
+    }
+
+    .landing-2026-redesign .api-section .lp-section-copy {
+      width: 100%;
+      font-size: 18px;
+    }
+
+    .landing-2026-redesign .api-demo {
+      grid-column: 1;
+      grid-row: 2;
+      height: 425px;
+      padding: 26px;
+      background: rgb(0 0 0 / 25%);
+      box-shadow: none;
+    }
+
+    .landing-2026-redesign .api-section .use-case-grid {
+      height: 425px;
+      grid-column: 2;
+      grid-row: 2;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 12px;
+      margin: 0;
+    }
+
+    .landing-2026-redesign .api-section .use-case-grid article {
+      min-height: 0;
+      padding: 22px;
+    }
+
+    .landing-2026-redesign .api-section .use-case-grid h3 {
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .landing-2026-redesign .api-section .use-case-grid p {
+      color: #ffddea;
+    }
+
+    .landing-2026-redesign .bottom-collage {
+      margin-top: -117px;
+    }
+
+    .landing-2026-redesign .intelligence-bridge .section-eyebrow {
+      height: 16px;
+    }
+
+    .landing-2026-redesign .intelligence-bridge .lp-section-heading {
+      margin-top: 16px;
+      font-size: 96px;
+      line-height: 0.9;
+    }
+
+    .landing-2026-redesign .intelligence-bridge .lp-section-copy {
+      font-size: 18px;
+    }
+
+    .landing-2026-redesign .dual-cta > div {
+      height: 330px;
+      gap: 12px;
+    }
+
+    .landing-2026-redesign .dual-cta article {
+      position: relative;
+      min-height: 330px;
+      justify-content: flex-end;
+      padding: 36px;
+      color: #ffffff;
+    }
+
+    .landing-2026-redesign .dual-cta__mark {
+      position: absolute;
+      top: 36px;
+      left: 36px;
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      background-image: url("assets/logo-wordmark.png");
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: auto 32px;
+    }
+
+    .figma-glass {
+      --glass-radius: 24px;
+
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--glass-radius);
+      background: rgb(0 0 0 / 25%);
+      border: 1px solid rgb(255 255 255 / 16%);
+      box-shadow: none;
+    }
+
+    @media (max-width: 720px) {
+      .landing-2026-redesign .site-header {
+        top: 28px;
+      }
+
+      .landing-2026-redesign .desktop-header-actions {
+        display: none;
+      }
+
+      .landing-2026-redesign .lp-hero {
+        height: auto;
+        padding: 116px 16px 56px;
+        overflow: visible;
+      }
+
+      .landing-2026-redesign .lp-hero__art {
+        width: min(336px, calc(100vw - 28px));
+      }
+
+      .landing-2026-redesign .lp-hero__copy {
+        width: min(336px, calc(100% - 24px));
+        margin-top: 24px;
+        font-size: 18px;
+      }
+
+      .landing-2026-redesign .lp-primary-actions {
+        margin-top: 28px;
+      }
+
+      .landing-2026-redesign .score-explain {
+        height: auto;
+        margin-top: 48px;
+        padding: 88px 16px 54px;
+      }
+
+      .landing-2026-redesign .context-switcher {
+        margin-top: 36px;
+      }
+
+      .landing-2026-redesign .context-card {
+        grid-template-columns: 1fr;
+      }
+
+      .landing-2026-redesign .context-card__photo {
+        min-height: 270px;
+      }
+
+      .landing-2026-redesign .context-card__body {
+        padding: 24px 20px;
+      }
+
+      .landing-2026-redesign .research {
+        height: auto;
+        margin-top: 72px;
+        padding: 54px 0 78px;
+      }
+
+      .research-map-2026 {
+        width: calc(100% - 32px);
+        min-height: 0;
+        aspect-ratio: 1204 / 757;
+        margin-top: 37px;
+      }
+
+      .landing-2026-redesign .collections {
+        height: auto;
+        margin-top: 0;
+        padding: 53px 0 23px 45px;
+      }
+
+      .landing-2026-redesign .learning-loop {
+        height: auto;
+        margin-top: 72px;
+        padding: 72px 16px;
+      }
+
+      .landing-2026-redesign .intelligence-bridge {
+        height: auto;
+        margin-top: 72px;
+        padding: 0 16px;
+      }
+
+      .landing-2026-redesign .intelligence-bridge .lp-section-heading,
+      .landing-2026-redesign .api-section .lp-section-heading {
+        font-size: 52px;
+      }
+
+      .landing-2026-redesign .dual-cta {
+        width: calc(100% - 32px);
+        height: auto;
+        padding-top: 32px;
+      }
+
+      .landing-2026-redesign .dual-cta > div {
+        height: auto;
+      }
+
+      .landing-2026-redesign .api-section {
+        width: calc(100% - 32px);
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        margin-top: 88px;
+        padding: 0;
+      }
+
+      .landing-2026-redesign .api-section__copy {
+        width: 100%;
+        grid-column: 1;
+      }
+
+      .landing-2026-redesign .api-demo {
+        height: auto;
+        grid-column: 1;
+        grid-row: auto;
+        padding: 18px;
+      }
+
+      .landing-2026-redesign .api-section .use-case-grid {
+        height: auto;
+        grid-column: 1;
+        grid-row: auto;
+        grid-template-rows: auto;
+      }
+
+      .landing-2026-redesign .bottom-collage {
+        margin-top: 72px;
+      }
+    }
+
+    /* Corrected 393px mobile composition. The measurements below are adapted
+       from the selected Figma frame and remain fluid down to the 360px minimum. */
+    @media (max-width: 720px) {
+      .copy--desktop {
+        display: none;
+      }
+
+      .copy--mobile {
+        display: inline;
+      }
+
+      .landing-2026-redesign .lp-hero {
+        padding: 84px 16px 39.36px;
+      }
+
+      .landing-2026-redesign .lp-hero__art {
+        width: min(340.361px, calc(100vw - 20px));
+      }
+
+      .landing-2026-redesign .lp-hero__copy {
+        width: min(266.724px, calc(100% - 48px));
+        margin-top: 23px;
+        font-size: 15px;
+        line-height: 1.35;
+      }
+
+      .landing-2026-redesign .lp-primary-actions {
+        margin-top: 23px;
+      }
+
+      .landing-2026-redesign .lp-press {
+        align-content: start;
+        height: 190.306px;
+        min-height: 0;
+        gap: 12px;
+        margin-top: 24px;
+        padding: 24px 16px;
+      }
+
+      .landing-2026-redesign .lp-press p {
+        font-size: 16px;
+        line-height: 32px;
+      }
+
+      .landing-2026-redesign .lp-press img {
+        width: 360px;
+        max-width: calc(100vw - 33px);
+      }
+
+      .landing-2026-redesign .lp-press blockquote {
+        display: grid;
+        gap: 12px;
+        margin-top: 12px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        line-height: 19px;
+      }
+
+      .landing-2026-redesign .lp-press cite {
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .landing-2026-redesign .score-explain {
+        height: auto;
+        margin-top: 36px;
+        padding: 0 24px;
+      }
+
+      .landing-2026-redesign .score-explain .lp-section-heading {
+        width: 100%;
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      .landing-2026-redesign .score-explain .lp-section-copy {
+        width: min(301px, 100%);
+        margin-top: 20px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .landing-2026-redesign .context-switcher {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .landing-2026-redesign .context-switcher__tabs {
+        display: none;
+      }
+
+      .landing-2026-redesign .context-card--desktop {
+        display: none;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel {
+        width: min(346px, 100%);
+        height: auto;
+        min-height: 543px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__viewport {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-inline: contain;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        touch-action: pan-x pan-y pinch-zoom;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__viewport::-webkit-scrollbar {
+        display: none;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__track {
+        display: flex;
+        gap: 12px;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel.is-transform-carousel .mobile-intent-carousel__viewport {
+        overflow-x: hidden;
+        scroll-behavior: auto;
+        scroll-snap-type: none;
+        touch-action: pan-y pinch-zoom;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel.is-transform-carousel .mobile-intent-carousel__track {
+        transform: translate3d(0, 0, 0);
+        will-change: transform;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel.is-transform-carousel .mobile-intent-carousel__track.is-animating {
+        transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel.is-transform-carousel .mobile-intent-carousel__track.is-dragging {
+        transition: none;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__slide img {
+        -webkit-user-drag: none;
+        user-select: none;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__slide {
+        width: 100%;
+        min-width: 100%;
+        flex: 0 0 100%;
+        height: auto;
+        min-height: 503px;
+        grid-template-rows: 216px auto;
+        margin: 0;
+        border-radius: 12px;
+        backface-visibility: hidden;
+        contain: paint;
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+      }
+
+      .landing-2026-redesign .context-card__photo {
+        min-height: 0;
+        height: 216px;
+      }
+
+      .landing-2026-redesign .context-card__body {
+        height: auto;
+        min-height: 287px;
+        gap: 11px;
+        justify-content: flex-start;
+        padding: 16px 16px 18px;
+        overflow: hidden;
+      }
+
+      .landing-2026-redesign .context-card__score {
+        width: 100%;
+        min-height: 24px;
+        height: 24px;
+        gap: 6px;
+        padding: 0;
+      }
+
+      .landing-2026-redesign .context-card__score img {
+        width: 20px;
+        height: 20px;
+        flex-basis: 20px;
+      }
+
+      .landing-2026-redesign .context-card__score strong,
+      .landing-2026-redesign .context-card__score span {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 20px;
+      }
+
+      .landing-2026-redesign .context-card__body h3 {
+        width: 100%;
+        height: 26px;
+        margin: 0;
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      .landing-2026-redesign .context-card__summary {
+        width: 100%;
+        height: auto;
+        min-height: 107px;
+        margin: 0;
+        padding-bottom: 12px;
+        overflow: visible;
+        color: #41374c;
+        font-size: 13px;
+        line-height: 19px;
+      }
+
+      .landing-2026-redesign .context-card__reasons {
+        width: 100%;
+        height: 63px;
+        align-content: flex-start;
+        gap: 11px 6px;
+        margin: auto 0 0;
+        overflow: hidden;
+      }
+
+      .landing-2026-redesign .context-card__reasons li {
+        height: 26px;
+        padding: 0 10px;
+        border: 1px solid #dad5e1;
+        background: #f6f4f8;
+        color: #181124;
+        box-shadow: none;
+        font-size: 11px;
+        line-height: 16px;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__pagination {
+        height: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 28px;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__pagination button {
+        width: 12px;
+        height: 12px;
+        flex: 0 0 12px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: rgb(255 255 255 / 24%);
+        cursor: pointer;
+        transition: background-color 180ms ease;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__pagination button.is-active {
+        background: #ffffff;
+      }
+
+      .landing-2026-redesign .mobile-intent-carousel__pagination button:focus-visible,
+      .landing-2026-redesign .mobile-intent-carousel__viewport:focus-visible {
+        outline: 2px solid #ffffff;
+        outline-offset: 3px;
+      }
+
+      .landing-2026-redesign .research {
+        height: auto;
+        margin-top: 52px;
+        padding: 0;
+      }
+
+      .landing-2026-redesign .research .lp-section-heading {
+        width: min(360px, calc(100% - 34px));
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      .landing-2026-redesign .research .lp-section-copy {
+        width: min(338px, calc(100% - 48px));
+        margin-top: 12px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .research-map-2026 {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 393 / 414.671;
+        margin-top: 32px;
+        overflow: visible;
+      }
+
+      .research-map-2026__image {
+        height: auto;
+        object-fit: contain;
+        object-position: top center;
+      }
+
+      .landing-2026-redesign .collections {
+        height: auto;
+        gap: 23px;
+        margin-top: 52px;
+        padding: 0;
+      }
+
+      .landing-2026-redesign .collections__copy {
+        width: min(338px, calc(100% - 48px));
+        margin: 0 auto;
+      }
+
+      .landing-2026-redesign .collections .lp-section-heading {
+        width: min(234px, 100%);
+        margin: 0 auto;
+        font-size: 36px;
+        line-height: 36px;
+        text-align: center;
+      }
+
+      .landing-2026-redesign .collections .lp-section-copy {
+        width: 100%;
+        margin-top: 12px;
+        font-size: 13px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .landing-2026-redesign .collection-cards {
+        width: 100%;
+        gap: 0.443px;
+        justify-content: center;
+        padding: 0 16px 0 17px;
+        overflow: visible;
+        transform: none;
+      }
+
+      .landing-2026-redesign .collection-card {
+        width: calc((100vw - 33.886px) / 3);
+        height: auto;
+        aspect-ratio: 119.704 / 183.879;
+        flex-basis: calc((100vw - 33.886px) / 3);
+        padding: 10.64px 7.98px;
+        border-radius: 8.867px;
+      }
+
+      .landing-2026-redesign .collection-card__title {
+        width: 100%;
+        font-size: clamp(16px, 4.738vw, 18.621px);
+        line-height: 0.99;
+      }
+
+      .landing-2026-redesign .collection-card__proof {
+        gap: 1.19px;
+        margin-top: 3.99px;
+        font-size: 3.867px;
+      }
+
+      .landing-2026-redesign .avatar-stack img {
+        width: 5.949px;
+        height: 5.949px;
+      }
+
+      .landing-2026-redesign .avatar-stack img:not(:first-child) {
+        margin-left: -2.38px;
+      }
+
+      .landing-2026-redesign .intelligence-bridge {
+        height: auto;
+        margin-top: 52px;
+        padding: 0 24px;
+      }
+
+      .landing-2026-redesign .intelligence-bridge .section-eyebrow {
+        height: 14px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+
+      .landing-2026-redesign .intelligence-bridge .lp-section-heading {
+        width: min(346px, 100%);
+        margin-top: 18px;
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      .landing-2026-redesign .intelligence-bridge .lp-section-copy {
+        width: min(346px, 100%);
+        margin-top: 18px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+
+      .landing-2026-redesign .dual-cta {
+        width: min(346px, calc(100% - 47px));
+        height: auto;
+        margin: 0 auto;
+        padding: 18px 0 0;
+      }
+
+      .landing-2026-redesign .dual-cta > div {
+        height: auto;
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .landing-2026-redesign .dual-cta article {
+        min-height: 0;
+        height: auto;
+        aspect-ratio: 346 / 206.848;
+        padding: 22.565px;
+        border-radius: 12.536px;
+      }
+
+      .landing-2026-redesign .dual-cta__mark {
+        top: 22.565px;
+        left: 22.565px;
+        width: 20.058px;
+        height: 20.058px;
+        background-size: auto 20.058px;
+      }
+
+      .landing-2026-redesign .dual-cta article > p {
+        font-size: 7.522px;
+        line-height: 9px;
+        letter-spacing: 0.752px;
+      }
+
+      .landing-2026-redesign .dual-cta article h3 {
+        width: 100%;
+        height: 42px;
+        margin: 5px 0 0;
+        padding: 6.268px 0 15px;
+        font-size: 17.551px;
+        line-height: 20.183px;
+        white-space: nowrap;
+      }
+
+      .landing-2026-redesign .dual-cta .lp-button {
+        width: max-content;
+        min-width: 0;
+        min-height: 35.101px;
+        padding: 0 11.283px;
+        border-radius: 10.029px;
+        font-size: 13.163px;
+        line-height: 13.163px;
+      }
+
+      .landing-2026-redesign .learning-loop {
+        height: auto;
+        margin-top: 52px;
+        padding: 0 24px;
+      }
+
+      .landing-2026-redesign .learning-loop .platform-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .landing-2026-redesign .learning-loop .section-eyebrow {
+        height: 14px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+
+      .landing-2026-redesign .learning-loop .lp-section-heading {
+        width: 100%;
+        margin: 0;
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      .landing-2026-redesign .learning-loop .lp-section-copy {
+        width: 100%;
+        height: 84px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 21px;
+        overflow: hidden;
+      }
+
+      .landing-2026-redesign .loop-steps {
+        width: 100%;
+        gap: 8px;
+        margin: 18px 0 0;
+      }
+
+      .landing-2026-redesign .loop-steps li {
+        min-height: 72px;
+        height: auto;
+        grid-template-columns: 24px minmax(0, 1fr);
+        gap: 14px;
+        align-items: start;
+        padding: 16px;
+        border: 0;
+        border-radius: 14px;
+        box-shadow: inset 0 0 0 1px rgb(255 255 255 / 12%);
+      }
+
+      .landing-2026-redesign .loop-steps li:nth-child(3) {
+        min-height: 104px;
+      }
+
+      .landing-2026-redesign .loop-steps > li > span {
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        font-family: Inter, sans-serif;
+        font-size: 9.333px;
+        font-weight: 700;
+        line-height: 12px;
+      }
+
+      .landing-2026-redesign .loop-steps h3 {
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .landing-2026-redesign .loop-steps p {
+        margin: 5px 0 0;
+        color: #e0d6ee;
+        font-size: 12px;
+        line-height: 17px;
+      }
+
+      .landing-2026-redesign .api-section {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 52px;
+        padding: 0 24px;
+      }
+
+      .landing-2026-redesign .api-section__copy {
+        width: min(346px, 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .landing-2026-redesign .api-section .section-eyebrow {
+        height: 14px;
+        font-size: 10px;
+        line-height: 14px;
+      }
+
+      .landing-2026-redesign .api-section .lp-section-heading {
+        width: 100%;
+        height: 108px;
+        margin-top: 16px;
+        font-size: 36px;
+        line-height: 36px;
+        overflow: hidden;
+      }
+
+      .landing-2026-redesign .api-section .lp-section-copy {
+        width: min(328px, 100%);
+        margin-top: 32px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .landing-2026-redesign .api-section__copy > .lp-button {
+        width: 178px;
+        min-width: 178px;
+        min-height: 44px;
+        display: inline-flex;
+        margin-top: 32px;
+        padding: 0 12px;
+        border-radius: 10px;
+        background: linear-gradient(53.428deg, #f01e6f 12.923%, #ef6f5e 94.788%);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+      }
+
+      .landing-2026-redesign .api-demo {
+        width: min(346px, 100%);
+        height: 372px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin: 32px auto 0;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        background: rgb(0 0 0 / 25%);
+        overflow: hidden;
+      }
+
+      .landing-2026-redesign .api-demo__label {
+        font-size: 9px;
+        line-height: 12px;
+      }
+
+      .landing-2026-redesign .api-demo__request {
+        width: min(276px, 100%);
+        height: 62px;
+        flex: 0 0 62px;
+        gap: 4px;
+        margin: 0;
+        padding: 10px 12px;
+        border: 0;
+        border-radius: 8px;
+        background: rgb(0 0 0 / 22%);
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .landing-2026-redesign .api-demo__request span {
+        font-size: 8px;
+        line-height: 10px;
+      }
+
+      .landing-2026-redesign .api-demo pre {
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        font-size: 9.5px;
+        line-height: 15px;
+        white-space: pre-wrap;
+      }
+
+      .landing-2026-redesign .api-section .use-case-grid {
+        width: min(346px, 100%);
+        height: 352px;
+        display: grid;
+        grid-template-rows: repeat(3, 112px);
+        gap: 8px;
+        margin: 8px auto 0;
+      }
+
+      .landing-2026-redesign .api-section .use-case-grid article {
+        height: 112px;
+        padding: 18px;
+        border-radius: 14px;
+      }
+
+      .landing-2026-redesign .api-section .use-case-grid h3 {
+        margin: 0;
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+      .landing-2026-redesign .api-section .use-case-grid p {
+        margin-top: 8px;
+        color: #e0d6ee;
+        font-size: 12px;
+        line-height: 17px;
+      }
+
+      .landing-2026-redesign .bottom-collage {
+        margin-top: -56px;
+      }
+
+      .landing-2026-redesign .site-footer-2026 {
+        inset: 0;
+        display: block;
+        height: auto;
+        padding: 0;
+      }
+
+      .landing-2026-redesign .store-badges {
+        position: absolute;
+        left: 50%;
+        bottom: 36px;
+        width: 322.667px;
+        justify-content: center;
+        gap: 12px;
+        transform: translateX(-50%);
+      }
+
+      .landing-2026-redesign .app-store-badge {
+        width: 144px;
+        height: 48px;
+      }
+
+      .landing-2026-redesign .google-play-badge {
+        width: 162.43px;
+        height: 47.43px;
+      }
+
+      .landing-2026-redesign .footer-wordmark {
+        display: none;
+      }
+
+      .landing-2026-redesign .social-links {
+        position: absolute;
+        right: 24px;
+        bottom: 105px;
+        width: 44px;
+        height: 156px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .landing-codex-2026 *,
+      .landing-codex-2026 *::before,
+      .landing-codex-2026 *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .landing-codex-2026 .score-marquee__track {
+        animation: score-marquee-reduced 30s steps(6, end) infinite !important;
+      }
+    }
+  </style>
+</head>
+<body class="landing-codex landing-codex-2026 landing-intelligence-2026 landing-2026-redesign">
+  <header class="site-header" aria-label="Atly landing page header">
+    <a class="brand" href="#top" aria-label="Atly home">
+      <img class="brand-wordmark" src="assets/logo-wordmark.png" alt="Atly">
+    </a>
+
+    <nav class="desktop-header-actions" aria-label="Primary navigation">
+      <a class="partner-link" href="#intelligence">For partners</a>
+      <a class="lp-button header-download" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018">
+        Get the app
+      </a>
+    </nav>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <img src="assets/figma/icon-menu.svg" alt="" aria-hidden="true">
+    </button>
+
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+      <button class="mobile-menu__close" aria-label="Close menu"></button>
+      <a href="https://www.atly.com/">Company</a>
+      <a href="https://www.atly.com/news">Press</a>
+      <a href="https://www.atly.com/blog">Blog</a>
+      <a href="https://www.atly.com/careers">Careers</a>
+      <a href="https://www.atly.com/contact-us">Contact</a>
+      <a href="#intelligence">For partners</a>
+      <a href="https://www.atly.com/terms-of-use">Terms</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="lp-hero" aria-labelledby="hero-title">
+      <h1 id="hero-title" class="sr-only">Know where to go</h1>
+      <div class="lp-hero__art" aria-hidden="true">
+        <img src="Images/Heroimage.png" alt="">
+      </div>
+
+      <p class="lp-hero__copy">
+        <strong>Context-aware place recommendations for exactly what you need right now.</strong>
+      </p>
+
+      <div class="lp-primary-actions" aria-label="Primary actions">
+        <a class="lp-button" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018">
+          <span>Get the app</span>
+          <span class="lp-button__icons" aria-hidden="true">
+            <img src="assets/figma/icon-apple.svg" alt="">
+            <img src="assets/figma/icon-play.svg" alt="">
+          </span>
+        </a>
+
+        <a class="lp-secondary-button" href="#how-it-works">See how Atly works</a>
+
+        <a class="lp-qr" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018" aria-label="Get Atly from the App Store">
+          <img class="lp-qr__base" src="assets/figma/qr-vector.svg" alt="">
+          <img class="lp-qr__code" src="assets/figma/qr-code.svg" alt="">
+          <img class="lp-qr__outline" src="assets/figma/qr-outline.svg" alt="">
+        </a>
+      </div>
+
+      <div class="hero-query-demo" aria-label="Try an example search">
+        <p class="hero-query-demo__eyebrow">Try a search</p>
+        <div class="hero-query-demo__queries" role="group" aria-label="Example searches">
+          <button class="query-chip is-active" type="button" data-query-key="work" aria-pressed="true">
+            A quiet café with Wi-Fi and outlets
+          </button>
+          <button class="query-chip" type="button" data-query-key="celiac" aria-pressed="false">
+            A celiac-safe bakery near my hotel
+          </button>
+          <button class="query-chip" type="button" data-query-key="conversation" aria-pressed="false">
+            A lively bar that’s still good for conversation
+          </button>
+        </div>
+        <article class="hero-query-result" aria-live="polite">
+          <img data-query-image src="Images/2.png" alt="Bright café interior">
+          <div>
+            <div class="hero-query-result__topline">
+              <span class="hero-query-result__place" data-query-place>Monday Coffee</span>
+              <strong data-query-score>9.2</strong>
+            </div>
+            <p class="hero-query-result__intent" data-query-intent>Excellent match for a focused work session</p>
+            <ul class="signal-list" data-query-signals>
+              <li>Dependable Wi-Fi</li>
+              <li>Outlets near most tables</li>
+              <li>Quiet weekday atmosphere</li>
+            </ul>
+            <p class="evidence-line" data-query-evidence>Based on 184 recent signals · verified July 2026 · high confidence</p>
+          </div>
+        </article>
+        <p class="illustrative-note">Illustrative interaction and evidence for this working build.</p>
+      </div>
+    </section>
+
+    <section class="lp-press" aria-label="Press mentions">
+      <p>As seen on</p>
+      <a href="https://www.atly.com/news" aria-label="Read Atly press coverage">
+        <img src="assets/figma/logo-strip.svg" alt="TechCrunch, Travel + Leisure, The Daily, and Yahoo">
+      </a>
+      <blockquote>“The lovechild of Reddit and Google Maps” <cite>TechCrunch</cite></blockquote>
+    </section>
+
+    <section class="traction-band" aria-label="Atly reach">
+      <div><strong>125K+</strong><span>places</span></div>
+      <div><strong>150+</strong><span>countries</span></div>
+      <div><strong>6K+</strong><span>maps</span></div>
+      <div><strong>320K+</strong><span>celiac-community reviews</span></div>
+      <p>Working figures from Atly’s public pages. Revalidate and date before launch.</p>
+    </section>
+
+    <section class="score-marquee" aria-labelledby="score-marquee-title">
+      <h2 id="score-marquee-title" class="sr-only">Atly score examples</h2>
+      <div class="score-marquee__rail" data-hero-rail>
+        <div class="score-marquee__track" data-hero-track data-marquee-mode="css">
+          <div class="score-marquee__group" data-marquee-group>
+            <article class="place-card">
+              <img src="Images/2.png" alt="Bright cafe interior with a pastry counter">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                <span>9.7 <em>for</em> Work friendly</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/3.png" alt="Dog at a cafe counter">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                <span>9.2 <em>for</em> Dog friendly cafe</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/5.png" alt="Bakery display case with pastries">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                <span>9.8 <em>for</em> Gluten free eats</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/6.png" alt="Cafe tables with tall windows">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                <span>9.4 <em>for</em> Vegan brunch</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/7.png" alt="Candlelit restaurant dining room">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                <span>9.4 <em>for</em> Date night</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/2.png" alt="Bright cafe interior with airy seating">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="" aria-hidden="true">
+                <span>9.7 <em>for</em> Work friendly</span>
+              </p>
+            </article>
+          </div>
+
+          <div class="score-marquee__group" aria-hidden="true">
+            <article class="place-card">
+              <img src="Images/2.png" alt="">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="">
+                <span>9.7 <em>for</em> Work friendly</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/3.png" alt="">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="">
+                <span>9.2 <em>for</em> Dog friendly cafe</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/5.png" alt="">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="">
+                <span>9.8 <em>for</em> Gluten free eats</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/6.png" alt="">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="">
+                <span>9.4 <em>for</em> Vegan brunch</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/7.png" alt="">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="">
+                <span>9.4 <em>for</em> Date night</span>
+              </p>
+            </article>
+
+            <article class="place-card">
+              <img src="Images/2.png" alt="">
+              <p class="place-card__score">
+                <img src="assets/figma/icon-sparkle.svg" alt="">
+                <span>9.7 <em>for</em> Work friendly</span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="lp-section research" aria-labelledby="research-title">
+      <h2 id="research-title" class="lp-section-heading">
+        Feels like the research was already done for you
+      </h2>
+      <p class="lp-section-copy">
+        <span class="copy--desktop">Instead of showing you everything nearby, Atly learns what you like and surfaces the places that feel right for you</span>
+        <span class="copy--mobile">Places don’t deserves a single rating. A cafe may be perfect for a cozy brunch but not suitable for work, as the best spot depends on your current needs.</span>
+      </p>
+
+      <picture class="research-map-2026">
+        <source media="(max-width: 720px)" srcset="Images/MapMobile2026.png">
+        <img
+          class="research-map-2026__image"
+          src="map.png"
+          alt="Atly map showing personalized place scores and match details for a wood-fired pizza restaurant"
+        >
+      </picture>
+    </section>
+
+    <section class="lp-section score-explain" aria-labelledby="score-explain-title">
+      <h2 id="score-explain-title" class="lp-section-heading">
+        One place. Three different answers.
+      </h2>
+      <p class="lp-section-copy">
+        <span class="copy--desktop">The same café can be perfect for getting work done, unsuitable for your dog, and good enough for a first date. Switch the intent to see the score and the evidence change.</span>
+        <span class="copy--mobile">The same café can be perfect for getting work done, unsuitable for your dog, and good enough for a first date. Switch the intent to see the score and evidence change.</span>
+      </p>
+
+      <div class="context-switcher" data-context-switcher>
+        <div class="context-switcher__tabs" role="tablist" aria-label="Choose an intent">
+          <button type="button" role="tab" aria-selected="true" class="context-tab is-active" data-context-key="work">
+            <img src="assets/figma/search-active.svg" alt="" aria-hidden="true">
+            <span>A café to focus and work</span>
+          </button>
+          <button type="button" role="tab" aria-selected="false" class="context-tab" data-context-key="dog">
+            <img src="assets/figma/search-muted.svg" alt="" aria-hidden="true">
+            <span>Dog-friendly café</span>
+          </button>
+          <button type="button" role="tab" aria-selected="false" class="context-tab" data-context-key="date">
+            <img src="assets/figma/search-muted.svg" alt="" aria-hidden="true">
+            <span>Café for first date</span>
+          </button>
+        </div>
+
+        <article class="context-card context-card--desktop" role="tabpanel" aria-live="polite">
+          <div class="context-card__photo">
+            <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
+          </div>
+          <div class="context-card__body">
+            <p class="context-card__score">
+              <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+              <strong data-context-score>9.2</strong>
+              <span>/ 10 match for</span>
+            </p>
+            <h3 data-context-title>A café to focus and work</h3>
+            <p class="context-card__summary" data-context-summary>
+              <strong>An ideal café for remote work</strong>, this spot offers a brew that keeps you energized, cozy ambiance and dependable Wi-Fi, it’s perfect for productivity. You'll find plenty of power outlets and the soundtrack plays gentle tunes.
+            </p>
+            <ul class="context-card__reasons" data-context-reasons>
+              <li>🛜 Dependable Wi-Fi</li>
+              <li>🔌 Outlets near most tables</li>
+              <li>🤫 Quiet weekday atmosphere</li>
+            </ul>
+          </div>
+        </article>
+
+        <div
+          class="mobile-intent-carousel"
+          data-mobile-intent-carousel
+          role="region"
+          aria-roledescription="carousel"
+          aria-label="Place recommendations by intent"
+        >
+          <div class="mobile-intent-carousel__viewport" data-mobile-intent-viewport tabindex="0">
+            <div class="mobile-intent-carousel__track">
+              <article class="context-card mobile-intent-carousel__slide" aria-label="1 of 3: A café to focus and work">
+                <div class="context-card__photo">
+                  <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
+                </div>
+                <div class="context-card__body">
+                  <p class="context-card__score">
+                    <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+                    <strong>9.2</strong>
+                    <span>/ 10 match for</span>
+                  </p>
+                  <h3>A café to focus and work</h3>
+                  <p class="context-card__summary">
+                    An <strong>ideal café for remote work</strong>, this spot offers a cozy ambiance, <strong>dependable Wi-Fi, plenty of power outlets, and gentle background music.</strong> It’s the perfect place to settle in with your laptop and enjoy a productive day.
+                  </p>
+                  <ul class="context-card__reasons">
+                    <li>🛜 Dependable Wi‑Fi</li>
+                    <li>🔌 Power outlets</li>
+                    <li>🤫 Quiet weekday atmosphere</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="context-card mobile-intent-carousel__slide" aria-label="2 of 3: Dog-friendly café">
+                <div class="context-card__photo">
+                  <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
+                </div>
+                <div class="context-card__body">
+                  <p class="context-card__score">
+                    <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+                    <strong>6.5</strong>
+                    <span>/ 10 match for</span>
+                  </p>
+                  <h3>Dog-friendly café</h3>
+                  <p class="context-card__summary">
+                    This cozy café isn't dog-friendly as <strong>barking can annoy the staff and disrupt the calm vibe.</strong> While the menu is great for humans, the <strong>indoor seating is ideal for those wanting peace.</strong> It's best to <strong>leave your pup at home for a more relaxing visit.</strong>
+                  </p>
+                  <ul class="context-card__reasons">
+                    <li>🐕 Not ideal for pets</li>
+                    <li>🤫 Calm indoor seating</li>
+                    <li>👨‍💻 Work friendly environment</li>
+                  </ul>
+                </div>
+              </article>
+
+              <article class="context-card mobile-intent-carousel__slide" aria-label="3 of 3: A café for a first date">
+                <div class="context-card__photo">
+                  <img src="Images/Cafe.png" alt="Cafe interior with long tables and a pastry counter">
+                </div>
+                <div class="context-card__body">
+                  <p class="context-card__score">
+                    <img src="Images/Sparkle.png" alt="" aria-hidden="true">
+                    <strong>8.9</strong>
+                    <span>/ 10 match for</span>
+                  </p>
+                  <h3>A café for a first date</h3>
+                  <p class="context-card__summary">
+                    The café's cozy <strong>downstairs vibe is perfect for a romantic date</strong>, featuring soft lighting and comfy seating for couples to relax with <strong>mellow tunes, creating an intimate atmosphere.</strong> The upstairs is a quiet space for laptop work and productivity.
+                  </p>
+                  <ul class="context-card__reasons">
+                    <li>💕 Romantic downstairs</li>
+                    <li>💡 Soft lighting</li>
+                    <li>🎶 Mellow tunes</li>
+                    <li>💬 Good for conversations</li>
+                  </ul>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="mobile-intent-carousel__pagination" aria-label="Choose recommendation card">
+            <button type="button" class="is-active" data-mobile-intent-dot="0" aria-label="Show work-friendly café" aria-current="true"></button>
+            <button type="button" data-mobile-intent-dot="1" aria-label="Show dog-friendly café" aria-current="false"></button>
+            <button type="button" data-mobile-intent-dot="2" aria-label="Show first-date café" aria-current="false"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section collections" aria-labelledby="collections-title">
+      <div class="collections__copy">
+        <h2 id="collections-title" class="lp-section-heading">
+          Curated collections, made personal
+        </h2>
+        <p class="lp-section-copy">
+          Find curated lists from locals, personalized to your taste and interests so every recommendation feels made for you.
+        </p>
+      </div>
+
+      <p class="carousel-hint">Swipe to explore collections <span aria-hidden="true">→</span></p>
+
+      <div class="collection-cards" aria-label="Curated collections">
+        <article class="collection-card">
+          <img src="Images/Atly%20-FS1.png" alt="Burger being eaten outside">
+          <h3 class="collection-card__title">THE Burger breakdown</h3>
+          <div class="collection-card__proof">
+            <span class="avatar-stack" aria-hidden="true">
+              <img src="assets/figma/avatar-1.png" alt="">
+              <img src="assets/figma/avatar-2.png" alt="">
+              <img src="assets/figma/avatar-3.png" alt="">
+              <img src="assets/figma/avatar-4.png" alt="">
+              <img src="assets/figma/avatar-5.png" alt="">
+            </span>
+            <span>Curated from 16k+ local reviews</span>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img src="Images/Atly%20-FS2.png" alt="Friends celebrating at a bar">
+          <h3 class="collection-card__title">Happy Hour Heroes</h3>
+          <div class="collection-card__proof">
+            <span class="avatar-stack" aria-hidden="true">
+              <img src="assets/figma/avatar-1.png" alt="">
+              <img src="assets/figma/avatar-2.png" alt="">
+              <img src="assets/figma/avatar-3.png" alt="">
+              <img src="assets/figma/avatar-4.png" alt="">
+              <img src="assets/figma/avatar-5.png" alt="">
+            </span>
+            <span>Curated from 22k+ local reviews</span>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img src="Images/Atly%20-FS3.png" alt="Fresh green salad on a table">
+          <h3 class="collection-card__title">Green Flags Only</h3>
+          <div class="collection-card__proof">
+            <span class="avatar-stack" aria-hidden="true">
+              <img src="assets/figma/avatar-1.png" alt="">
+              <img src="assets/figma/avatar-2.png" alt="">
+              <img src="assets/figma/avatar-3.png" alt="">
+              <img src="assets/figma/avatar-4.png" alt="">
+              <img src="assets/figma/avatar-5.png" alt="">
+            </span>
+            <span>Curated from 15k+ local reviews</span>
+          </div>
+        </article>
+      </div>
+
+      <details class="methodology-note">
+        <summary>What does “curated from local reviews” mean?</summary>
+        <p>These working figures represent reviews processed across the places included in each collection. Definitions and dates should be revalidated before launch.</p>
+      </details>
+    </section>
+
+    <section id="intelligence" class="lp-section intelligence-bridge" aria-labelledby="intelligence-title">
+      <p class="section-eyebrow">Beyond the app</p>
+      <h2 id="intelligence-title" class="lp-section-heading">
+        intelligence layer that bridges personal taste with real-world places.
+      </h2>
+      <p class="lp-section-copy">
+        <span class="copy--desktop">Every place means something different depending on who is asking and why. Atly turns fragmented local signals into structured, explainable place intelligence, powering personal discovery today and new partner experiences tomorrow.</span>
+        <span class="copy--mobile">Every place has unique meanings depending on who asks. Atly turns scattered local signals into clear place insights, improving personal discovery now and partner experiences later.</span>
+      </p>
+    </section>
+
+    <section class="lp-section place-graph" aria-labelledby="place-graph-title">
+      <div class="platform-heading">
+        <p class="section-eyebrow">The data foundation</p>
+        <h2 id="place-graph-title" class="lp-section-heading">A living map of what places are actually good for.</h2>
+        <p class="lp-section-copy">
+          A place is more than a name, category, address, and average rating. Atly models the contextual qualities that determine whether it is right for a particular person and moment.
+        </p>
+      </div>
+
+      <div class="place-graph__visual">
+        <article class="graph-place-card">
+          <img src="Images/Cafe.png" alt="Example Café interior">
+          <div>
+            <p>Example Café</p>
+            <strong>Context changes the answer</strong>
+            <span>Last verified July 2026</span>
+          </div>
+        </article>
+
+        <ul class="graph-attributes" aria-label="Intent-specific attributes">
+          <li><span>Work-friendly</span><strong>9.2</strong></li>
+          <li><span>Dog-friendly</span><strong>8.7</strong></li>
+          <li><span>First-date fit</span><strong>6.4</strong></li>
+          <li><span>Reliable Wi-Fi</span><strong>High confidence</strong></li>
+          <li><span>Quiet weekday mornings</span><strong>Recent</strong></li>
+          <li><span>Limited intimate seating</span><strong>Observed</strong></li>
+        </ul>
+
+        <div class="graph-sources" aria-label="Evidence feeding the place record">
+          <span>Local reviews</span>
+          <span>Trusted creators</span>
+          <span>Community contributions</span>
+          <span>Official information</span>
+          <span>Observed changes</span>
+        </div>
+      </div>
+
+      <div class="principle-grid">
+        <article><span>01</span><h3>Context, not one score</h3><p>The same place can be excellent for one need and wrong for another.</p></article>
+        <article><span>02</span><h3>Evidence, not opaque answers</h3><p>Recommendations expose the attributes and signals behind them.</p></article>
+        <article><span>03</span><h3>Freshness, not a static directory</h3><p>Place intelligence changes as menus, policies, hours, and local behavior change.</p></article>
+      </div>
+    </section>
+
+    <section class="lp-section api-section" aria-labelledby="api-title">
+      <div class="api-section__copy">
+        <p class="section-eyebrow">Atly Intelligence API</p>
+        <h2 id="api-title" class="lp-section-heading">
+          <span class="copy--desktop">Give every product a better sense of place.</span>
+          <span class="copy--mobile">Give every product<br>A better sense<br>of place.</span>
+        </h2>
+        <p class="lp-section-copy">
+          <span class="copy--desktop">Atly turns natural-language intent into ranked, explainable place matches. Built for travel products, AI assistants, hospitality platforms, marketplaces, and any experience that needs to understand not just where a place is, but what it is good for.</span>
+          <span class="copy--mobile">Atly turns natural-language intent into ranked, explainable place matches, built for travel products, AI assistants, hospitality platforms, marketplaces, and any experience that needs to understand not just where a place is, but what it is good for.</span>
+        </p>
+        <a class="lp-button" href="https://www.atly.com/contact-us">Request API access</a>
+      </div>
+
+      <div class="api-demo" aria-label="Illustrative API response">
+        <p class="api-demo__label">Illustrative response</p>
+        <div class="api-demo__request"><span>Request</span>“A quiet first-date wine bar”</div>
+        <pre><code>{
+  <span class="code-key">"place"</span>: <span class="code-string">"Example Place"</span>,
+  <span class="code-key">"match_score"</span>: <span class="code-number">9.1</span>,
+  <span class="code-key">"intent"</span>: <span class="code-string">"quiet first-date wine bar"</span>,
+  <span class="code-key">"reasons"</span>: [
+    <span class="code-string">"low-noise seating"</span>,
+    <span class="code-string">"intimate atmosphere"</span>,
+    <span class="code-string">"open late"</span>
+  ],
+  <span class="code-key">"confidence"</span>: <span class="code-string">"high"</span>,
+  <span class="code-key">"last_verified_at"</span>: <span class="code-string">"2026-07"</span>
+}</code></pre>
+      </div>
+
+      <div class="use-case-grid">
+        <article class="figma-glass"><h3>AI assistants and agents</h3><p>Give assistants evidence-backed local recommendations instead of generic lists.</p></article>
+        <article class="figma-glass"><h3>Travel and hospitality</h3><p>Build itineraries and concierge experiences around each guest’s needs.</p></article>
+        <article class="figma-glass"><h3>Maps and marketplaces</h3><p>Add contextual discovery, ranking, and enriched attributes to an existing product.</p></article>
+      </div>
+    </section>
+
+    <section class="lp-section learning-loop" aria-labelledby="learning-loop-title">
+      <div class="platform-heading">
+        <p class="section-eyebrow">The compounding advantage</p>
+        <h2 id="learning-loop-title" class="lp-section-heading">
+          <span class="copy--desktop">Every choice enhances the intelligence of the system.</span>
+          <span class="copy--mobile">Every choice enhances<br>the intelligence<br>of the system.</span>
+        </h2>
+        <p class="lp-section-copy">
+          <span class="copy--desktop">Searches reveal what people need. Saves, selections, and contributions directly improve ranking, attributes, and confidence, making the consumer experience and partner intelligence more useful with every decision.</span>
+          <span class="copy--mobile">Searches reveal what people need. Saves, selections, and contributions directly improve ranking, attributes, and confidence, making Atly more useful with every decision.</span>
+        </p>
+      </div>
+
+      <ol class="loop-steps">
+        <li class="figma-glass"><span>1</span><div><h3>People express intent</h3><p>“Quiet café for a two-hour work session.”</p></div></li>
+        <li class="figma-glass"><span>2</span><div><h3>Atly ranks and explains</h3><p>Results are scored against the attributes that matter.</p></div></li>
+        <li class="figma-glass"><span>3</span><div><h3>People choose, save, or contribute</h3><p>Behavior and explicit feedback validate relevance.</p></div></li>
+        <li class="figma-glass"><span>4</span><div><h3><span class="copy--desktop">Place intelligence improves</span><span class="copy--mobile">People to Place match algo improves</span></h3><p>Attributes, confidence, and rankings become more precise.</p></div></li>
+        <li class="figma-glass"><span>5</span><div><h3>Better results attract more use</h3><p>More use creates more opportunities to enrich the graph.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="dual-cta" aria-labelledby="dual-cta-title">
+      <h2 id="dual-cta-title">One intelligence layer. Two ways to use it.</h2>
+      <div>
+        <article class="figma-glass">
+          <span class="dual-cta__mark" aria-hidden="true"></span>
+          <p>For people</p>
+          <h3>Find your next place.</h3>
+          <a class="lp-button" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018">Get the app</a>
+        </article>
+        <article class="figma-glass">
+          <span class="dual-cta__mark" aria-hidden="true"></span>
+          <p>For partners</p>
+          <h3>Build with Atly Intelligence.</h3>
+          <a class="lp-button" href="https://www.atly.com/contact-us">Request API access</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="bottom-collage" aria-labelledby="closing-title">
+      <h2 id="closing-title" class="sr-only">Your kind of places</h2>
+      <picture>
+        <source media="(max-width: 720px)" srcset="Images/BottomSection3-mobile.png">
+        <img
+          class="bottom-collage__image"
+          src="Images/BottomSection3-desktop.png"
+          alt="Collage of New York places, city scenes, and people enjoying food"
+        >
+      </picture>
+
+      <footer class="site-footer-2026">
+        <div class="store-badges" aria-label="Download Atly">
+          <a class="app-store-badge" href="https://apps.apple.com/us/app/atly-know-where-to-go/id1449597018" aria-label="Download Atly on the App Store">
+            <img src="Images/FooterAppStore.svg" alt="" aria-hidden="true">
+          </a>
+
+          <a class="google-play-badge" href="https://play.google.com/store/apps/details?id=com.steps.app.steps&amp;hl=en" aria-label="Get Atly on Google Play">
+            <img src="Images/FooterGooglePlay.svg" alt="" aria-hidden="true">
+          </a>
+        </div>
+
+        <img class="footer-wordmark" src="Images/FooterAtlyLogo.svg" alt="Atly">
+
+        <nav class="social-links" aria-label="Social links">
+          <a href="https://www.instagram.com/atly/" aria-label="Atly on Instagram">
+            <img src="Images/FooterInstagram.svg" alt="" aria-hidden="true">
+          </a>
+          <a href="https://www.tiktok.com/@atlyofficial" aria-label="Atly on TikTok">
+            <img src="Images/FooterTikTok.svg" alt="" aria-hidden="true">
+          </a>
+          <a href="https://www.facebook.com/atlyofficial/" aria-label="Atly on Facebook">
+            <img src="Images/FooterFacebook.svg" alt="" aria-hidden="true">
+          </a>
+        </nav>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script-v4-1.js?v=20260801-v41-motion"></script>
+  <script src="landing-v4-1.js?v=20260801-v41-motion"></script>
+</body>
+</html>
