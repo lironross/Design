@@ -2,6 +2,7 @@ const rail = document.querySelector("[data-hero-rail]");
 const track = document.querySelector("[data-hero-track]");
 const marqueeGroup = track?.querySelector("[data-marquee-group]");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const manualMobileRail = window.matchMedia("(max-width: 720px)");
 
 if (rail && track && marqueeGroup) {
   const fallbackSpeed = 35;
@@ -29,7 +30,7 @@ if (rail && track && marqueeGroup) {
   }
 
   function startFallback() {
-    if (fallbackFrame || reducedMotion.matches) return;
+    if (fallbackFrame || reducedMotion.matches || manualMobileRail.matches) return;
     measureFallback();
     fallbackStartedAt = undefined;
     track.classList.add("is-raf-fallback");
@@ -47,26 +48,39 @@ if (rail && track && marqueeGroup) {
   }
 
   function verifyCssAnimation() {
-    if (reducedMotion.matches || document.hidden || fallbackFrame) return;
+    if (manualMobileRail.matches || reducedMotion.matches || document.hidden || fallbackFrame) return;
     const startPosition = track.getBoundingClientRect().left;
 
     window.setTimeout(() => {
-      if (reducedMotion.matches || document.hidden || fallbackFrame) return;
+      if (manualMobileRail.matches || reducedMotion.matches || document.hidden || fallbackFrame) return;
       const endPosition = track.getBoundingClientRect().left;
       if (Math.abs(endPosition - startPosition) < 2) startFallback();
     }, 1200);
   }
 
-  if (forceFallback) {
+  function syncRailMode() {
+    if (manualMobileRail.matches) {
+      stopFallback();
+      track.dataset.marqueeMode = "manual";
+      return;
+    }
+
+    track.dataset.marqueeMode = "css";
+    verifyCssAnimation();
+  }
+
+  if (manualMobileRail.matches) {
+    syncRailMode();
+  } else if (forceFallback) {
     window.requestAnimationFrame(startFallback);
   } else {
     window.requestAnimationFrame(() => window.requestAnimationFrame(verifyCssAnimation));
     window.addEventListener("load", verifyCssAnimation, { once: true });
   }
   window.addEventListener("resize", measureFallback);
-  window.addEventListener("pageshow", verifyCssAnimation);
+  window.addEventListener("pageshow", syncRailMode);
   document.addEventListener("visibilitychange", () => {
-    if (!document.hidden && track.dataset.marqueeMode === "css") verifyCssAnimation();
+    if (!document.hidden) syncRailMode();
   });
 
   const handleMotionChange = () => {
@@ -75,8 +89,10 @@ if (rail && track && marqueeGroup) {
   };
   if (typeof reducedMotion.addEventListener === "function") {
     reducedMotion.addEventListener("change", handleMotionChange);
+    manualMobileRail.addEventListener("change", syncRailMode);
   } else {
     reducedMotion.addListener(handleMotionChange);
+    manualMobileRail.addListener(syncRailMode);
   }
 }
 
