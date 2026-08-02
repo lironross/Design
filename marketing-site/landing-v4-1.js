@@ -6,7 +6,7 @@ const queryExamples = {
     intent: "Excellent match for a focused work session",
     signals: ["Dependable Wi-Fi", "Outlets near most tables", "Quiet weekday atmosphere"],
     evidence: "Based on 184 recent signals · verified July 2026 · high confidence",
-    image: "Images/2.png",
+    image: "Images/2.webp",
     alt: "Bright café interior"
   },
   celiac: {
@@ -15,7 +15,7 @@ const queryExamples = {
     intent: "Strong match for a celiac-safe bakery near your hotel",
     signals: ["Dedicated preparation area", "Cross-contact details", "Recent community validation"],
     evidence: "Based on 126 dietary-safety signals · verified July 2026 · high confidence",
-    image: "Images/5.png",
+    image: "Images/5.webp",
     alt: "Bakery display case with pastries"
   },
   conversation: {
@@ -24,7 +24,7 @@ const queryExamples = {
     intent: "Lively atmosphere with space for conversation",
     signals: ["Low-noise seating zone", "Energetic after 8pm", "Tables suited to small groups"],
     evidence: "Based on 211 recent signals · verified July 2026 · medium-high confidence",
-    image: "Images/7.png",
+    image: "Images/7.webp",
     alt: "Warmly lit bar and restaurant interior"
   }
 };
